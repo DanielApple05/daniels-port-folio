@@ -7,9 +7,9 @@ const hero = () => {
   return (
     <>
       
-        <div className='bg-blue-950 text-white xl:py-10 py-5 w-full xl:text-base text-xs'>
-          <div className='flex justify-between xl:w-5/12 w-10/12 xl:place-self-center place-self-center '>
-            {Tabs.map((tab) => (
+        <div className='bg-blue-950 text-white xl:py-10 py-5 w-full xl:text-base text-xs place-content-center grid'>
+          <div className='flex justify-between xl:w-5/12 w-10/12 xl:place-self-center place-self-center'>
+            {Tabs.map((tab) => ( 
               tab.isSection ? (
                 <a
                   key={tab.id}
@@ -30,7 +30,7 @@ const hero = () => {
             ))}
           </div>
           <div className='flex w-12/12 xl:px-20 px-5 xl:mt-10 mt-3 xl:pt-5 pt-2 xl:space-x-0 space-x-5 '>
-            <div className=' xl:w-4/12 w-3/12 justify-end flex items-center bg-red-400'>
+            <div className=' xl:w-4/12 w-3/12 justify-end flex items-center '>
               <img src="/images/myIcon.jpeg" alt="My Icon" className='xl:w-60 w-20 xl:h-60 h-20 rounded-full object-cover xl:ring-5 ring-2 xl:m-2 m-1 ' />
             </div>
             <div className='flex flex-col place-items-center xl:space-y-7 space-y-2 xl:w-7/12 w-8/12 xl:pt-5 pt-2'>
