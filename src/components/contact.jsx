@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const contact = () => {
   const contactInfo = [
-    { id: 1, icon: faEnvelope, text: "ejimofordanielchukwuebuka@gmail.com", link: "mailto:ejimofordanielchukwuebuka@gmail.com" },
+    { id: 1, icon: faEnvelope, text: "ejimofordanielchukwuebuka@gmail.com", link: "https://mailto:ejimofordanielchukwuebuka@gmail.com" },
     { id: 2, icon: faPhone, text: "08103439913", link: "tel:+2348103439913" },
     { id: 3, icon: faLinkedin, text: "linkedin.com/in/ejimofor-daniel", link: "https://www.linkedin.com/in/daniel-ejimofor" },
     { id: 4, icon: faLocation, text: "Nigeria" },
@@ -102,7 +102,11 @@ const contact = () => {
 
           <div className="w-5/12 bg-gray-800/30 rounded-lg p-5 text-sm ">
             <h5 className="text-2xl font-semibold my-4">Send Me A Message</h5>
-            <form onSubmit={handleSubmit}>
+            <form
+               onSubmit={handleSubmit} 
+               action="mailto:ejimofordanielchukwuebuka@gmail.com"
+               method="post"
+               encType="text/plain" >
               <input
                 type="text"
                 placeholder="Your Name"
@@ -131,8 +135,7 @@ const contact = () => {
 
               <button
                 type="submit"
-                className="bg-blue-500 hover:bg-blue-600 hover:ring cursor-pointer text-white py-2 px-4 rounded-md"
-              >
+                className="bg-blue-500 hover:bg-blue-600 hover:ring cursor-pointer text-white py-2 px-4 rounded-md">
                 Send Message
               </button>
             </form>
