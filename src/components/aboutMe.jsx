@@ -18,7 +18,7 @@ const aboutMe = ( id ) => {
       <Hero key={id} />
       <div className='xl:px-24 px-5 bg-gray-100 xl:py-15 py-5 xl:text-base text-xs'>
         <section id='about' className=''>
-          <h3 className='mb-5 font-bold' >
+          <h3 className='mb-5 font-bold xl:text-xl text-lg ' >
             About Me
           </h3>
           <hr className='border-gray-400 mb-4' />
@@ -32,7 +32,7 @@ const aboutMe = ( id ) => {
           </h3>
           <hr className='border-gray-400 xl:my-7 my-3' />
           <div className='flex w-full xl:space-x-5 space-x-2 xl:h-50 h-40'>
-            <div className='grid grid-cols-2 w-6/12 bg-white xl:p-5 p-2 xl:space-y-5 space-y-2 rounded-xl shadow-lg'>
+            <div className='grid grid-cols-2 w-6/12 bg-white xl:p-5 p-3 xl:space-y-5 space-y-0 items-center rounded-xl shadow-lg'>
               <div className='flex space-x-1'>
                 <FontAwesomeIcon icon={faReact} className='text-blue-500 xl:text-2xl text-lg' />
                 <p>React</p>
@@ -54,14 +54,14 @@ const aboutMe = ( id ) => {
                 <p>Tailwind CSS</p>
               </div>
             </div>
-            <div className='grid grid-cols-2 w-6/12 bg-white p-5 space-y-5 rounded-xl shadow-lg'>
+            <div className='grid grid-cols-2 w-6/12 bg-white xl:p-5 p-3 xl:space-y-5 space-y-0 rounded-xl items-center shadow-lg'>
               <div className='flex space-x-1'>
-                <FontAwesomeIcon icon={faGithub} className='text-gray-800 text-2xl' />
+                <FontAwesomeIcon icon={faGithub} className='text-gray-800 xl:text-2xl text-lg' />
                 <p>Git & GitHub</p>
               </div>
               <p>VsCode</p>
               <div className='flex space-x-1'>
-                <FontAwesomeIcon icon={faFigma} className='text-pink-500 text-2xl' />
+                <FontAwesomeIcon icon={faFigma} className='text-pink-500 xl:text-2xl text-lg' />
                 <p>Figma</p>
               </div>
               <p>Netlify</p>
@@ -70,12 +70,12 @@ const aboutMe = ( id ) => {
           </div>
         </section>
         <section id='projects' >
-          <h3 className='my-5 text-xl font-bold'>
+          <h3 className='xl:my-5 my-3 text-xl font-bold'>
             Projects
           </h3>
-          <div className='flex w-full rounded-2xl space-x-5'>
-            <div className='w-6/12 space-y-5 bg-white flex flex-col p-5 rounded-xl shadow-2xl'>
-              <h3 className='font-bold tracking-widest text-xl'>Sneaker E-Commerce App</h3>
+          <div className='flex w-full rounded-2xl xl:space-x-5 space-x-3'>
+            <div className='w-6/12 xl:space-y-5 space-y-3 bg-white flex flex-col xl:p-5 p-3 rounded-xl shadow-2xl'>
+              <h3 className='font-bold xl:tracking-widest tracking-wide xl:text-xl text-xs'>Sneaker E-Commerce App</h3>
               <hr className='border-gray-400' />
               <img src="/images/project1.jpeg" alt="" className='rounded-md w-12/12 shadow-2xl ring-2 ring-white' />
               <div className=' items-center flex space-x-2'>
