@@ -73,8 +73,8 @@ const aboutMe = ( id ) => {
           <h3 className='xl:my-5 my-3 text-xl font-bold'>
             Projects
           </h3>
-          <div className='flex w-full rounded-2xl xl:space-x-5 space-x-3'>
-            <div className='w-6/12 xl:space-y-5 space-y-3 bg-white flex flex-col xl:p-5 p-3 rounded-xl shadow-2xl'>
+          <div className=' xl:flex grid w-full rounded-2xl xl:space-x-5 space-x-3 xl:space-y-0 space-y-5 '>
+            <div className='xl:w-6/12 w-full xl:space-y-5 space-y-3 bg-white flex flex-col xl:p-5 p-3 rounded-xl shadow-2xl'>
               <h3 className='font-bold xl:tracking-widest tracking-wide xl:text-xl text-xs'>Sneaker E-Commerce App</h3>
               <hr className='border-gray-400' />
               <img src="/images/project1.jpeg" alt="" className='rounded-md w-12/12 shadow-2xl ring-2 ring-white' />
@@ -100,8 +100,8 @@ const aboutMe = ( id ) => {
                 ))}
               </div>
             </div>
-            <div className='w-6/12 space-y-5 bg-white flex flex-col p-5 rounded-xl shadow-2xl'>
-              <h3 className='font-bold tracking-widest text-xl'> Todo App</h3>
+            <div className=' xl:w-6/12 w-full xl:space-y-5 space-y-3 bg-white flex flex-col xl:p-5 p-3 rounded-xl shadow-2xl'>
+              <h3 className='font-bold tracking-widest xl:text-xl text-xs'> Todo App</h3>
               <hr className='border-gray-400' />
               <img src="/images/project2.jpeg" alt="" className='rounded-md w-12/12 shadow-2xl ring-2 ring-white' />
               <div className=' items-center flex space-x-2'>
@@ -129,7 +129,7 @@ const aboutMe = ( id ) => {
           <a href="https://github.com/DanielApple05"
             target="_blank"
             rel="noopener noreferrer"
-            className='flex place-self-center bg-blue-600 rounded p-2 mt-6 text-white cursor-pointer  w-40 font-semibold'>
+            className='flex place-self-center bg-blue-600 rounded p-2 xl:mt-6 mt-4 text-white cursor-pointer  xl:w-40 w-auto font-semibold '>
             View more projects
           </a>
         </section>
