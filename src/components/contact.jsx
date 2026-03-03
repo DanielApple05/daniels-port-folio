@@ -70,7 +70,7 @@ const contact = () => {
             <Link to="/" className="text-sm bg-blue-400 hover:border-2 cursor-pointer xl:p-3 p-2 rounded-full items-center flex font-medium transition text-white">About Me</Link>
           </div>
         </div>
-        <div className="w-full xl:flex grid justify-around xl:space-y-0 space-y-5  ">
+        <div className="w-full flex xl:flex-row flex-col-reverse  justify-around xl:space-y-0 space-y-5  ">
           <div className="xl:w-5/12 w-full bg-gray-800/30 rounded-lg p-5 space-y-5 place-content-center flex flex-col ">
             <div>
               <h5 className="xlz:text-3xl text-lg font-semibold mb-4">Let's Work Together!</h5>
