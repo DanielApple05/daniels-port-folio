@@ -16,7 +16,7 @@ const aboutMe = ( id ) => {
   return (
     <>
       <Hero key={id} />
-      <div className='px-24 bg-gray-100 py-15'>
+      <div className='xl:px-24 px-5 bg-gray-100 xl:py-15 py-5'>
         <section id='about' className=''>
           <h3 className='mb-5 font-bold' >
             About Me
