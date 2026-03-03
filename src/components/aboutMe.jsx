@@ -9,12 +9,10 @@ const aboutMe = ( id ) => {
     { id: 1, name: 'View Demo', link: 'https://a-sneakers-ecommerce-page.vercel.app/' },
     { id: 2, name: 'View Code', link: 'https://github.com/DanielApple05/A-sneakers-Ecommerce-page' }
   ];
-
   const projectActions2 = [
     { id: 3, label: 'View Demo', link: 'https://todo-list-with-react-js-brown.vercel.app' },
     { id: 4, label: 'View Code', link: 'https://github.com/DanielApple05/Todo-list-with-React.js' }
   ];
-
   return (
     <>
       <Hero key={id} />
@@ -28,9 +26,8 @@ const aboutMe = ( id ) => {
             I am a frontend developer focused on building user interfaces and web applications with React, JavaScript, HTML, and CSS. I am passionate about creating seamless and engaging digital experiences that captivate users and drive business success. With a strong foundation in frontend development, I specialize in crafting responsive and visually appealing websites that deliver exceptional performance across all devices.
           </p>
         </section>
-
         <section id='skills' className='my-5'>
-          <h3 className=' font-bold '>
+          <h3 className=' text-xl font-bold '>
             Skills
           </h3>
           <hr className='border-gray-400 my-7' />
@@ -73,7 +70,7 @@ const aboutMe = ( id ) => {
           </div>
         </section>
         <section id='projects' >
-          <h3 className='my-5 font-bold'>
+          <h3 className='my-5 text-xl font-bold'>
             Projects
           </h3>
           <div className='flex w-full rounded-2xl space-x-5'>

@@ -1,9 +1,9 @@
 const Tabs = [
-  { id: "about", name: "About" },
-  { id: "skills", name: "Skills" },
-  { id: "projects", name: "Projects",  },
-  { id: "experience", name: "Experience" },
-  { id: "contact", name: "Contact", path: "/contact" },
+  { id: "about", name: "About", isSection: true },
+  { id: "skills", name: "Skills", isSection: true },
+  { id: "projects", name: "Projects", isSection: true },
+  { id: "experience", name: "Experience", isSection: true },
+  { id: "contact", name: "Contact", isSection: false, path: "/contact" },
 ];
 
 export default Tabs;

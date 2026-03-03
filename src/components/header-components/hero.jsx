@@ -1,4 +1,5 @@
 import Tabs from './tabs';
+import { Link } from "react-router-dom";
 
 
 const hero = () => {
@@ -7,14 +8,26 @@ const hero = () => {
     <>
       <div>
         <div className='bg-blue-950 text-white py-10 w-full'>
-            <div className='flex justify-between w-5/12 place-self-center '>
-            {
-              Tabs.map((tab) => (
-                <a href ={`#${tab.id}`}  to={tab.path}
-                  className='cursor-pointer hover:text-blue-400'>{tab.name}
+          <div className='flex justify-between w-5/12 place-self-center'>
+            {Tabs.map((tab) => (
+              tab.isSection ? (
+                <a
+                  key={tab.id}
+                  href={`#${tab.id}`}
+                  className='cursor-pointer hover:text-blue-400'
+                >
+                  {tab.name}
                 </a>
-              ))
-            }
+              ) : (
+                <Link
+                  key={tab.id}
+                  to={tab.path}
+                  className='cursor-pointer hover:text-blue-400'
+                >
+                  {tab.name}
+                </Link>
+              )
+            ))}
           </div>
           <div className='flex w-12/12 px-20 mt-10 pt-5'>
             <div className=' w-4/12 justify-end flex'>
