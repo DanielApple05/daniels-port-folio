@@ -43,7 +43,7 @@ const hero = () => {
               <p >
                 I build responsive, user friendly web applications with React and modern UI tools.
               </p>
-              <div className='flex xl:space-x-18 space-x-5 '>
+              <div className='flex xl:space-x-18 space-x-5 place-self-center '>
                 {About.map((item) => (<button key={item.id} className='cursor-pointer bg-gray-400 hover:bg-blue-600 rounded-md xl:px-5 px-3 py-1 hover:ring-1 ' onClick={() => window.open(item.link, '_blank', 'noopener,noreferrer')}>
                   {item.name}
                 </button>))}

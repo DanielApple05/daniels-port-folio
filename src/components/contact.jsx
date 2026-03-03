@@ -54,26 +54,26 @@ const contact = () => {
   return (
     <div
       style={{ backgroundImage: "url('/images/contactBg.png')" }}
-      className="w-full min-h-screen max-w-full bg-cover bg-center relative px-30 place-content-center flex py-10 " >
-      <div className="absolute inset-0 bg-black/70 backdrop-blur-sm pointer-events-none"></div>
-      <div className="relative text-white w-10/12  ">
-        <div className=" flex mb-10 pl-8 pr-8">
-          <div className=" w-6/12 flex flex-col space-y-3">
-            <h3 className="text-3xl font-bold tracking-wide mb-2">
+      className="w-full min-h-screen max-w-full bg-cover bg-center relative xl:px-30 px-5 place-items-center flex xl:py-10 py-5 xl:text-base text-xs text-gray-400  " >
+      <div className="absolute inset-0 xl:bg-black/70 bg-black/20 backdrop-blur-sm pointer-events-none"></div>
+      <div className="relative  xl:w-10/12 w-full  ">
+        <div className=" flex xl:mb-10 mb-15 xl:pl-8 pl-0 xl:pr-8 pr-o ">
+          <div className=" w-6/12 flex flex-col xl:space-y-3 space-y-1 ">
+            <h3 className="xl:text-3xl text-lg font-bold tracking-wide ">
               Contact Me
             </h3>
-            <p className="text-gray-300  text-lg">
+            <p>
               Let's build something impactful together.
             </p>
           </div>
-          <div className="relative w-6/12 justify-end flex pt-5 ">
-            <Link to="/"><button className="text-sm bg-blue-400 hover:border-2 cursor-pointer p-3 rounded-full font-medium transition">About Me</button></Link>
+          <div className="relative w-6/12  justify-end flex xl:pt-5 pt-2 ">
+            <Link to="/"><button className="text-sm bg-blue-400 hover:border-2 cursor-pointer p-3 rounded-full font-medium transition text-white">About Me</button></Link>
           </div>
         </div>
-        <div className="w-full flex justify-around ">
-          <div className="w-5/12 bg-gray-800/30 rounded-lg p-5 space-y-5 place-content-center flex flex-col ">
+        <div className="w-full xl:flex grid justify-around xl:space-y-0 space-y-5  ">
+          <div className="xl:w-5/12 w-full bg-gray-800/30 rounded-lg p-5 space-y-5 place-content-center flex flex-col ">
             <div>
-              <h5 className="text-3xl font-semibold mb-4">Let's Work Together!</h5>
+              <h5 className="xlz:text-3xl text-lg font-semibold mb-4">Let's Work Together!</h5>
               <p className="text-sm">
                 I'm open to Internship and junior frontend opportuinities. Feel free to reach out for collaborations, projects, or just a chat about tech and web development.
               </p>
@@ -100,7 +100,7 @@ const contact = () => {
             </div>
           </div>
 
-          <div className="w-5/12 bg-gray-800/30 rounded-lg p-5 text-sm ">
+          <div className="xl:w-5/12 w-full bg-gray-800/30 rounded-lg p-5 text-sm ">
             <h5 className="text-2xl font-semibold my-4">Send Me A Message</h5>
             <form
                onSubmit={handleSubmit} 
