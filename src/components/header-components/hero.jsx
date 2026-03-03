@@ -44,7 +44,7 @@ const hero = () => {
                 I build responsive, user friendly web applications with React and modern UI tools.
               </p>
               <div className='flex space-x-18'>
-                {About.map((item) => (<button key={item.id} className='cursor-pointer bg-gray-400 hover:bg-blue-600 rounded-md px-5 py-1' onClick={() => window.open(item.link, '_blank', 'noopener,noreferrer')}>
+                {About.map((item) => (<button key={item.id} className='cursor-pointer bg-gray-400 hover:bg-blue-600 rounded-md px-5 py-1 hover:ring-1' onClick={() => window.open(item.link, '_blank', 'noopener,noreferrer')}>
                   {item.name}
                 </button>))}
               </div>
