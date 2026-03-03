@@ -67,7 +67,7 @@ const contact = () => {
             </p>
           </div>
           <div className="relative w-6/12  justify-end flex xl:pt-5 pt-2 ">
-            <Link to="/"><button className="text-sm bg-blue-400 hover:border-2 cursor-pointer p-3 rounded-full font-medium transition text-white">About Me</button></Link>
+            <Link to="/" className="text-sm bg-blue-400 hover:border-2 cursor-pointer xl:p-3 p-2 rounded-full items-center flex font-medium transition text-white">About Me</Link>
           </div>
         </div>
         <div className="w-full xl:flex grid justify-around xl:space-y-0 space-y-5  ">
