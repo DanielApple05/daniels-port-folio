@@ -70,8 +70,8 @@ const contact = () => {
             <Link to="/" className="text-sm bg-blue-400 hover:border-2 cursor-pointer xl:p-3 p-2 rounded-full items-center flex font-medium transition text-white">About Me</Link>
           </div>
         </div>
-        <div className="w-full flex xl:flex-row flex-col-reverse  justify-around xl:space-y-0 space-y-5  ">
-          <div className="xl:w-5/12 w-full bg-gray-800/30 rounded-lg p-5 space-y-5 place-content-center flex flex-col ">
+        <div className="w-full flex xl:flex-row flex-col-reverse  justify-around gap-10 ">
+          <div className="xl:w-5/12 w-full xl:bg-gray-800/30 bg-gray-800/50 rounded-lg p-5 xl:space-y-5 space-y-2 place-content-center flex flex-col ">
             <div>
               <h5 className="xlz:text-3xl text-lg font-semibold mb-4">Let's Work Together!</h5>
               <p className="text-sm">
@@ -100,7 +100,7 @@ const contact = () => {
             </div>
           </div>
 
-          <div className="xl:w-5/12 w-full bg-gray-800/30 rounded-lg p-5 text-sm ">
+          <div className="xl:w-5/12 w-full xl:bg-gray-800/30 bg-gray-800/50 rounded-lg p-5 text-sm ">
             <h5 className="text-2xl font-semibold my-4">Send Me A Message</h5>
             <form
                onSubmit={handleSubmit} 
