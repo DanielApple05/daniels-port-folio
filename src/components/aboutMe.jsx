@@ -16,7 +16,7 @@ const aboutMe = ( id ) => {
   return (
     <>
       <Hero key={id} />
-      <div className='xl:px-24 px-5 bg-gray-100 xl:py-15 py-5'>
+      <div className='xl:px-24 px-5 bg-gray-100 xl:py-15 py-5 xl:text-base text-xs'>
         <section id='about' className=''>
           <h3 className='mb-5 font-bold' >
             About Me
@@ -26,31 +26,31 @@ const aboutMe = ( id ) => {
             I am a frontend developer focused on building user interfaces and web applications with React, JavaScript, HTML, and CSS. I am passionate about creating seamless and engaging digital experiences that captivate users and drive business success. With a strong foundation in frontend development, I specialize in crafting responsive and visually appealing websites that deliver exceptional performance across all devices.
           </p>
         </section>
-        <section id='skills' className='my-5'>
-          <h3 className=' text-xl font-bold '>
+        <section id='skills' className='xl:my-5 my-3 '>
+          <h3 className=' xl:text-xl text-lg font-bold '>
             Skills
           </h3>
-          <hr className='border-gray-400 my-7' />
-          <div className='flex w-full space-x-5 h-50'>
-            <div className='grid grid-cols-2 w-6/12 bg-white p-5 space-y-5 rounded-xl shadow-lg'>
+          <hr className='border-gray-400 xl:my-7 my-3' />
+          <div className='flex w-full xl:space-x-5 space-x-2 xl:h-50 h-40'>
+            <div className='grid grid-cols-2 w-6/12 bg-white xl:p-5 p-2 xl:space-y-5 space-y-2 rounded-xl shadow-lg'>
               <div className='flex space-x-1'>
-                <FontAwesomeIcon icon={faReact} className='text-blue-500 text-2xl' />
+                <FontAwesomeIcon icon={faReact} className='text-blue-500 xl:text-2xl text-lg' />
                 <p>React</p>
               </div>
               <div className='flex space-x-1'>
-                <FontAwesomeIcon icon={faJs} className='text-yellow-500 text-2xl' />
+                <FontAwesomeIcon icon={faJs} className='text-yellow-500 xl:text-2xl text-lg' />
                 <p>JavaScript</p>
               </div>
               <div className='flex space-x-1'>
-                <FontAwesomeIcon icon={faHtml5} className='text-orange-500 text-2xl' />
+                <FontAwesomeIcon icon={faHtml5} className='text-orange-500 xl:text-2xl text-lg' />
                 <p>HTML</p>
               </div>
               <div className='flex space-x-1'>
-                <FontAwesomeIcon icon={faCss3} className='text-blue-600 text-2xl' />
+                <FontAwesomeIcon icon={faCss3} className='text-blue-600 xl:text-2xl text-lg' />
                 <p>CSS</p>
               </div>
               <div className='flex space-x-1'>
-                <FontAwesomeIcon icon={faTailwindCss} className='text-blue-400 text-2xl' />
+                <FontAwesomeIcon icon={faTailwindCss} className='text-blue-400 xl:text-2xl text-lg' />
                 <p>Tailwind CSS</p>
               </div>
             </div>
