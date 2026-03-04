@@ -6,8 +6,8 @@ import Hero from './header-components/hero';
 
 const aboutMe = ( id ) => {
   const projectActions = [
-    { id: 1, name: 'View Demo', link: 'https://a-sneakers-ecommerce-page.vercel.app/' },
-    { id: 2, name: 'View Code', link: 'https://github.com/DanielApple05/A-sneakers-Ecommerce-page' }
+    { id: 1, name: 'View Demo', link: 'https://space-tourism-site-gamma.vercel.app/' },
+    { id: 2, name: 'View Code', link: 'https://github.com/DanielApple05/Space-Tourism-site' }
   ];
   const projectActions2 = [
     { id: 3, label: 'View Demo', link: 'https://todo-list-with-react-js-brown.vercel.app' },
