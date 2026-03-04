@@ -75,16 +75,16 @@ const aboutMe = ( id ) => {
           </h3>
           <div className=' xl:flex grid w-full rounded-2xl xl:space-x-5 space-x-3 xl:space-y-0 space-y-5 '>
             <div className='xl:w-6/12 w-full xl:space-y-5 space-y-3 bg-white flex flex-col xl:p-5 p-3 rounded-xl shadow-2xl'>
-              <h3 className='font-bold xl:tracking-widest tracking-wide xl:text-xl text-xs'>Sneaker E-Commerce App</h3>
+              <h3 className='font-bold xl:tracking-widest tracking-wide xl:text-xl text-xs'>Space Tourism App</h3>
               <hr className='border-gray-400' />
               <img src="/images/project1.jpeg" alt="" className='rounded-md w-12/12 shadow-2xl ring-2 ring-white' />
               <div className=' items-center flex space-x-2'>
                 <FontAwesomeIcon icon={faCheck} className='text-green-600' />
-                <p className='font-semibold'> Product Filters & Cart System </p>
+                <p className='font-semibold'> Responsive UI </p>
               </div>
               <div className='flex items-center space-x-2'>
                 <FontAwesomeIcon icon={faCheck} className='text-green-600' />
-                <p className='font-semibold'> Dynamic Routing & Quantity Logic </p>
+                <p className='font-semibold'> Dynamic Routing  </p>
               </div>
               <div className='w-full flex justify-between'>
                 {projectActions.map((project) => (
