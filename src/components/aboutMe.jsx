@@ -77,7 +77,7 @@ const aboutMe = ( id ) => {
             <div className='xl:w-6/12 w-full xl:space-y-5 space-y-3 bg-white flex flex-col xl:p-5 p-3 rounded-xl shadow-2xl'>
               <h3 className='font-bold xl:tracking-widest tracking-wide xl:text-xl text-xs'>Space Tourism App</h3>
               <hr className='border-gray-400' />
-              <img src="/images/project1.jpeg" alt="" className='rounded-md w-12/12 shadow-2xl ring-2 ring-white' />
+              <img src="/images/project1.PNG" alt="" className='rounded-md w-12/12 shadow-2xl ring-2 ring-white' />
               <div className=' items-center flex space-x-2'>
                 <FontAwesomeIcon icon={faCheck} className='text-green-600' />
                 <p className='font-semibold'> Responsive UI </p>
@@ -103,7 +103,7 @@ const aboutMe = ( id ) => {
             <div className=' xl:w-6/12 w-full xl:space-y-5 space-y-3 bg-white flex flex-col xl:p-5 p-3 rounded-xl shadow-2xl'>
               <h3 className='font-bold tracking-widest xl:text-xl text-xs'> Todo App</h3>
               <hr className='border-gray-400' />
-              <img src="/images/project2.jpeg" alt="" className='rounded-md w-12/12 shadow-2xl ring-2 ring-white' />
+              <img src="/images/project2.PNG" alt="" className='rounded-md w-12/12 shadow-2xl ring-2 ring-white' />
               <div className=' items-center flex space-x-2'>
                 <FontAwesomeIcon icon={faCheck} className='text-green-600' />
                 <p className='font-semibold'> Add, Complete & Delete Tasks </p>
