@@ -6,7 +6,6 @@ const hero = () => {
   const About = [{ id: 1, name: 'View Projects', link: 'https://github.com/DanielApple05' }, { id: 2, name: 'Download CV', link: '/Ejimofor_Daniel_Chukwuebuka_Internship_Resume.pdf', download: true }];
   return (
     <>
-      
         <div className='bg-blue-950 text-white xl:py-10 py-5 w-full xl:text-base text-xs place-content-center grid'>
           <div className='flex justify-between xl:w-5/12 w-10/12 place-self-center '>
             {Tabs.map((tab) => ( 
@@ -14,8 +13,7 @@ const hero = () => {
                 <a
                   key={tab.id}
                   href={`#${tab.id}`}
-                  className='cursor-pointer hover:text-blue-400'
-                >
+                  className='cursor-pointer hover:text-blue-400' >
                   {tab.name}
                 </a>
               ) : (
