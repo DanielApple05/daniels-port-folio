@@ -110,6 +110,7 @@ const contact = () => {
               <input
                 type="text"
                 placeholder="Your Name"
+                required
                 className="w-full p-2 mb-4 bg-gray-700 rounded-md text-white"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -118,6 +119,7 @@ const contact = () => {
               <input
                 type="email"
                 placeholder="Your Email"
+                required
                 className="w-full p-2 mb-4 bg-gray-700 rounded-md text-white"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -125,6 +127,7 @@ const contact = () => {
 
               <textarea
                 placeholder="Your Message"
+                required
                 className="w-full p-2 mb-2 bg-gray-700 rounded-md text-white h-32"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
@@ -142,6 +145,15 @@ const contact = () => {
           </div>
         </div>
       </div>
+
+
+
+service_x7x5m0p
+
+
+
+
+
     </div>
   );
 };

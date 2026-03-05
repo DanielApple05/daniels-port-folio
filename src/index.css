@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body {
-  max-width: 1440px;
-  min-width: auto;
+  max-width: 1400px;
   overflow-x: hidden;
+  margin: 0 auto;
 }
