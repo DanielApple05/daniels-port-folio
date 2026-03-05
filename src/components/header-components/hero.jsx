@@ -7,7 +7,7 @@ const hero = () => {
   return (
     <>
         <div className='bg-blue-950 text-white xl:py-10 py-5 w-full xl:text-base text-xs place-content-center grid'>
-          <div className='flex justify-between xl:w-5/12 w-10/12 place-self-center '>
+          <div className='flex justify-between xl:w-8/12 w-10/12 place-self-center '>
             {Tabs.map((tab) => ( 
               tab.isSection ? (
                 <a

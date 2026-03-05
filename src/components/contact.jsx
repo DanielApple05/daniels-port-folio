@@ -56,7 +56,7 @@ const contact = () => {
       style={{ backgroundImage: "url('/images/contactBg.png')" }}
       className="w-full min-h-screen max-w-full bg-cover bg-center relative xl:px-30 px-5 place-items-center flex xl:py-10 py-5 xl:text-base text-xs text-gray-400  " >
       <div className="absolute inset-0 xl:bg-black/70 bg-black/20 backdrop-blur-sm pointer-events-none"></div>
-      <div className="relative  xl:w-10/12 w-full  ">
+      <div className="relative  w-full ">
         <div className=" flex xl:mb-10 mb-15 xl:pl-8 pl-0 xl:pr-8 pr-o ">
           <div className=" w-6/12 flex flex-col xl:space-y-3 space-y-1 ">
             <h3 className="xl:text-3xl text-lg font-bold tracking-wide ">
@@ -67,7 +67,7 @@ const contact = () => {
             </p>
           </div>
           <div className="relative w-6/12  justify-end flex xl:pt-5 pt-2 ">
-            <Link to="/" className="text-sm bg-blue-400 hover:border-2 cursor-pointer xl:p-3 p-2 rounded-full items-center flex font-medium transition text-white">About Me</Link>
+            <Link to="/" className="text-sm bg-blue-400 hover:ring-2 cursor-pointer xl:p-3 p-2 rounded-full items-center flex font-medium transition text-white">About Me</Link>
           </div>
         </div>
         <div className="w-full flex xl:flex-row flex-col-reverse  justify-around gap-10 ">
