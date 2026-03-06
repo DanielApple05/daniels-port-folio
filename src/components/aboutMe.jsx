@@ -3,16 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { faReact, faJs, faHtml5, faCss3, faTailwindCss, faFigma, faGithub } from '@fortawesome/free-brands-svg-icons';
 import Hero from './header-components/hero';
+import projectsData from './projectsData';
 
-const aboutMe = ( id ) => {
-  const projectActions = [
-    { id: 1, name: 'View Demo', link: 'https://space-tourism-site-gamma.vercel.app/' },
-    { id: 2, name: 'View Code', link: 'https://github.com/DanielApple05/Space-Tourism-site' }
-  ];
-  const projectActions2 = [
-    { id: 3, label: 'View Demo', link: 'https://todo-list-with-react-js-brown.vercel.app' },
-    { id: 4, label: 'View Code', link: 'https://github.com/DanielApple05/Todo-list-with-React.js' }
-  ];
+const aboutMe = (id) => {
+
   return (
     <>
       <Hero key={id} />
@@ -73,58 +67,32 @@ const aboutMe = ( id ) => {
           <h3 className='xl:my-5 my-3 text-xl font-bold'>
             Projects
           </h3>
-          <div className=' xl:flex grid w-full rounded-2xl xl:space-x-5 space-x-3 xl:space-y-0 space-y-5 '>
-            <div className='xl:w-6/12 w-full xl:space-y-5 space-y-3 bg-white flex flex-col xl:p-5 p-3 rounded-xl shadow-2xl'>
-              <h3 className='font-bold xl:tracking-widest tracking-wide xl:text-xl text-xs'>Space Tourism App</h3>
-              <hr className='border-gray-400' />
-              <img src="/images/project1.PNG" alt="" className='rounded-md w-12/12 shadow-2xl ring-2 ring-white' />
-              <div className=' items-center flex space-x-2'>
-                <FontAwesomeIcon icon={faCheck} className='text-green-600' />
-                <p className='font-semibold'> Responsive UI </p>
-              </div>
-              <div className='flex items-center space-x-2'>
-                <FontAwesomeIcon icon={faCheck} className='text-green-600' />
-                <p className='font-semibold'> Dynamic Routing  </p>
-              </div>
-              <div className='w-full flex justify-between'>
-                {projectActions.map((project) => (
-                  <a
-                    key={project.id}
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
+          <div className=' xl:grid-cols-2 grid  w-full rounded-2xl gap-x-10   space-y-5 '>        
+            {projectsData.map((project) => (
+              <div className=' w-full xl:space-y-5 space-y-3 bg-white flex flex-col xl:p-5 p-3 xl:h-140 h-90 rounded-xl shadow-2xl' key={project.id}>
+                <h2 className='font-bold xl:tracking-widest tracking-wide xl:text-xl text-xs' >{project.title}</h2>
+                <hr className='border-gray-400' />
+                <img src={project.image} alt="" className='rounded-md w-12/12 shadow-2xl ring-2 ring-white xl:h-80 h-50' />
+                {project.description.map((text, index) => (
+                  <div key={index} className=' items-center flex space-x-2'>
+                    <FontAwesomeIcon icon={faCheck} className='text-green-600' />
+                    <p className='font-semibold'> {text}</p>
+                  </div>
+                ))}
+                <div className='w-full flex justify-between'>
+                {project.links.map((btn) => (
+                  <a 
+                  key={btn.id}
+                  href={btn.link} 
+                  target="_blank"
                     className={`font-bold py-2 px-4 rounded border border-blue-400
                  hover:bg-blue-700 hover:text-white`}>
-                    {project.name}
+                    {btn.name}
                   </a>
                 ))}
+                </div> 
               </div>
-            </div>
-            <div className=' xl:w-6/12 w-full xl:space-y-5 space-y-3 bg-white flex flex-col xl:p-5 p-3 rounded-xl shadow-2xl'>
-              <h3 className='font-bold tracking-widest xl:text-xl text-xs'> Todo App</h3>
-              <hr className='border-gray-400' />
-              <img src="/images/project2.PNG" alt="" className='rounded-md w-12/12 shadow-2xl ring-2 ring-white' />
-              <div className=' items-center flex space-x-2'>
-                <FontAwesomeIcon icon={faCheck} className='text-green-600' />
-                <p className='font-semibold'> Add, Complete & Delete Tasks </p>
-              </div>
-              <div className='flex items-center space-x-2'>
-                <FontAwesomeIcon icon={faCheck} className='text-green-600' />
-                <p className='font-semibold'> Dark Mode & Local Storage </p>
-              </div>
-              <div className='w-full flex justify-between'>
-                {projectActions2.map((project2) => (
-                  <a
-                    key={project2.id}
-                    href={project2.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`font-bold py-2 px-4 rounded border cursor-pointer border-blue-400 hover:bg-blue-700 hover:text-white`}>
-                    {project2.label}
-                  </a>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
           <a href="https://github.com/DanielApple05"
             target="_blank"
