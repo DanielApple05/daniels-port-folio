@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
-import { faReact, faJs, faHtml5, faCss3, faTailwindCss, faFigma, faGithub } from '@fortawesome/free-brands-svg-icons';
+// import { faReact, faJs, faHtml5, faCss3, faTailwindCss, faFigma, faGithub } from '@fortawesome/free-brands-svg-icons';
 import Hero from './header-components/hero';
 import projectsData from './projectsData';
+import skillsData from './skillsData';
 
 const aboutMe = (id) => {
 
@@ -27,39 +28,20 @@ const aboutMe = (id) => {
           <hr className='border-gray-400 xl:my-7 my-3' />
           <div className='flex w-full xl:space-x-5 space-x-2 xl:h-50 h-40'>
             <div className='grid grid-cols-2 w-6/12 bg-white xl:p-5 p-3 xl:space-y-5 space-y-0 items-center rounded-xl shadow-lg'>
-              <div className='flex space-x-1'>
-                <FontAwesomeIcon icon={faReact} className='text-blue-500 xl:text-2xl text-lg' />
-                <p>React</p>
-              </div>
-              <div className='flex space-x-1'>
-                <FontAwesomeIcon icon={faJs} className='text-yellow-500 xl:text-2xl text-lg' />
-                <p>JavaScript</p>
-              </div>
-              <div className='flex space-x-1'>
-                <FontAwesomeIcon icon={faHtml5} className='text-orange-500 xl:text-2xl text-lg' />
-                <p>HTML</p>
-              </div>
-              <div className='flex space-x-1'>
-                <FontAwesomeIcon icon={faCss3} className='text-blue-600 xl:text-2xl text-lg' />
-                <p>CSS</p>
-              </div>
-              <div className='flex space-x-1'>
-                <FontAwesomeIcon icon={faTailwindCss} className='text-blue-400 xl:text-2xl text-lg' />
-                <p>Tailwind CSS</p>
-              </div>
+              {skillsData.tools.map((tool) => (
+                <div key={tool.id} className='flex space-x-1'>
+                  <FontAwesomeIcon icon={tool.logo} className={`xl:text-2xl text-lg ${tool.style}`} />
+                  <p>{tool.name}</p>
+                </div>
+              ))}
             </div>
             <div className='grid grid-cols-2 w-6/12 bg-white xl:p-5 p-3 xl:space-y-5 space-y-0 rounded-xl items-center shadow-lg'>
-              <div className='flex space-x-1'>
-                <FontAwesomeIcon icon={faGithub} className='text-gray-800 xl:text-2xl text-lg' />
-                <p>Git & GitHub</p>
-              </div>
-              <p>VsCode</p>
-              <div className='flex space-x-1'>
-                <FontAwesomeIcon icon={faFigma} className='text-pink-500 xl:text-2xl text-lg' />
-                <p>Figma</p>
-              </div>
-              <p>Netlify</p>
-              <p>Vercel</p>
+              {skillsData.others.map((skill) => (
+                <div className='flex space-x-1'>
+                  <FontAwesomeIcon icon={skill.logo}  className={`xl:text-2xl text-lg ${skill.style}`}  />
+                  <p>{skill.name}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -67,7 +49,7 @@ const aboutMe = (id) => {
           <h3 className='xl:my-5 my-3 text-xl font-bold'>
             Projects
           </h3>
-          <div className=' xl:grid-cols-2 grid  w-full rounded-2xl gap-x-10   space-y-5 '>        
+          <div className=' xl:grid-cols-2 grid  w-full rounded-2xl gap-x-10   space-y-5 '>
             {projectsData.map((project) => (
               <div className=' w-full xl:space-y-5 space-y-3 bg-white flex flex-col xl:p-5 p-3 xl:h-140 h-90 rounded-xl shadow-2xl' key={project.id}>
                 <h2 className='font-bold xl:tracking-widest tracking-wide xl:text-xl text-xs' >{project.title}</h2>
@@ -80,24 +62,24 @@ const aboutMe = (id) => {
                   </div>
                 ))}
                 <div className='w-full flex justify-between'>
-                {project.links.map((btn) => (
-                  <a 
-                  key={btn.id}
-                  href={btn.link} 
-                  target="_blank"
-                    className={`font-bold py-2 px-4 rounded border border-blue-400
+                  {project.links.map((btn) => (
+                    <a
+                      key={btn.id}
+                      href={btn.link}
+                      target="_blank"
+                      className={`font-bold py-2 px-4 rounded border border-blue-400
                  hover:bg-blue-700 hover:text-white`}>
-                    {btn.name}
-                  </a>
-                ))}
-                </div> 
+                      {btn.name}
+                    </a>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
           <a href="https://github.com/DanielApple05"
             target="_blank"
             rel="noopener noreferrer"
-            className='flex place-self-center bg-blue-600 rounded p-2 xl:mt-6 mt-4 text-white cursor-pointer  xl:w-40 w-40 justify-center font-semibold '>
+            className='flex place-self-center bg-blue-600 rounded p-2 xl:mt-6 mt-4 text-white cursor-pointer  xl:w-40 w-40 justify-center font-semibold text-center '>
             View more projects
           </a>
         </section>
