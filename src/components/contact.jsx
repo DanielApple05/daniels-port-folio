@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone, faLocation } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
+import { useForm, ValidationError } from '@formspree/react';
 
 const contact = () => {
   const contactInfo = [
@@ -14,42 +15,10 @@ const contact = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [name, setName] = useState("");
-  const [successMessage, setSuccessMessage] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Reset messages first
-    setErrorMessage("");
-    setSuccessMessage("");
-
-    // 1️⃣ Check empty fields
-    if (!name || !email || !message) {
-      setErrorMessage("Please fill in all fields.");
-      return;
-    }
-
-    // 2️⃣ Validate email
-    if (!email.includes("@")) {
-      setErrorMessage("Please enter a valid email address.");
-      return;
-    }
-
-    // 3️⃣ Validate message length
-    if (message.length < 10) {
-      setErrorMessage("Message must be at least 10 characters long.");
-      return;
-    }
-
-    // ✅ If everything passes
-    setSuccessMessage("Your message was sent successfully!");
-
-    // Clear form
-    setName("");
-    setEmail("");
-    setMessage("");
-  };
+  const [state, handleSubmit] = useForm("mzdjbkrq");
+  if (state.succeeded) {
+    alert('Thanks for reaching out, your message has been sent')
+  }
 
   return (
     <div
@@ -88,72 +57,63 @@ const contact = () => {
                       href={info.link}
                       target={info.link.startsWith("http") ? "_blank" : undefined}
                       rel="noopener noreferrer"
-                      className="ml-2 text-sm hover:text-blue-400 transition"
-                    >
+                      className="ml-2 text-sm hover:text-blue-400 transition">
                       {info.text}
-                    </a>
-                  ) : (
-                    <span className="ml-2 text-sm">{info.text}</span>
-                  )}
+                    </a> ) : (<span className="ml-2 text-sm">{info.text}</span> )}
                 </div>
               ))}
             </div>
           </div>
-
           <div className="xl:w-5/12 w-full xl:bg-gray-800/30 bg-gray-800/50 rounded-lg p-5 text-sm ">
             <h5 className="text-2xl font-semibold my-4">Send Me A Message</h5>
             <form
-               onSubmit={handleSubmit} 
-               action="mailto:ejimofordanielchukwuebuka@gmail.com"
-               method="post"
-               encType="text/plain" >
+              onSubmit={handleSubmit} >
               <input
                 type="text"
+                name="name"
                 placeholder="Your Name"
                 required
                 className="w-full p-2 mb-4 bg-gray-700 rounded-md text-white"
                 value={name}
-                onChange={(e) => setName(e.target.value)}
-              />
-
+                onChange={(e) => setName(e.target.value)} />
+              <ValidationError
+                prefix="Name"
+                field="name"
+                errors={state.errors} />
               <input
                 type="email"
+                name="email"
                 placeholder="Your Email"
                 required
                 className="w-full p-2 mb-4 bg-gray-700 rounded-md text-white"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-
+                onChange={(e) => setEmail(e.target.value)} />
+              <ValidationError
+                prefix="Email"
+                field="email"
+                errors={state.errors} />
               <textarea
+                name="message"
                 placeholder="Your Message"
                 required
                 className="w-full p-2 mb-2 bg-gray-700 rounded-md text-white h-32"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               ></textarea>
-
-              {errorMessage && <p className="text-red-500 mb-4 text-sm">{errorMessage}</p>}
-              {successMessage && <p className="text-green-500 mb-4 text-sm">{successMessage}</p>}
-
+              <ValidationError
+                prefix="Message"
+                field="message"
+                errors={state.errors} />
               <button
                 type="submit"
+                disabled={state.submitting}
                 className="bg-blue-500 hover:bg-blue-600 hover:ring cursor-pointer text-white py-2 px-4 rounded-md">
-                Send Message
+                {state.submitting ? 'Submitting...' : 'Send Message'}
               </button>
             </form>
           </div>
         </div>
       </div>
-
-
-
-service_x7x5m0p
-
-
-
-
-
     </div>
   );
 };
