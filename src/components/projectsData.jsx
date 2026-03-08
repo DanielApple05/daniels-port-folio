@@ -46,7 +46,7 @@ const projectsData = [
   {
     id: 4,
     title: "Furniro Furniture Ecommerce",
-    image: "/images/project5.png",
+    image: "/images/project5.PNG",
     links: [
       { id: 7, name: "View Demo", link: "https:/furniro-furniture-shop.netlify.app" },
       { id: 8, name: "View Code", link: "https://github.com/DanielApple05/Furniro-ECommerce-frontend"}
