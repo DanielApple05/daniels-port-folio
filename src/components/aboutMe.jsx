@@ -1,13 +1,11 @@
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
-// import { faReact, faJs, faHtml5, faCss3, faTailwindCss, faFigma, faGithub } from '@fortawesome/free-brands-svg-icons';
 import Hero from './header-components/hero';
 import projectsData from './projectsData';
 import skillsData from './skillsData';
 
 const aboutMe = (id) => {
-
   return (
     <>
       <Hero key={id} />
@@ -38,7 +36,7 @@ const aboutMe = (id) => {
             <div className='grid grid-cols-2 w-6/12 bg-white xl:p-5 p-3 xl:space-y-5 space-y-0 rounded-xl items-center shadow-lg'>
               {skillsData.others.map((skill) => (
                 <div className='flex space-x-1'>
-                  <FontAwesomeIcon icon={skill.logo}  className={`xl:text-2xl text-lg ${skill.style}`}  />
+                  <FontAwesomeIcon icon={skill.logo} className={`xl:text-2xl text-lg ${skill.style}`} />
                   <p>{skill.name}</p>
                 </div>
               ))}
@@ -68,7 +66,7 @@ const aboutMe = (id) => {
                       href={btn.link}
                       target="_blank"
                       className={`font-bold py-2 px-4 rounded border border-blue-400
-                 hover:bg-blue-700 hover:text-white`}>
+                       hover:bg-blue-700 hover:text-white`}>
                       {btn.name}
                     </a>
                   ))}
