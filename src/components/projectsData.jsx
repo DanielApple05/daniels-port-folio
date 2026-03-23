@@ -39,7 +39,7 @@ const projectsData = [
     description: [
       "Product page with image gallery",
       "Add-to-cart functionality using React state",
-      "Still under development"
+      "Under development"
     ]
   },
 
