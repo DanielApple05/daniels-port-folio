@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 
 const hero = () => {
-  const About = [{ id: 1, name: 'View Projects', link: 'https://github.com/DanielApple05' }, { id: 2, name: 'Download CV', link: '/Daniel_Ejimofor_Resume.pdf', download: true }];
+  const About = [{ id: 1, name: 'View Projects', link: 'https://github.com/DanielApple05' }, { id: 2, name: 'Download CV', link: '/Daniel_Ejimofor_CV.pdf', download: true }];
   return (
     <>
         <div className='bg-blue-950 text-white xl:py-10 py-5 w-full xl:text-base text-xs place-content-center grid'>
