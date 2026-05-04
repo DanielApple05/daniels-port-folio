@@ -5,15 +5,15 @@ import { Link } from "react-router-dom";
 const hero = () => {
   const About = [{ id: 1, name: 'View Projects', link: 'https://github.com/DanielApple05' }, { id: 2, name: 'Download CV', link: '/Daniel_Ejimofor_CV.pdf', download: true }];
   return (
-    <>
-      <div className='bg-blue-950 text-white xl:py-10 py-5 w-full xl:text-base text-xs place-content-center grid'>
+    <div>
+      <div className='bg-[#0A0F1C] text-white xl:py-10 py-5 w-full xl:text-base text-xs place-content-center grid'>
         <div className='flex justify-between xl:w-8/12 w-10/12 place-self-center '>
           {Tabs.map((tab) => (
             tab.isSection ? (
               <a
                 key={tab.id}
                 href={`#${tab.id}`}
-                className='cursor-pointer hover:text-blue-400' >
+                className='cursor-pointer hover:text-blue-400'>
                 {tab.name}
               </a>
             ) : (
@@ -49,7 +49,7 @@ const hero = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

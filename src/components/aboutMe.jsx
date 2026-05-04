@@ -7,7 +7,7 @@ import skillsData from './skillsData';
 
 const aboutMe = (id) => {
   return (
-    <>
+    <div classname='w-full'>
       <Hero key={id} />
       <div className='xl:px-24 px-5 bg-gray-100 xl:py-15 py-5 xl:text-base text-xs'>
         <section id='about' className=''>
@@ -85,7 +85,7 @@ const aboutMe = (id) => {
         </section>
       </div>
 
-    </>
+    </div>
   );
 }
 
