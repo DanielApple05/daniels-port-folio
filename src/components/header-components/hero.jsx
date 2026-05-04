@@ -8,7 +8,7 @@ const hero = () => {
     <div>
       <div
         style={{ backgroundImage: "url('/images/snippet.png')" }}
-        className=' fixed text-white xl:pb-10 pb-5 w-full bg-no-repeat bg-cover  xl:text-base text-xs grid'>
+        className=' fixed z-50 text-white  w-full bg-no-repeat bg-cover  xl:text-base text-xs grid'>
         <div className='flex justify-between xl:w-5/12 w-full p-3 place-self-center bg-[#0A0F1C] '>
           {Tabs.map((tab) => (
             tab.isSection ? (
