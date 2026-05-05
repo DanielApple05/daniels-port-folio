@@ -5,12 +5,12 @@ import Hero from './header-components/hero';
 import projectsData from './projectsData';
 import skillsData from './skillsData';
 
-const aboutMe = ({id}) => {
- 
+const aboutMe = ({ id }) => {
+
   return (
-    <div className='w-full'>
+    <div>
       <Hero key={id} />
-      <div className='xl:px-24 px-5 bg-gray-100 xl:py-15 py-5 xl:text-base text-xs'>
+      <div className='xl:px-24 px-5 bg-[#1E3A8A] xl:py-15 py-5 xl:text-base text-xs'>
         <section id='about' className=''>
           <h3 className='mb-5 font-bold xl:text-xl text-lg ' >
             About Me
@@ -28,20 +28,23 @@ const aboutMe = ({id}) => {
           </h3>
           <hr className='border-gray-400 xl:my-7 my-3' />
           <div className='flex w-full xl:space-x-5 space-x-2 xl:h-50 h-40'>
-            <div className='grid grid-cols-2 w-6/12 bg-white xl:p-5 p-3 xl:space-y-5 space-y-0 items-center rounded-xl shadow-lg'>
+            <div className='grid grid-cols-2 w-6/12 bg-[#0D1324] xl:p-5 p-3 xl:space-y-5 space-y-0 items-center rounded-xl shadow-lg xl:text-xs text-[10px] text-gray-400'>
               {skillsData.tools.map((tool) => (
                 <div key={tool.id} className='flex space-x-1'>
-                 { tool.isAwesome ?
-                   <FontAwesomeIcon icon={tool.logo} className={`xl:text-2xl text-lg ${tool.style}`} /> :  <img className='w-10' src={tool.logo} alt="" /> 
-                 }
+                  {tool.isAwesome ?
+                    <FontAwesomeIcon icon={tool.logo} className={`xl:text-2xl text-lg ${tool.style}`} /> : <img src={tool.logo} alt="" />
+                  }
                   <p>{tool.name}</p>
                 </div>
               ))}
             </div>
-            <div className='grid grid-cols-2 w-6/12 bg-white xl:p-5 p-3 xl:space-y-5 space-y-0 rounded-xl items-center shadow-lg'>
+            <div className='grid grid-cols-2 w-6/12 bg-[#0D1324] xl:p-5 p-3 xl:space-y-5 space-y-0 rounded-xl items-center shadow-lg xl:text-xs text-[10px] text-gray-400'>
               {skillsData.others.map((skill) => (
-                <div key={skill.id} className='flex space-x-1'>
-                  <FontAwesomeIcon icon={skill.logo} className={`xl:text-2xl text-lg ${skill.style}`} />
+                <div key={skill.id} className='flex space-x-1 items-center'>
+                  {skill.isAwesome
+                    ? <FontAwesomeIcon icon={skill.logo} className={`xl:text-2xl text-lg ${skill.style}`} />
+                    : <img className='w-4' src={skill.logo}  />
+                  }
                   <p>{skill.name}</p>
                 </div>
               ))}
