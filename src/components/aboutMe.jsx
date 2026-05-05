@@ -55,9 +55,9 @@ const aboutMe = ({ id }) => {
           <h3 className='xl:my-5 my-3 text-xl font-bold'>
             Projects
           </h3>
-          <div className=' xl:grid-cols-2 grid  w-full rounded-2xl gap-x-10  space-y-5 '>
+          <div className=' xl:grid-cols-2 grid  w-full rounded-2xl gap-x-10  space-y-5'>
             {projectsData.map((project) => (
-              <div className=' max-w-full xl:space-y-5 space-y-3 bg-[#0D1324] flex flex-col  xl:p-5 p-3 xl:min-h-150 min-h-90 xl:h-140 h-100   rounded-xl shadow-2xl' key={project.id}>
+              <div className=' max-w-full xl:space-y-5 space-y-3 ring-2 ring-blue-800 bg-[#0D1324] flex flex-col  xl:p-5 p-3 xl:min-h-150 min-h-90 xl:h-140 h-100   rounded-xl shadow-2xl' key={project.id}>
                 <h2 className='font-bold xl:tracking-widest tracking-wide xl:text-xl text-xs' >{project.title}</h2>
                 <hr className='border-gray-400' />
                 <img src={project.image} alt="" className='rounded-md w-12/12 shadow-2xl ring-2 ring-white xl:min-h-70 min-h-50' />
