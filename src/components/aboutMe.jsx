@@ -10,7 +10,7 @@ const aboutMe = ({ id }) => {
   return (
     <div>
       <Hero key={id} />
-      <div className='xl:px-24 px-5 bg-[#1E3A8A] text-gray-300 xl:py-15 py-5 xl:text-base text-xs'>
+      <div className='xl:px-24 px-5 bg-[#0a1841] text-gray-300 xl:py-15 py-5 xl:text-base text-xs'>
         <section id='about' className=''>
           <h3 className='mb-5 font-bold xl:text-xl text-lg ' >
             About Me
@@ -28,7 +28,7 @@ const aboutMe = ({ id }) => {
           </h3>
           <hr className='border-gray-400 xl:my-7 my-3' />
           <div className='flex w-full xl:space-x-5 space-x-2 xl:h-50 h-40'>
-            <div className='grid grid-cols-2 w-6/12 bg-[#0D1324] xl:p-5 p-3 xl:space-y-5 space-y-0 items-center rounded-xl shadow-lg xl:text-xs text-[10px] '>
+            <div className='grid grid-cols-2 w-6/12 bg-[#0D1324] xl:p-5 p-3 xl:space-y-5 space-y-0 items-center rounded-xl shadow-2xl xl:text-xs text-[10px] ring ring-blue-800 '>
               {skillsData.tools.map((tool) => (
                 <div key={tool.id} className='flex space-x-1'>
                   {tool.isAwesome ?
@@ -38,7 +38,7 @@ const aboutMe = ({ id }) => {
                 </div>
               ))}
             </div>
-            <div className='grid grid-cols-2 w-6/12 bg-[#0D1324] xl:p-5 p-3 xl:space-y-5 space-y-0 rounded-xl items-center shadow-lg xl:text-xs text-[10px]'>
+            <div className='grid grid-cols-2 w-6/12 bg-[#0D1324] xl:p-5 p-3 xl:space-y-5 space-y-0 rounded-xl items-center shadow-2xl ring ring-blue-800 xl:text-xs text-[10px]'>
               {skillsData.others.map((skill) => (
                 <div key={skill.id} className='flex space-x-1 items-center'>
                   {skill.isAwesome
