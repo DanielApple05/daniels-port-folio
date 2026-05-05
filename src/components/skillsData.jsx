@@ -89,7 +89,7 @@ const skillsData = {
     }, {
       id: 13,
       name: "MongoDb",
-      logo: Mongo,
+      logo: MongoDb,
        isAwesome: false
     }
   ]
