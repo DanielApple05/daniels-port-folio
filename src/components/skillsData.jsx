@@ -56,7 +56,7 @@ const skillsData = {
       id: 7,
       name: "GitHub",
       logo: faGithub,
-      style: "text-black",
+      style: "text-white",
        isAwesome: true
     },
     {
@@ -69,6 +69,7 @@ const skillsData = {
       id: 9,
       name: "Vercel",
       logo: Vercel,
+      style: "fill-white",
        isAwesome: false
     },
     {

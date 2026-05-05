@@ -10,7 +10,7 @@ const aboutMe = ({ id }) => {
   return (
     <div>
       <Hero key={id} />
-      <div className='xl:px-24 px-5 bg-[#0a1841] text-gray-300 xl:py-15 py-5 xl:text-base text-xs'>
+      <div className='xl:px-24 px-8 bg-[#0a1841] text-gray-300 xl:py-15 py-5 xl:text-base text-xs'>
         <section id='about' className=''>
           <h3 className='mb-5 font-bold xl:text-xl text-lg ' >
             About Me
@@ -22,15 +22,15 @@ const aboutMe = ({ id }) => {
             I'm currently open to opportunities where I can contribute, grow, and build impactful digital experiences.
           </p>
         </section>
-        <section id='skills' className='xl:my-5 my-3 '>
+        <section id='skills' className='xl:my-5 my-10 '>
           <h3 className=' xl:text-xl text-lg font-bold '>
-            Skills
+            Skills / Tools
           </h3>
           <hr className='border-gray-400 xl:my-7 my-3' />
           <div className='flex w-full xl:space-x-5 space-x-2 xl:h-50 h-40'>
             <div className='grid grid-cols-2 w-6/12 bg-[#0D1324] xl:p-5 p-3 xl:space-y-5 space-y-0 items-center rounded-xl shadow-2xl xl:text-xs text-[10px] ring ring-blue-800 '>
               {skillsData.tools.map((tool) => (
-                <div key={tool.id} className='flex space-x-1'>
+                <div key={tool.id} className='flex space-x-1 items-center'>
                   {tool.isAwesome ?
                     <FontAwesomeIcon icon={tool.logo} className={`xl:text-2xl text-lg ${tool.style}`} /> : <img src={tool.logo} alt="" />
                   }
@@ -55,6 +55,7 @@ const aboutMe = ({ id }) => {
           <h3 className='xl:my-5 my-3 text-xl font-bold'>
             Projects
           </h3>
+         <hr className='border-gray-400 xl:my-7 my-3' /> 
           <div className=' xl:grid-cols-2 grid  w-full rounded-2xl gap-x-10  space-y-5'>
             {projectsData.map((project) => (
               <div className=' max-w-full xl:space-y-5 space-y-3 ring-2 ring-blue-800 bg-[#0D1324] flex flex-col  xl:p-5 p-3 xl:min-h-150 min-h-90 xl:h-140 h-100   rounded-xl shadow-2xl' key={project.id}>
