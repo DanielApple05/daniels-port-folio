@@ -5,9 +5,10 @@ import Hero from './header-components/hero';
 import projectsData from './projectsData';
 import skillsData from './skillsData';
 
-const aboutMe = (id) => {
+const aboutMe = ({id}) => {
+ 
   return (
-    <div classname='w-full'>
+    <div className='w-full'>
       <Hero key={id} />
       <div className='xl:px-24 px-5 bg-gray-100 xl:py-15 py-5 xl:text-base text-xs'>
         <section id='about' className=''>
@@ -16,7 +17,9 @@ const aboutMe = (id) => {
           </h3>
           <hr className='border-gray-400 mb-4' />
           <p>
-            I am a frontend developer focused on building user interfaces and web applications with React, JavaScript, HTML, and CSS. I am passionate about creating seamless and engaging digital experiences that captivate users and drive business success. With a strong foundation in frontend development, I specialize in crafting responsive and visually appealing websites that deliver exceptional performance across all devices.
+            I'm a Full Stack Developer specializing in the MERN stack, with a focus on building scalable, secure, and user-friendly web applications. I've developed both frontend interfaces and backend systems, including REST APIs, authentication flows, and protected routes.
+            I enjoy turning ideas into real-world products, writing clean and maintainable code, and continuously improving my skills. My recent work includes building a fully functional backend with user authentication and integrating APIs using modern development tools.
+            I'm currently open to opportunities where I can contribute, grow, and build impactful digital experiences.
           </p>
         </section>
         <section id='skills' className='xl:my-5 my-3 '>
@@ -28,14 +31,16 @@ const aboutMe = (id) => {
             <div className='grid grid-cols-2 w-6/12 bg-white xl:p-5 p-3 xl:space-y-5 space-y-0 items-center rounded-xl shadow-lg'>
               {skillsData.tools.map((tool) => (
                 <div key={tool.id} className='flex space-x-1'>
-                  <FontAwesomeIcon icon={tool.logo} className={`xl:text-2xl text-lg ${tool.style}`} />
+                 { tool.isAwesome ?
+                   <FontAwesomeIcon icon={tool.logo} className={`xl:text-2xl text-lg ${tool.style}`} /> :  <img className='w-10' src={tool.logo} alt="" /> 
+                 }
                   <p>{tool.name}</p>
                 </div>
               ))}
             </div>
             <div className='grid grid-cols-2 w-6/12 bg-white xl:p-5 p-3 xl:space-y-5 space-y-0 rounded-xl items-center shadow-lg'>
               {skillsData.others.map((skill) => (
-                <div className='flex space-x-1'>
+                <div key={skill.id} className='flex space-x-1'>
                   <FontAwesomeIcon icon={skill.logo} className={`xl:text-2xl text-lg ${skill.style}`} />
                   <p>{skill.name}</p>
                 </div>
@@ -76,11 +81,11 @@ const aboutMe = (id) => {
           </div>
           <div className=' flex items-center place-self-center'>
             <a href="https://github.com/DanielApple05"
-            target="_blank"
-            rel="noopener noreferrer"
-            className='flex place-self-center bg-blue-600 rounded p-2 xl:mt-6 mt-4 text-white cursor-pointer  xl:w-40 w-40 justify-center font-semibold text-center '>
-            View more projects
-          </a>
+              target="_blank"
+              rel="noopener noreferrer"
+              className='flex place-self-center bg-blue-600 rounded p-2 xl:mt-6 mt-4 text-white cursor-pointer  xl:w-40 w-40 justify-center font-semibold text-center '>
+              View more projects
+            </a>
           </div>
         </section>
       </div>
