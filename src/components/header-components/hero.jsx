@@ -8,8 +8,8 @@ const hero = () => {
     <div>
       <div
         style={{ backgroundImage: "url('/images/snippet.png')" }}
-        className=' fixed z-50 text-white  w-full bg-no-repeat bg-cover  xl:text-base text-xs grid'>
-        <div className='flex justify-between xl:w-5/12 w-full p-3 place-self-center bg-[#0A0F1C] '>
+        className='relative text-white w-full bg-no-repeat bg-cover  xl:text-base text-xs grid'>
+        <div className='flex  justify-between xl:w-5/12 w-full p-3 place-self-center bg-[#0A0F1C] fixed top-0 z-50 '>
           {Tabs.map((tab) => (
             tab.isSection ? (
               <a
@@ -33,8 +33,8 @@ const hero = () => {
         {/* <div className=' xl:w-4/12 w-3/12 justify-end flex items-center '>
             <img src="/images/myIcon.jpeg" alt="My Icon" className='xl:w-60 w-20 xl:h-60 h-20 rounded-full object-cover xl:ring-5 ring-2 xl:m-2 m-1 ' />
           </div> */}
-        <div className='flex flex-col place-items-start xl:space-y-7 space-y-2 xl:w-10/12 w-7/12 xl:p-5 p-2 backdrop-blur-lg '>
-          <h1 className='xl:text-3xl text-xs font-bold'>
+        <div className='flex flex-col place-items-start xl:space-y-7 space-y-2 xl:w-10/12 w-7/12 xl:p-5 p-2 backdrop-blur-lg mt-9 '>
+          <h1 className='xl:text-3xl text-xs font-bold relative'>
             Daniel Chukwuebuka Ejimofor
           </h1>
           <h3 className=' xl:text-xl text-xs font-semibold text-blue-600'>
