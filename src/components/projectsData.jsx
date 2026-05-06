@@ -36,7 +36,8 @@ const projectsData = [
     ],
     description: [
       "Add, complete, and delete tasks",
-      "Dark mode with local storage persistence"
+      "Dark mode with local storage persistence",
+      "A functional MERN Stack App"
     ],
     tools: [
        { logo: VSCode,   isAwesome: false, style: ''  },
@@ -60,6 +61,7 @@ const projectsData = [
     description: [
       "Product page with image gallery",
       "Add-to-cart functionality using React state",
+       "A functional MERN Stack App",
       "Under development"
     ],
      tools: [
