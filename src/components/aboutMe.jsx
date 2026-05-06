@@ -68,14 +68,16 @@ const aboutMe = ({ id }) => {
                     <p className='font-semibold'> {text}</p>
                   </div>
                 ))}
-                {project.tools.map((index, tool ) => (
-                <div key={tool.index} className='flex space-x-1 items-center'>
-                  {tool.isAwesome ?
-                    <FontAwesomeIcon icon={tool} className={`xl:text-2xl text-lg ${tool.style}`} /> : <img src={tool} alt="" />
-                  }
+                <div className='flex space-x-5 justify-center'>
+                  {project.tools && project.tools.map((tool, index) => (
+                    <div key={index} className='flex items-center'>
+                      {tool.isAwesome
+                        ? <FontAwesomeIcon icon={tool.logo} className={` xl:text-xl text-base ${tool.style}`} />
+                        : <tool.logo className={`w-5 h-5 text-gray-300 ${tool.style}`} />
+                      }
+                    </div>
+                  ))}
                 </div>
-              ))}
-             
                 <div className='w-full flex justify-between'>
                   {project.links.map((btn) => (
                     <a

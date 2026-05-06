@@ -18,7 +18,13 @@ const projectsData = [
       "Dynamic routing between pages",
       "Fully responsive UI built with React and Tailwind"
     ],
-    tools: [VSCode, faReact, faFigma, faGithub, Vercel]
+    tools: [
+      { logo: VSCode,   isAwesome: false, style: ''  },
+      { logo: faReact,  isAwesome: true, style: 'text-cyan-400'   },
+      { logo: faFigma,  isAwesome: true, style: 'text-pink-500'   },
+      { logo: faGithub, isAwesome: true, style: 'text-white'   },
+      { logo: Vercel,   isAwesome: false, style: ''  },
+    ]
   },
   {
     id: 2,
@@ -32,7 +38,12 @@ const projectsData = [
       "Add, complete, and delete tasks",
       "Dark mode with local storage persistence"
     ],
-    tools: [faReact, faGithub, Vercel]
+    tools: [
+      { logo: faReact,  isAwesome: true, style: 'text-cyan-400' },
+       { logo: MongoDB,  isAwesome: true, style: 'text-cyan-400' },
+      { logo: faGithub, isAwesome: true, style: ''   },
+      { logo: Vercel,   isAwesome: false, style: ''  },
+    ]
   },
   {
     id: 3,
@@ -47,7 +58,11 @@ const projectsData = [
       "Add-to-cart functionality using React state",
       "Under development"
     ],
-    tools: [faReact, faGithub, Vercel]
+    tools: [
+      { logo: faReact,  isAwesome: true  },
+      { logo: faGithub, isAwesome: true  },
+      { logo: Vercel,   isAwesome: false },
+    ]
   },
   {
     id: 4,
@@ -61,7 +76,11 @@ const projectsData = [
       "Built with HTML and CSS",
       "Responsive ecommerce layout with modern UI"
     ],
-    tools: [faHtml5, faCss3, faGithub]
+    tools: [
+      { logo: faHtml5,  isAwesome: true  },
+      { logo: faCss3,   isAwesome: true  },
+      { logo: faGithub, isAwesome: true  },
+    ]
   }
 ];
 
