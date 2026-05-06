@@ -103,7 +103,6 @@ const aboutMe = ({ id }) => {
           </a>
         </div>
       </div>
-
     </div>
   );
 }
