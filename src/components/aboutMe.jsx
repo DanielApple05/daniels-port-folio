@@ -93,15 +93,15 @@ const aboutMe = ({ id }) => {
               </div>
             ))}
           </div>
-          <div className=' flex place-self-center'>
-            <a href="https://github.com/DanielApple05"
-              target="_blank"
-              rel="noopener noreferrer"
-              className='flex place-self-center bg-blue-600 rounded p-2 xl:mt-6 mt-4 text-white cursor-pointer  xl:w-40 w-40 justify-center font-semibold text-center '>
-              View more projects
-            </a>
-          </div>
         </section>
+        <div className=' flex place-self-center'>
+          <a href="https://github.com/DanielApple05"
+            target="_blank"
+            rel="noopener noreferrer"
+            className='flex place-self-center bg-blue-600 rounded p-2 xl:mt-6 mt-4 text-white cursor-pointer  xl:w-40 w-40 justify-center font-semibold text-center '>
+            View more projects
+          </a>
+        </div>
       </div>
 
     </div>
