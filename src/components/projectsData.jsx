@@ -92,6 +92,7 @@ const projectsData = [
       { logo: faCss3,   isAwesome: true, style: "text-blue-500"  },
       { logo: faGithub, isAwesome: true, style: ""  },
         { logo: faTailwindCss, isAwesome: true, style: "text-sky-400"  },
+        { logo: faJs, isAwesome: true, style: "text-yellow-400"  },
     ]
   }
 ];
