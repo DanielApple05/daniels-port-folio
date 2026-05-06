@@ -24,7 +24,7 @@ const aboutMe = ({ id }) => {
         </section>
         <section id='skills' className='xl:my-5 my-10 '>
           <h3 className=' xl:text-xl text-lg font-bold '>
-            Skills / Tools
+            Technologies I Work With 
           </h3>
           <hr className='border-gray-400 xl:my-7 my-3' />
           <div className='flex w-full xl:space-x-5 space-x-2 xl:h-50 h-40'>

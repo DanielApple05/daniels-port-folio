@@ -39,6 +39,7 @@ const projectsData = [
       "Dark mode with local storage persistence"
     ],
     tools: [
+       { logo: VSCode,   isAwesome: false, style: ''  },
       { logo: MongoDB,  isAwesome: false, style: '' },
        { logo: Express,  isAwesome: false, style: 'bg-white'},
       
@@ -62,6 +63,7 @@ const projectsData = [
       "Under development"
     ],
      tools: [
+       { logo: VSCode,   isAwesome: false, style: ''  },
       { logo: MongoDB,  isAwesome: false, style: '' },
        { logo: Express,  isAwesome: false, style: 'bg-white'},
        { logo: faReact,  isAwesome: true, style: 'text-cyan-400' },
@@ -83,9 +85,11 @@ const projectsData = [
       "Responsive ecommerce layout with modern UI"
     ],
     tools: [
+       { logo: VSCode,   isAwesome: false, style: ''  },
       { logo: faHtml5,  isAwesome: true, style: 'text-orange-500'  },
       { logo: faCss3,   isAwesome: true, style: "text-blue-500"  },
       { logo: faGithub, isAwesome: true, style: ""  },
+        { logo: faTailwindCss, isAwesome: true, style: "text-sky-400"  },
     ]
   }
 ];
