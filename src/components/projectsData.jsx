@@ -39,10 +39,13 @@ const projectsData = [
       "Dark mode with local storage persistence"
     ],
     tools: [
-      { logo: faReact,  isAwesome: true, style: 'text-cyan-400' },
-       { logo: MongoDB,  isAwesome: true, style: 'text-cyan-400' },
+      { logo: MongoDB,  isAwesome: false, style: '' },
+       { logo: Express,  isAwesome: false, style: 'bg-white'},
+      
+       { logo: faReact,  isAwesome: true, style: 'text-cyan-400' },
+       { logo: Node,  isAwesome: false, style: 'text-cyan-400' },
       { logo: faGithub, isAwesome: true, style: ''   },
-      { logo: Vercel,   isAwesome: false, style: ''  },
+      { logo: Vercel, isAwesome: false, style: ''  },
     ]
   },
   {
