@@ -61,10 +61,13 @@ const projectsData = [
       "Add-to-cart functionality using React state",
       "Under development"
     ],
-    tools: [
-      { logo: faReact,  isAwesome: true  },
-      { logo: faGithub, isAwesome: true  },
-      { logo: Vercel,   isAwesome: false },
+     tools: [
+      { logo: MongoDB,  isAwesome: false, style: '' },
+       { logo: Express,  isAwesome: false, style: 'bg-white'},
+       { logo: faReact,  isAwesome: true, style: 'text-cyan-400' },
+       { logo: Node,  isAwesome: false, style: 'text-cyan-400' },
+      { logo: faGithub, isAwesome: true, style: ''   },
+      { logo: Vercel, isAwesome: false, style: ''  },
     ]
   },
   {
@@ -80,9 +83,9 @@ const projectsData = [
       "Responsive ecommerce layout with modern UI"
     ],
     tools: [
-      { logo: faHtml5,  isAwesome: true  },
-      { logo: faCss3,   isAwesome: true  },
-      { logo: faGithub, isAwesome: true  },
+      { logo: faHtml5,  isAwesome: true, style: 'text-orange-500'  },
+      { logo: faCss3,   isAwesome: true, style: "text-blue-500"  },
+      { logo: faGithub, isAwesome: true, style: ""  },
     ]
   }
 ];

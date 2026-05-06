@@ -68,7 +68,7 @@ const aboutMe = ({ id }) => {
                     <p className='font-semibold'> {text}</p>
                   </div>
                 ))}
-                <div className='flex space-x-5 justify-center ring py-1  ring-blue-400 rounded-lg '>
+                <div className='flex space-x-5 justify-center ring py-2  ring-blue-400 rounded-lg '>
                   {project.tools && project.tools.map((tool, index) => (
                     <div key={index} className='flex items-center'>
                       {tool.isAwesome
