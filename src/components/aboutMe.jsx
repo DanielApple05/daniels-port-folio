@@ -58,7 +58,7 @@ const aboutMe = ({ id }) => {
           <hr className='border-gray-400 xl:my-7 my-3' />
           <div className=' xl:grid-cols-2 grid  w-full rounded-2xl gap-x-10  space-y-5'>
             {projectsData.map((project) => (
-              <div className=' max-w-full xl:space-y-5 space-y-3 ring-2 ring-blue-800 bg-[#0D1324] flex flex-col  xl:p-5 p-3 xl:min-h-150 min-h-90 rounded-xl shadow-2xl' key={project.id}>
+              <div className=' max-w-full xl:space-y-5 space-y-3 ring-2 ring-blue-800 bg-[#0D1324] flex flex-col  xl:p-5 p-3 xl:min-h-150 min-h-auto rounded-xl shadow-2xl' key={project.id}>
                 <h2 className='font-bold xl:tracking-widest tracking-wide xl:text-xl text-xs' >{project.title}</h2>
                 <hr className='border-gray-400' />
                 <img src={project.image} alt="" className='rounded-md w-12/12 shadow-2xl ring-2 ring-white xl:min-h-70 min-h-auto' />
@@ -84,7 +84,7 @@ const aboutMe = ({ id }) => {
                       key={btn.id}
                       href={btn.link}
                       target="_blank"
-                      className={`font-bold py-2 px-4 rounded border border-blue-400
+                      className={`font-bold py-2 px-4 rounded-lg border border-blue-400
                        hover:bg-blue-700 hover:text-white`}>
                       {btn.name}
                     </a>
@@ -93,7 +93,7 @@ const aboutMe = ({ id }) => {
               </div>
             ))}
           </div>
-          <div className=' flex items-center place-self-center'>
+          <div className=' flex place-self-center'>
             <a href="https://github.com/DanielApple05"
               target="_blank"
               rel="noopener noreferrer"
