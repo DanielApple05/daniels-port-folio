@@ -43,7 +43,7 @@ const aboutMe = ({ id }) => {
                 <div key={skill.id} className='flex space-x-1 items-center'>
                   {skill.isAwesome
                     ? <FontAwesomeIcon icon={skill.logo} className={`xl:text-2xl text-lg ${skill.style}`} />
-                    : <img className='w-4' src={skill.logo}  />
+                    : <img className='w-4' src={skill.logo} />
                   }
                   <p>{skill.name}</p>
                 </div>
@@ -55,7 +55,7 @@ const aboutMe = ({ id }) => {
           <h3 className='xl:my-5 my-3 text-xl font-bold'>
             Projects
           </h3>
-         <hr className='border-gray-400 xl:my-7 my-3' /> 
+          <hr className='border-gray-400 xl:my-7 my-3' />
           <div className=' xl:grid-cols-2 grid  w-full rounded-2xl gap-x-10  space-y-5'>
             {projectsData.map((project) => (
               <div className=' max-w-full xl:space-y-5 space-y-3 ring-2 ring-blue-800 bg-[#0D1324] flex flex-col  xl:p-5 p-3 xl:min-h-150 min-h-90 xl:h-140 h-100   rounded-xl shadow-2xl' key={project.id}>
@@ -68,6 +68,14 @@ const aboutMe = ({ id }) => {
                     <p className='font-semibold'> {text}</p>
                   </div>
                 ))}
+                {project.tools.map((index, tool ) => (
+                <div key={tool.index} className='flex space-x-1 items-center'>
+                  {tool.isAwesome ?
+                    <FontAwesomeIcon icon={tool} className={`xl:text-2xl text-lg ${tool.style}`} /> : <img src={tool} alt="" />
+                  }
+                </div>
+              ))}
+             
                 <div className='w-full flex justify-between'>
                   {project.links.map((btn) => (
                     <a

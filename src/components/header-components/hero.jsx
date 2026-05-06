@@ -8,7 +8,7 @@ const hero = () => {
     <div>
       <div
         style={{ backgroundImage: "url('/images/snippet.png')" }}
-        className='relative text-white w-full bg-no-repeat bg-cover  xl:text-base text-xs grid'>
+        className='relative text-white w-full bg-no-repeat bg-cover  xl:text-base text-xs grid min-h-40 items-center'>
         <div className='flex  justify-between xl:w-5/12 w-full p-3 place-self-center bg-[#0A0F1C] fixed top-0 z-50 '>
           {Tabs.map((tab) => (
             tab.isSection ? (
@@ -40,9 +40,7 @@ const hero = () => {
           <h3 className=' xl:text-xl text-xs font-semibold text-blue-600'>
             <span className=' xl:mr-2 mr-1'>Full Stack Developer</span> | <span className='xl:ml-2 ml-1'> Mern Stack Developer</span>
           </h3>
-          <p className='xl:text-sm text-[10px]' >
-            I build responsive, user friendly web applications with React and modern UI tools.
-          </p>
+         
           <div className='flex xl:space-x-18 space-x-3'>
             {About.map((item) => (<button key={item.id} className='cursor-pointer bg-gray-400 hover:bg-blue-600 rounded-md xl:px-5 px-3 py-1 hover:ring-1 ' onClick={() => window.open(item.link, '_blank', 'noopener,noreferrer')}>
               {item.name}

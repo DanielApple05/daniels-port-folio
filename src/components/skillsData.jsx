@@ -69,7 +69,7 @@ const skillsData = {
       id: 9,
       name: "Vercel",
       logo: Vercel,
-      style: "fill-white",
+      style: "text-white",
        isAwesome: false
     },
     {

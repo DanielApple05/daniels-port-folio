@@ -1,3 +1,9 @@
+import { faReact, faJs, faHtml5, faCss3, faTailwindCss, faFigma, faGithub } from '@fortawesome/free-brands-svg-icons';
+import VSCode  from '../images/vscode.svg?react'
+import Vercel  from '../images/vercel.svg?react'
+import Express from '../images/express.svg?react'
+import Node    from '../images/node.svg?react'
+import MongoDB from '../images/mongoDb.svg?react'
 
 const projectsData = [
   {
@@ -11,9 +17,9 @@ const projectsData = [
     description: [
       "Dynamic routing between pages",
       "Fully responsive UI built with React and Tailwind"
-    ]
+    ],
+    tools: [VSCode, faReact, faFigma, faGithub, Vercel]
   },
-
   {
     id: 2,
     title: "Todo App",
@@ -25,9 +31,9 @@ const projectsData = [
     description: [
       "Add, complete, and delete tasks",
       "Dark mode with local storage persistence"
-    ]
+    ],
+    tools: [faReact, faGithub, Vercel]
   },
-
   {
     id: 3,
     title: "Sneakers Ecommerce",
@@ -40,21 +46,22 @@ const projectsData = [
       "Product page with image gallery",
       "Add-to-cart functionality using React state",
       "Under development"
-    ]
+    ],
+    tools: [faReact, faGithub, Vercel]
   },
-
   {
     id: 4,
     title: "Furniro Furniture Ecommerce",
     image: "/images/project5.PNG",
     links: [
-      { id: 7, name: "View Demo", link: "https:/furniro-furniture-shop.netlify.app" },
-      { id: 8, name: "View Code", link: "https://github.com/DanielApple05/Furniro-ECommerce-frontend"}
+      { id: 7, name: "View Demo", link: "https://furniro-furniture-shop.netlify.app" },
+      { id: 8, name: "View Code", link: "https://github.com/DanielApple05/Furniro-ECommerce-frontend" }
     ],
     description: [
       "Built with HTML and CSS",
       "Responsive ecommerce layout with modern UI"
-    ]
+    ],
+    tools: [faHtml5, faCss3, faGithub]
   }
 ];
 
