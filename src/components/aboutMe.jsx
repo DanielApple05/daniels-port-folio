@@ -28,8 +28,8 @@ const aboutMe = ({ id }) => {
             Technologies I Work With 
           </h3>
         
-          <div className='flex w-full gap-5'>
-            <div className='grid grid-cols-2 w-6/12 bg-[#0D1324] xl:p-5 p-3 xl:space-y-5 space-y-0 items-center rounded-xl shadow-2xl xl:text-xs text-[10px] ring ring-blue-800 '>
+          <div className='flex w-full gap-5 h-full'>
+            <div className='grid grid-cols-2 w-6/12 bg-[#0D1324] xl:p-5 p-3 space-y-5 items-center rounded-xl shadow-2xl text-xs ring ring-blue-800 '>
               {skillsData.tools.map((tool) => (
                 <div key={tool.id} className='flex space-x-1 items-center'>
                   {tool.isAwesome ?
@@ -44,7 +44,7 @@ const aboutMe = ({ id }) => {
                 <div key={skill.id} className='flex space-x-1 items-center'>
                   {skill.isAwesome
                     ? <FontAwesomeIcon icon={skill.logo} className={`xl:text-2xl text-lg ${skill.style}`} />
-                    : <img className='w-5' src={skill.logo} />
+                    : <img className='xl:w-5 w-3' src={skill.logo} />
                   }
                   <p>{skill.name}</p>
                 </div>
