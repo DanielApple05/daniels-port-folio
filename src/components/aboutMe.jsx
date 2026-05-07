@@ -29,17 +29,17 @@ const aboutMe = ({ id }) => {
           </h3>
         
           <div className='flex w-full gap-5 h-full'>
-            <div className='grid grid-cols-2 w-6/12 bg-[#0D1324] xl:p-5 p-3 space-y-5 items-center rounded-xl shadow-2xl text-xs ring ring-blue-800 '>
+            <div className='grid grid-cols-2 w-6/12 bg-[#0D1324] xl:p-5 p-3 gap-5 items-center rounded-xl shadow-2xl xl:text-xs text-[10px] ring ring-blue-800 '>
               {skillsData.tools.map((tool) => (
                 <div key={tool.id} className='flex space-x-1 items-center'>
                   {tool.isAwesome ?
-                    <FontAwesomeIcon icon={tool.logo} className={`xl:text-2xl text-lg ${tool.style}`} /> : <img className={` w-6 ${tool.style}`} src={tool.logo} alt="" />
+                    <FontAwesomeIcon icon={tool.logo} className={`xl:text-2xl text-lg ${tool.style}`} /> : <img className={` w-5 ${tool.style}`} src={tool.logo} alt="" />
                   }
                   <p>{tool.name}</p>
                 </div>
               ))}
             </div>
-            <div className='grid grid-cols-2 w-6/12 bg-[#0D1324] xl:p-5 p-3 xl:space-y-5 space-y-0 rounded-xl items-center shadow-2xl ring ring-blue-800 xl:text-xs text-[10px]'>
+            <div className='grid grid-cols-2 w-6/12 bg-[#0D1324] xl:p-5 p-3 gap-5 rounded-xl items-center shadow-2xl ring ring-blue-800 xl:text-xs text-[10px]'>
               {skillsData.others.map((skill) => (
                 <div key={skill.id} className='flex space-x-1 items-center'>
                   {skill.isAwesome
