@@ -10,18 +10,19 @@ const aboutMe = ({ id }) => {
   return (
     <div>
       <Hero key={id} />
-      <div className='xl:px-20 px-8 bg-[#0a1841] text-gray-300 xl:py-15 py-5 xl:text-base text-xs'>
+      <div className='xl:px-20 px-5 bg-[#0a1841] text-gray-300 xl:py-15 py-5 xl:text-base text-xs'>
         <section id='about' className=''>
           <h3 className='mb-5 font-bold xl:text-xl text-lg ' >
             About Me
           </h3>
-          <hr className='border-gray-400 mb-4' />
+      
           <p>
             I'm a Full Stack Developer specializing in the MERN stack, with a focus on building scalable, secure, and user-friendly web applications. I've developed both frontend interfaces and backend systems, including REST APIs, authentication flows, and protected routes.
             I enjoy turning ideas into real-world products, writing clean and maintainable code, and continuously improving my skills. My recent work includes building a fully functional backend with user authentication and integrating APIs using modern development tools.
             I'm currently open to opportunities where I can contribute, grow, and build impactful digital experiences.
           </p>
         </section>
+            <hr className='border-gray-400 mt-5' />
         <section id='skills' className='xl:my-5 my-10 '>
           <h3 className=' xl:text-xl text-lg font-bold my-10'>
             Technologies I Work With 
@@ -32,7 +33,7 @@ const aboutMe = ({ id }) => {
               {skillsData.tools.map((tool) => (
                 <div key={tool.id} className='flex space-x-1 items-center'>
                   {tool.isAwesome ?
-                    <FontAwesomeIcon icon={tool.logo} className={`xl:text-2xl text-lg ${tool.style}`} /> : <img src={tool.logo} alt="" />
+                    <FontAwesomeIcon icon={tool.logo} className={`xl:text-2xl text-lg ${tool.style}`} /> : <img className={` w-6 ${tool.style}`} src={tool.logo} alt="" />
                   }
                   <p>{tool.name}</p>
                 </div>
@@ -43,7 +44,7 @@ const aboutMe = ({ id }) => {
                 <div key={skill.id} className='flex space-x-1 items-center'>
                   {skill.isAwesome
                     ? <FontAwesomeIcon icon={skill.logo} className={`xl:text-2xl text-lg ${skill.style}`} />
-                    : <img className='w-4' src={skill.logo} />
+                    : <img className='w-5' src={skill.logo} />
                   }
                   <p>{skill.name}</p>
                 </div>
@@ -51,14 +52,15 @@ const aboutMe = ({ id }) => {
             </div>
           </div>
         </section>
+           <hr className='border-gray-400 xl:my-7 my-3' />
         <section id='projects' >
           <h3 className='xl:my-5 my-3 text-xl font-bold'>
             Projects
           </h3>
-          <hr className='border-gray-400 xl:my-7 my-3' />
-          <div className=' xl:grid-cols-2 grid  w-full rounded-2xl gap-x-10  space-y-5'>
+         
+          <div className=' xl:grid-cols-2 grid  w-full rounded-2xl gap-10 space-y-5'>
             {projectsData.map((project) => (
-              <div className=' max-w-full xl:space-y-5 space-y-3 ring-2 ring-blue-800 bg-[#0D1324] flex flex-col  xl:p-5 p-3 xl:min-h-150 min-h-auto rounded-xl shadow-2xl' key={project.id}>
+              <div className=' max-w-full xl:space-y-5 space-y-3 ring-2 ring-blue-800 bg-[#0D1324] flex flex-col xl:p-5 p-3 h-full rounded-xl shadow-2xl' key={project.id}>
                 <h2 className='font-bold xl:tracking-widest tracking-wide xl:text-xl text-xs' >{project.title}</h2>
                 <hr className='border-gray-400' />
                 <img src={project.image} alt="" className='rounded-md w-12/12 shadow-2xl ring-2 ring-white xl:min-h-70 min-h-auto' />

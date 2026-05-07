@@ -84,7 +84,8 @@ const projectsData = [
     ],
     description: [
       "Built with HTML and CSS",
-      "Responsive ecommerce layout with modern UI"
+      "Responsive ecommerce layout with modern UI",
+      " Plain javaSCript"
     ],
     tools: [
        { logo: VSCode,   isAwesome: false, style: ''  },

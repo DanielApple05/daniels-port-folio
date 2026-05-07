@@ -42,6 +42,11 @@ const skillsData = {
       logo: faTailwindCss,
       style: "text-sky-400",
        isAwesome: true
+    }, {
+      id: 6,
+      name: "Node",
+      logo: Node,
+       isAwesome: false
     },
   ],
   others: [
@@ -84,11 +89,6 @@ const skillsData = {
        isAwesome: false
     }, {
       id: 12,
-      name: "Node",
-      logo: Node,
-       isAwesome: false
-    }, {
-      id: 13,
       name: "MongoDb",
       logo: MongoDb,
        isAwesome: false
