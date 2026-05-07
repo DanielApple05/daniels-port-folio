@@ -74,13 +74,14 @@ const skillsData = {
       id: 9,
       name: "Vercel",
       logo: Vercel,
+      style: "", 
        isAwesome: false
     },
     {
       id: 10,
       name: "VsCode",
       logo: VSCode,
-       isAwesome: false
+      isAwesome: false
     }, {
       id: 11,
       name: "Express",

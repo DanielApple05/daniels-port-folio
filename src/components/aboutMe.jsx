@@ -33,7 +33,7 @@ const aboutMe = ({ id }) => {
               {skillsData.tools.map((tool) => (
                 <div key={tool.id} className='flex space-x-1 items-center'>
                   {tool.isAwesome ?
-                    <FontAwesomeIcon icon={tool.logo} className={`xl:text-2xl text-lg ${tool.style}`} /> : <img className={` w-5 ${tool.style}`} src={tool.logo} alt="" />
+                    <FontAwesomeIcon icon={tool.logo} className={`xl:text-2xl text-lg ${tool.style}`} /> : <img className={`  w-5 ${tool.style}`} src={tool.logo} alt="" />
                   }
                   <p>{tool.name}</p>
                 </div>
