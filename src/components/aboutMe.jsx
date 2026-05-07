@@ -28,8 +28,8 @@ const aboutMe = ({ id }) => {
             Technologies I Work With 
           </h3>
         
-          <div className='flex w-full gap-5 h-full'>
-            <div className='grid grid-cols-2 w-6/12 bg-[#0D1324] xl:p-5 p-3 gap-5 items-center rounded-xl shadow-2xl xl:text-xs text-[10px] ring ring-blue-800 '>
+          <div className='flex w-full gap-4 h-full'>
+            <div className='grid grid-cols-2 w-6/12 bg-[#0D1324] xl:p-5 p-3 gap-3 items-center rounded-xl shadow-2xl xl:text-xs text-[10px] ring ring-blue-800 '>
               {skillsData.tools.map((tool) => (
                 <div key={tool.id} className='flex space-x-1 items-center'>
                   {tool.isAwesome ?
