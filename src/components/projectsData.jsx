@@ -53,7 +53,7 @@ const projectsData = [
   {
     id: 3,
     title: "Sneakers Ecommerce",
-    image: "/images/project3.PNG",
+    image: "/images/project3.png",
     links: [
       { id: 5, name: "View Demo", link: "https://a-sneakers-ecommerce-page.vercel.app" },
       { id: 6, name: "View Code", link: "https://github.com/DanielApple05/A-sneakers-Ecommerce-page" }
