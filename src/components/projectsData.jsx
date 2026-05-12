@@ -95,6 +95,28 @@ const projectsData = [
         { logo: faTailwindCss, isAwesome: true, style: "text-sky-400"  },
         { logo: faJs, isAwesome: true, style: "text-yellow-400"  },
     ]
+  },
+   {
+    id: 5,
+    title: "Weather App",
+    image: "/images/project5.PNG",
+    links: [
+      { id: 7, name: "View Demo", link: "https://furniro-furniture-shop.netlify.app" },
+      { id: 8, name: "View Code", link: "https://github.com/DanielApple05/Furniro-ECommerce-frontend" }
+    ],
+    description: [
+      "Built with HTML and CSS",
+      "Responsive ecommerce layout with modern UI",
+      " Plain javaSCript"
+    ],
+    tools: [
+       { logo: VSCode,   isAwesome: false, style: ''  },
+      { logo: faHtml5,  isAwesome: true, style: 'text-orange-500'  },
+      { logo: faCss3,   isAwesome: true, style: "text-blue-500"  },
+      { logo: faGithub, isAwesome: true, style: ""  },
+        { logo: faTailwindCss, isAwesome: true, style: "text-sky-400"  },
+        { logo: faJs, isAwesome: true, style: "text-yellow-400"  },
+    ]
   }
 ];
 

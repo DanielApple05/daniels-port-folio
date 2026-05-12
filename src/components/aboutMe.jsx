@@ -10,7 +10,7 @@ const aboutMe = ({ id }) => {
   return (
     <div>
       <Hero key={id} />
-      <div className='xl:px-20 px-5 bg-[#0a1841] text-gray-300 xl:py-15 py-5 xl:text-base text-xs'>
+      <div className='xl:px-20 px-5 bg-[#0a1841] text-gray-300 xl:py-15 py-5 xl:text-base text-xs '>
         <section id='about' className=''>
           <h3 className='mb-5 font-bold xl:text-xl text-lg ' >
             About Me
