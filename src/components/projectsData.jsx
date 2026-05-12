@@ -84,8 +84,7 @@ const projectsData = [
     ],
     description: [
       "Built with HTML and CSS",
-      "Responsive ecommerce layout with modern UI",
-      " Plain javaSCript"
+      "Responsive ecommerce layout with modern UI"
     ],
     tools: [
        { logo: VSCode,   isAwesome: false, style: ''  },
@@ -99,23 +98,21 @@ const projectsData = [
    {
     id: 5,
     title: "Weather App",
-    image: "/images/project5.PNG",
+    image: "/images/project6.png",
     links: [
-      { id: 7, name: "View Demo", link: "https://furniro-furniture-shop.netlify.app" },
-      { id: 8, name: "View Code", link: "https://github.com/DanielApple05/Furniro-ECommerce-frontend" }
+      { id: 7, name: "View Demo", link: "https://weather-app-omega-vert-47.vercel.app/" },
+      { id: 8, name: "View Code", link: "https://github.com/DanielApple05/weather-App" }
     ],
     description: [
-      "Built with HTML and CSS",
-      "Responsive ecommerce layout with modern UI",
-      " Plain javaSCript"
+      "A responsive weather forecasting web app that gives you real-time weather conditions and forecasts for any city in the world. Built with React and powered by the OpenWeatherMap API, it features current weather conditions including temperature, humidity, wind speed, and precipitation, a 5-day daily forecast, and an hourly breakdown by day. Users can search any city, switch between metric and imperial units, with a dynamic hourly panel with day selector. Designed with a clean dark UI built on Tailwind CSS."
+      
     ],
     tools: [
        { logo: VSCode,   isAwesome: false, style: ''  },
-      { logo: faHtml5,  isAwesome: true, style: 'text-orange-500'  },
-      { logo: faCss3,   isAwesome: true, style: "text-blue-500"  },
       { logo: faGithub, isAwesome: true, style: ""  },
         { logo: faTailwindCss, isAwesome: true, style: "text-sky-400"  },
-        { logo: faJs, isAwesome: true, style: "text-yellow-400"  },
+          { logo: faReact,  isAwesome: true, style: 'text-cyan-400' },
+           { logo: Vercel, isAwesome: false, style: ''  }
     ]
   }
 ];
