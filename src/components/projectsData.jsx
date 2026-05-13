@@ -53,7 +53,7 @@ const projectsData = [
   {
     id: 3,
     title: "Sneakers Ecommerce",
-    image: "/images/project3.png",
+    image: "/images/project3.PNG",
     links: [
       { id: 5, name: "View Demo", link: "https://leinads-sneaks.vercel.app" },
       { id: 6, name: "View Code", link: "https://github.com/DanielApple05/A-sneakers-Ecommerce-page" }
@@ -98,7 +98,7 @@ const projectsData = [
    {
     id: 5,
     title: "Weather App",
-    image: "/images/project6.png",
+    image: "/images/project6.PNG",
     links: [
       { id: 7, name: "View Demo", link: "https://sky-view-forecast.vercel.app/" },
       { id: 8, name: "View Code", link: "https://github.com/DanielApple05/weather-App" }
