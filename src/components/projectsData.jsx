@@ -98,7 +98,7 @@ const projectsData = [
    {
     id: 5,
     title: "Weather App",
-    image: "/images/project6.PNG",
+    image: "/images/project6.png",
     links: [
       { id: 9, name: "View Demo", link: "https://sky-view-forecast.vercel.app/" },
       { id: 10, name: "View Code", link: "https://github.com/DanielApple05/weather-App" }
