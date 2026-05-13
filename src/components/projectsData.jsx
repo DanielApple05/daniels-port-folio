@@ -100,8 +100,8 @@ const projectsData = [
     title: "Weather App",
     image: "/images/project6.PNG",
     links: [
-      { id: 7, name: "View Demo", link: "https://sky-view-forecast.vercel.app/" },
-      { id: 8, name: "View Code", link: "https://github.com/DanielApple05/weather-App" }
+      { id: 9, name: "View Demo", link: "https://sky-view-forecast.vercel.app/" },
+      { id: 10, name: "View Code", link: "https://github.com/DanielApple05/weather-App" }
     ],
     description: [
       "A responsive weather forecasting web app that gives you real-time weather conditions and forecasts for any city in the world. Built with React and powered by the OpenWeatherMap API, it features current weather conditions including temperature, humidity, wind speed, and precipitation, a 5-day daily forecast, and an hourly breakdown by day. Users can search any city, switch between metric and imperial units, with a dynamic hourly panel with day selector. Designed with a clean dark UI built on Tailwind CSS."
