@@ -61,8 +61,7 @@ const projectsData = [
     description: [
       "Product page with image gallery",
       "Add-to-cart functionality using React state",
-      "A functional MERN Stack App",
-      "Under development"
+      "A Demo App",
     ],
     tools: [
       { logo: VSCode, isAwesome: false, style: '' },
