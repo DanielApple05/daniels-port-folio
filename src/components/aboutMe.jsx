@@ -10,12 +10,11 @@ const aboutMe = ({ id }) => {
   return (
     <div>
       <Hero key={id} />
-      <div className='xl:px-20 px-5 bg-[#0a1841] text-gray-300 xl:py-15 py-5 xl:text-base text-xs '>
+      <div className='xl:p-20 p-5 bg-[#0a1841] text-gray-300 xl:text-base text-xs '>
         <section id='about' className=''>
           <h3 className='mb-5 font-bold xl:text-xl text-lg ' >
             About Me
           </h3>
-      
           <p>
             I'm a Full Stack Developer specializing in the MERN stack, with a focus on building scalable, secure, and user-friendly web applications. I've developed both frontend interfaces and backend systems, including REST APIs, authentication flows, and protected routes.
             I enjoy turning ideas into real-world products, writing clean and maintainable code, and continuously improving my skills. My recent work includes building a fully functional backend with user authentication and integrating APIs using modern development tools.
@@ -26,8 +25,7 @@ const aboutMe = ({ id }) => {
         <section id='skills' className='xl:my-5 my-10 '>
           <h3 className=' xl:text-xl text-lg font-bold my-10'>
             Technologies I Work With 
-          </h3>
-        
+          </h3>        
           <div className='flex w-full gap-4 h-full'>
             <div className='grid grid-cols-2 w-6/12 bg-[#0D1324] xl:p-5 p-3 gap-3 items-center rounded-xl shadow-2xl xl:text-xs text-[10px] ring ring-blue-800 '>
               {skillsData.tools.map((tool) => (
