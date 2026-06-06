@@ -1,8 +1,8 @@
 import { faReact, faJs, faHtml5, faCss3, faTailwindCss, faFigma, faGithub } from '@fortawesome/free-brands-svg-icons';
-import VSCode  from '../images/vscode.svg?react'
-import Vercel  from '../images/vercel.svg?react'
+import VSCode from '../images/vscode.svg?react'
+import Vercel from '../images/vercel.svg?react'
 import Express from '../images/express.svg?react'
-import Node    from '../images/node.svg?react'
+import Node from '../images/node.svg?react'
 import MongoDB from '../images/mongoDb.svg?react'
 
 const projectsData = [
@@ -19,11 +19,11 @@ const projectsData = [
       "Fully responsive UI built with React and Tailwind"
     ],
     tools: [
-      { logo: VSCode,   isAwesome: false, style: ''  },
-      { logo: faReact,  isAwesome: true, style: 'text-cyan-400'   },
-      { logo: faFigma,  isAwesome: true, style: 'text-pink-500'   },
-      { logo: faGithub, isAwesome: true, style: 'text-white'   },
-      { logo: Vercel,   isAwesome: false, style: ''  },
+      { logo: VSCode, isAwesome: false, style: '' },
+      { logo: faReact, isAwesome: true, style: 'text-cyan-400' },
+      { logo: faFigma, isAwesome: true, style: 'text-pink-500' },
+      { logo: faGithub, isAwesome: true, style: 'text-white' },
+      { logo: Vercel, isAwesome: false, style: '' },
     ]
   },
   {
@@ -40,14 +40,14 @@ const projectsData = [
       "A functional MERN Stack App"
     ],
     tools: [
-       { logo: VSCode,   isAwesome: false, style: ''  },
-      { logo: MongoDB,  isAwesome: false, style: '' },
-       { logo: Express,  isAwesome: false, style: 'bg-white'},
-      
-       { logo: faReact,  isAwesome: true, style: 'text-cyan-400' },
-       { logo: Node,  isAwesome: false, style: 'text-cyan-400' },
-      { logo: faGithub, isAwesome: true, style: ''   },
-      { logo: Vercel, isAwesome: false, style: ''  },
+      { logo: VSCode, isAwesome: false, style: '' },
+      { logo: MongoDB, isAwesome: false, style: '' },
+      { logo: Express, isAwesome: false, style: 'bg-white' },
+
+      { logo: faReact, isAwesome: true, style: 'text-cyan-400' },
+      { logo: Node, isAwesome: false, style: 'text-cyan-400' },
+      { logo: faGithub, isAwesome: true, style: '' },
+      { logo: Vercel, isAwesome: false, style: '' },
     ]
   },
   {
@@ -61,17 +61,17 @@ const projectsData = [
     description: [
       "Product page with image gallery",
       "Add-to-cart functionality using React state",
-       "A functional MERN Stack App",
+      "A functional MERN Stack App",
       "Under development"
     ],
-     tools: [
-       { logo: VSCode,   isAwesome: false, style: ''  },
-      { logo: MongoDB,  isAwesome: false, style: '' },
-       { logo: Express,  isAwesome: false, style: 'bg-white'},
-       { logo: faReact,  isAwesome: true, style: 'text-cyan-400' },
-       { logo: Node,  isAwesome: false, style: 'text-cyan-400' },
-      { logo: faGithub, isAwesome: true, style: ''   },
-      { logo: Vercel, isAwesome: false, style: ''  },
+    tools: [
+      { logo: VSCode, isAwesome: false, style: '' },
+      { logo: MongoDB, isAwesome: false, style: '' },
+      { logo: Express, isAwesome: false, style: 'bg-white' },
+      { logo: faReact, isAwesome: true, style: 'text-cyan-400' },
+      { logo: Node, isAwesome: false, style: 'text-cyan-400' },
+      { logo: faGithub, isAwesome: true, style: '' },
+      { logo: Vercel, isAwesome: false, style: '' },
     ]
   },
   {
@@ -87,15 +87,15 @@ const projectsData = [
       "Responsive ecommerce layout with modern UI"
     ],
     tools: [
-       { logo: VSCode,   isAwesome: false, style: ''  },
-      { logo: faHtml5,  isAwesome: true, style: 'text-orange-500'  },
-      { logo: faCss3,   isAwesome: true, style: "text-blue-500"  },
-      { logo: faGithub, isAwesome: true, style: ""  },
-        { logo: faTailwindCss, isAwesome: true, style: "text-sky-400"  },
-        { logo: faJs, isAwesome: true, style: "text-yellow-400"  },
+      { logo: VSCode, isAwesome: false, style: '' },
+      { logo: faHtml5, isAwesome: true, style: 'text-orange-500' },
+      { logo: faCss3, isAwesome: true, style: "text-blue-500" },
+      { logo: faGithub, isAwesome: true, style: "" },
+      { logo: faTailwindCss, isAwesome: true, style: "text-sky-400" },
+      { logo: faJs, isAwesome: true, style: "text-yellow-400" },
     ]
   },
-   {
+  {
     id: 5,
     title: "Weather App",
     image: "/images/project6.png",
@@ -104,15 +104,44 @@ const projectsData = [
       { id: 10, name: "View Code", link: "https://github.com/DanielApple05/weather-App" }
     ],
     description: [
-      "A responsive weather forecasting web app that gives you real-time weather conditions and forecasts for any city in the world. Built with React and powered by the OpenWeatherMap API, it features current weather conditions including temperature, humidity, wind speed, and precipitation, a 5-day daily forecast, and an hourly breakdown by day. Users can search any city, switch between metric and imperial units, with a dynamic hourly panel with day selector. Designed with a clean dark UI built on Tailwind CSS."
-      
+      "Real-time weather conditions for any city worldwide",
+      "5-day forecast with hourly breakdown by day",
+      "Search by city with metric/imperial unit toggle",
+      "Powered by OpenWeatherMap API with a clean dark UI"
     ],
     tools: [
-       { logo: VSCode,   isAwesome: false, style: ''  },
-      { logo: faGithub, isAwesome: true, style: ""  },
-        { logo: faTailwindCss, isAwesome: true, style: "text-sky-400"  },
-          { logo: faReact,  isAwesome: true, style: 'text-cyan-400' },
-           { logo: Vercel, isAwesome: false, style: ''  }
+      { logo: VSCode, isAwesome: false, style: '' },
+      { logo: faGithub, isAwesome: true, style: "" },
+      { logo: faTailwindCss, isAwesome: true, style: "text-sky-400" },
+      { logo: faReact, isAwesome: true, style: 'text-cyan-400' },
+      { logo: Vercel, isAwesome: false, style: '' }
+    ]
+  },
+  {
+    id: 6,
+    title: "Book Verse",
+    image: "/images/project7.png",
+    links: [
+      { id: 11, name: "View Demo", link: "https://leinads-book-verse.vercel.app/" },
+      { id: 12, name: "View Code", link: "https://github.com/DanielApple05/Book-verse" }
+    ],
+    description: [
+      "Digital library app built with React, Tailwind CSS, and the Google Books API",
+      "Full-stack MERN app with JWT-based user authentication and account management",
+      "Browse books by category, search by title or author, and view detailed book info",
+      "Personal library with reading progress tracking, favorites, and reading status",
+      "Embedded Google Books viewer with font size and theme customization",
+      "Responsive UI with dark mode, auto dark mode, and mobile navigation support",
+      "Deployed on Vercel (frontend) and Render (backend) with MongoDB Atlas"
+    ],
+    tools: [
+      { logo: VSCode, isAwesome: false, style: '' },
+      { logo: MongoDB, isAwesome: false, style: '' },
+      { logo: Express, isAwesome: false, style: 'bg-white' },
+      { logo: faReact, isAwesome: true, style: 'text-cyan-400' },
+      { logo: Node, isAwesome: false, style: 'text-cyan-400' },
+      { logo: faGithub, isAwesome: true, style: '' },
+      { logo: Vercel, isAwesome: false, style: '' },
     ]
   }
 ];
