@@ -5,6 +5,7 @@ const SingleProject = () => {
 
   return (
     <div>
+      
       {
         projectsData.map((project) => (
           <div>

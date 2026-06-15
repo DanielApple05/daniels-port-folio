@@ -64,7 +64,7 @@ const aboutMe = ({ id }) => {
               <div className=' xl:space-y-5 space-y-3 ring-2 ring-blue-800 bg-[#0D1324] flex flex-col xl:p-5 p-3 rounded-xl shadow-2xl' key={project.id}>
                 <h2 className='font-bold xl:tracking-widest tracking-wide xl:text-xl text-xs' >{project.title}</h2>
                 <hr className='border-gray-400' />
-                <img src={project.image} alt="" className='rounded-md w-full h-70 shadow-2xl ring-2 ring-white ' />
+                <img src={project.image} alt="" className='rounded-md w-full xl:h-72 h-60 shadow-2xl ring-2 ring-white ' />
                 {/* {project.description.map((text, index) => (
                   <div key={index} className=' items-center flex space-x-2'>
                     <FontAwesomeIcon icon={faCheck} className='text-green-600' />
@@ -107,7 +107,7 @@ const aboutMe = ({ id }) => {
                         </Link>
                       );
                     }
-
+                    return null;
                   })}
                 </div>
               </div>
