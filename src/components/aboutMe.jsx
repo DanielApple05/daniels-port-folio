@@ -25,11 +25,11 @@ const aboutMe = ({ id }) => {
             I'm currently open to opportunities where I can contribute, grow, and build impactful digital experiences.
           </p>
         </section>
-            <hr className='border-gray-400 mt-5' />
+        <hr className='border-gray-400 mt-5' />
         <section id='skills' className='xl:my-5 my-10 '>
           <h3 className=' xl:text-xl text-lg font-bold my-10'>
-            Technologies I Work With 
-          </h3>        
+            Technologies I Work With
+          </h3>
           <div className='flex w-full gap-4 h-full'>
             <div className='grid grid-cols-2 w-6/12 bg-[#0D1324] xl:p-5 p-3 gap-3 items-center rounded-xl shadow-2xl xl:text-xs text-[10px] ring ring-blue-800 '>
               {skillsData.tools.map((tool) => (
@@ -54,7 +54,7 @@ const aboutMe = ({ id }) => {
             </div>
           </div>
         </section>
-           <hr className='border-gray-400 xl:my-7 my-3' />
+        <hr className='border-gray-400 xl:my-7 my-3' />
         <section id='projects' >
           <h3 className='xl:my-5 my-3 text-xl font-bold'>
             Projects
@@ -81,24 +81,34 @@ const aboutMe = ({ id }) => {
                     </div>
                   ))}
                 </div>
-                <div className='w-full'>
-                  <div>{project.links.map((btn) => ( 
-                    <a
-                      key={btn.id}
-                      href={btn.link}
-                      target="_blank"
-                      className={`font-bold py-2 px-4 rounded-lg border border-blue-400
-                       hover:bg-blue-700 hover:text-white`}>
-                      {btn.name}
-                    </a>
-                  ))} </div>
-
-                  <div>
-                    {
-                      link
+                <div className='w-full flex justify-between'>
+                  {project.links.map((link) => {
+                    if (link.name) {
+                      return (
+                        <a
+                          key={link.id}
+                          href={link.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-bold py-2 px-4 rounded-lg border border-blue-400 hover:bg-blue-700 hover:text-white"
+                        >
+                          {link.name}
+                        </a>
+                      );
                     }
-                  </div>
+                    if (link.more) {
+                      return (
+                        <Link
+                          key={link.id}
+                          to="/singleProject"
+                          className="font-bold py-2 px-4 rounded-lg border border-blue-400 hover:bg-blue-700 hover:text-white"
+                        >
+                          {link.more}
+                        </Link>
+                      );
+                    }
 
+                  })}
                 </div>
               </div>
             ))}
@@ -112,8 +122,8 @@ const aboutMe = ({ id }) => {
             View more projects
           </a>
         </div>
-      </div>
-    </div>
+      </div >
+    </div >
   );
 }
 
