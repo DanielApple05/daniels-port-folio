@@ -12,7 +12,7 @@ const projectsData = [
     image: "/images/project7.png",
     links: [
       { id: 1, name: "View Demo", link: "https://leinads-book-verse.vercel.app/" },
-      { id: 2, name: "View Code", link: "https://github.com/DanielApple05/Book-verse" }
+      { id: 2, more: "Description"}
     ],
     description: [
       "Digital library app built with React, Tailwind CSS, and the Google Books API",
@@ -39,7 +39,7 @@ const projectsData = [
     image: "/images/project1.PNG",
     links: [
       { id: 3, name: "View Demo", link: "https://space-tourism-site-gamma.vercel.app/" },
-      { id: 4, name: "View Code", link: "https://github.com/DanielApple05/Space-Tourism-site" }
+      { id: 4, more: "Description" }
     ],
     description: [
       "Dynamic routing between pages",
@@ -59,7 +59,7 @@ const projectsData = [
     image: "/images/project6.png",
     links: [
       { id: 5, name: "View Demo", link: "https://sky-view-forecast.vercel.app/" },
-      { id: 6, name: "View Code", link: "https://github.com/DanielApple05/weather-App" }
+      { id: 6, more: "Description"}
     ],
     description: [
       "Real-time weather conditions for any city worldwide",
@@ -81,7 +81,7 @@ const projectsData = [
     image: "/images/project2.PNG",
     links: [
       { id: 7, name: "View Demo", link: "https://todo-list-with-react-js-brown.vercel.app" },
-      { id: 8, name: "View Code", link: "https://github.com/DanielApple05/Todo-list-with-React.js" }
+      { id: 8, more: "Description"}
     ],
     description: [
       "Add, complete, and delete tasks",
@@ -104,7 +104,7 @@ const projectsData = [
     image: "/images/project3.PNG",
     links: [
       { id: 9, name: "View Demo", link: "https://leinads-sneaks.vercel.app" },
-      { id: 10, name: "View Code", link: "https://github.com/DanielApple05/A-sneakers-Ecommerce-page" }
+      { id: 10, more: "Description" }
     ],
     description: [
       "Product page with image gallery",
@@ -127,7 +127,7 @@ const projectsData = [
     image: "/images/project5.PNG",
     links: [
       { id: 11, name: "View Demo", link: "https://furniro-furniture-shop.netlify.app" },
-      { id: 12, name: "View Code", link: "https://github.com/DanielApple05/Furniro-ECommerce-frontend" }
+      { id: 12, more: "Description"}
     ],
     description: [
       "Built with HTML and CSS",

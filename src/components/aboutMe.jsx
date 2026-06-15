@@ -4,8 +4,12 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import Hero from './header-components/hero';
 import projectsData from './projectsData';
 import skillsData from './skillsData';
+import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const aboutMe = ({ id }) => {
+
+  const navigate = useNavigate();
 
   return (
     <div>
@@ -57,16 +61,16 @@ const aboutMe = ({ id }) => {
           </h3>
           <div className=' xl:grid-cols-2 grid  w-full rounded-2xl gap-10 space-y-5'>
             {projectsData.map((project) => (
-              <div className=' xl:space-y-5 space-y-3 ring-2 ring-blue-800 bg-[#0D1324] flex flex-col xl:p-5 p-3 rounded-xl shadow-2xl h-full' key={project.id}>
+              <div className=' xl:space-y-5 space-y-3 ring-2 ring-blue-800 bg-[#0D1324] flex flex-col xl:p-5 p-3 rounded-xl shadow-2xl' key={project.id}>
                 <h2 className='font-bold xl:tracking-widest tracking-wide xl:text-xl text-xs' >{project.title}</h2>
                 <hr className='border-gray-400' />
-                <img src={project.image} alt="" className='rounded-md w-full h-auto shadow-2xl ring-2 ring-white ' />
-                {project.description.map((text, index) => (
+                <img src={project.image} alt="" className='rounded-md w-full h-70 shadow-2xl ring-2 ring-white ' />
+                {/* {project.description.map((text, index) => (
                   <div key={index} className=' items-center flex space-x-2'>
                     <FontAwesomeIcon icon={faCheck} className='text-green-600' />
                     <p className='font-semibold'> {text}</p>
                   </div>
-                ))}
+                ))} */}
                 <div className='flex space-x-5 justify-center ring py-2  ring-blue-400 rounded-lg '>
                   {project.tools && project.tools.map((tool, index) => (
                     <div key={index} className='flex items-center'>
@@ -77,8 +81,8 @@ const aboutMe = ({ id }) => {
                     </div>
                   ))}
                 </div>
-                <div className='w-full flex justify-between'>
-                  {project.links.map((btn) => (
+                <div className='w-full'>
+                  <div>{project.links.map((btn) => ( 
                     <a
                       key={btn.id}
                       href={btn.link}
@@ -87,7 +91,14 @@ const aboutMe = ({ id }) => {
                        hover:bg-blue-700 hover:text-white`}>
                       {btn.name}
                     </a>
-                  ))}
+                  ))} </div>
+
+                  <div>
+                    {
+                      link
+                    }
+                  </div>
+
                 </div>
               </div>
             ))}
