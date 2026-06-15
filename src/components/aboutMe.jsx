@@ -6,6 +6,7 @@ import projectsData from './projectsData';
 import skillsData from './skillsData';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import MobileNav from './mobileNav';
 
 const aboutMe = ({ id }) => {
 
@@ -14,7 +15,8 @@ const aboutMe = ({ id }) => {
   return (
     <div>
       <Hero key={id} />
-      <div className='xl:p-20 p-5 bg-[#0a1841] text-gray-300 xl:text-base text-xs '>
+      <div className='xl:p-20 p-5 bg-[#050816]  text-slate-50 xl:text-base text-xs '>
+        
         <section id='about' className=''>
           <h3 className='mb-5 font-bold xl:text-xl text-lg ' >
             About Me
@@ -31,7 +33,7 @@ const aboutMe = ({ id }) => {
             Technologies I Work With
           </h3>
           <div className='flex w-full gap-4 h-full'>
-            <div className='grid grid-cols-2 w-6/12 bg-[#0D1324] xl:p-5 p-3 gap-3 items-center rounded-xl shadow-2xl xl:text-xs text-[10px] ring ring-blue-800 '>
+            <div className='grid grid-cols-2 w-6/12 xl:p-5 p-3 gap-3 items-center rounded-xl shadow-2xl hover:shadow-violet-500/20 xl:text-xs text-[10px]  border-2 border-[#1E293B] bg-[#0D1324]'>
               {skillsData.tools.map((tool) => (
                 <div key={tool.id} className='flex space-x-1 items-center'>
                   {tool.isAwesome ?
@@ -41,7 +43,7 @@ const aboutMe = ({ id }) => {
                 </div>
               ))}
             </div>
-            <div className='grid grid-cols-2 w-6/12 bg-[#0D1324] xl:p-5 p-3 gap-5 rounded-xl items-center shadow-2xl ring ring-blue-800 xl:text-xs text-[10px]'>
+            <div className='grid grid-cols-2 w-6/12 bg-[#0D1324] xl:p-5 p-3 gap-5 rounded-xl items-center shadow-2xl  border-2 border-[#1E293B] xl:text-xs text-[10px] hover:shadow-violet-500/20'>
               {skillsData.others.map((skill) => (
                 <div key={skill.id} className='flex space-x-1 items-center'>
                   {skill.isAwesome
@@ -59,12 +61,12 @@ const aboutMe = ({ id }) => {
           <h3 className='xl:my-5 my-3 text-xl font-bold'>
             Projects
           </h3>
-          <div className=' xl:grid-cols-2 grid  w-full rounded-2xl gap-10 space-y-5'>
+          <div className=' xl:grid-cols-2 grid-cols-1 grid w-full rounded-2xl gap-10 space-y-5'>
             {projectsData.map((project) => (
-              <div className=' xl:space-y-5 space-y-3 ring-2 ring-blue-800 bg-[#0D1324] flex flex-col xl:p-5 p-3 rounded-xl shadow-2xl' key={project.id}>
-                <h2 className='font-bold xl:tracking-widest tracking-wide xl:text-xl text-xs' >{project.title}</h2>
+              <div className=' space-y-3 border-2  border-[#1E293B] bg-[#0D1324] flex flex-col xl:p-5 p-3  rounded-xl shadow-2xl' key={project.id}>
+                <h2 className='font-bold xl:tracking-widest tracking-wide xl:text-lg text-xs' >{project.title}</h2>
                 <hr className='border-gray-400' />
-                <img src={project.image} alt="" className='rounded-md w-full xl:h-72 h-60 shadow-2xl ring-2 ring-white ' />
+                <img src={project.image} alt="" className='rounded-md w-full xl:h-64 h-40 shadow-2xl ring-2 ring-white ' />
                 {/* {project.description.map((text, index) => (
                   <div key={index} className=' items-center flex space-x-2'>
                     <FontAwesomeIcon icon={faCheck} className='text-green-600' />
@@ -114,14 +116,7 @@ const aboutMe = ({ id }) => {
             ))}
           </div>
         </section>
-        <div className=' flex place-self-center'>
-          <a href="https://github.com/DanielApple05"
-            target="_blank"
-            rel="noopener noreferrer"
-            className='flex place-self-center bg-blue-600 rounded p-2 xl:mt-6 mt-4 text-white cursor-pointer  justify-center font-semibold text-center '>
-            View more projects
-          </a>
-        </div>
+     < MobileNav key={id} />
       </div >
     </div >
   );
