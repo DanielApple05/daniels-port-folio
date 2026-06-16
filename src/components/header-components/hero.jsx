@@ -28,8 +28,8 @@ const hero = () => {
             )
           ))}
         </div>
-        <div className='flex flex-col justify-center xl:place-items-center h-[80vh] place-items-start space-y-7 xl:p-15 bg-[#0A1022] p-5  xl:mt-9 m-0 '>
-          <h1 className='xl:text-3xl text-xs font-bold relative'>
+        <div className='flex flex-col justify-center place-items-center h-[80vh] space-y-7 xl:p-15 bg-[#0A1022] p-5  xl:mt-9 m-0 '>
+          <h1 className='  text-3xl font-bold text-center'>
             Daniel Chukwuebuka Ejimofor
           </h1>
           <h3 className=' xl:text-xl text-xs font-semibold text-blue-600'>
