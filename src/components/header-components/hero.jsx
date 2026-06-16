@@ -28,7 +28,7 @@ const hero = () => {
             )
           ))}
         </div>
-        <div className='flex flex-col justify-center xl:place-items-center xl:h-72 h-52 place-items-start space-y-7 xl:p-15 bg-[#0A1022] p-5  xl:mt-9 m-0 '>
+        <div className='flex flex-col justify-center xl:place-items-center h-[80vh] place-items-start space-y-7 xl:p-15 bg-[#0A1022] p-5  xl:mt-9 m-0 '>
           <h1 className='xl:text-3xl text-xs font-bold relative'>
             Daniel Chukwuebuka Ejimofor
           </h1>
@@ -37,7 +37,7 @@ const hero = () => {
           </h3>
           <div className='flex xl:space-x-18 space-x-3'>
             {About.map((item) => (
-              <button key={item.id} className='cursor-pointer bg-blue-950 border border-violet-500/50 hover:bg-blue-600 rounded-md xl:px-5 px-3 py-1' 
+              <button key={item.id} className='hover:shadow-lg hover:shadow-violet-700/50 hover:translate-y-1 transition-all duration-300 cursor-pointer bg-blue-950 border border-violet-500/50 hover:bg-blue-600 rounded-md xl:px-5 px-3 py-1' 
             onClick={() => window.open(item.link, '_blank', 'noopener,noreferrer')}>
               {item.name}
             </button>))}

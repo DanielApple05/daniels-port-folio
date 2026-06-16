@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import Hero from './header-components/hero';
 import projectsData from './projectsData';
 import skillsData from './skillsData';
@@ -61,18 +60,12 @@ const aboutMe = ({ id }) => {
           <h3 className='xl:my-5 my-3 text-xl font-bold'>
             Projects
           </h3>
-          <div className=' xl:grid-cols-2 grid-cols-1 grid w-full rounded-2xl gap-10 space-y-5'>
+          <div className=' xl:grid-cols-2 grid-cols-1 grid w-full rounded-2xl gap-10 space-y-5 '>
             {projectsData.map((project) => (
-              <div className=' space-y-3 border-2  border-[#1E293B] bg-[#0D1324] flex flex-col xl:p-5 p-3  rounded-xl shadow-2xl' key={project.id}>
+              <div className=' space-y-3 border-2  border-[#1E293B] bg-[#0D1324] flex flex-col xl:p-5 p-3  rounded-xl hover:shadow-lg hover:shadow-violet-700/50 hover:-translate-y-2 transition-all duration-300 cursor-pointer' key={project.id}>
                 <h2 className='font-bold xl:tracking-widest tracking-wide xl:text-lg text-xs' >{project.title}</h2>
                 <hr className='border-gray-400' />
                 <img src={project.image} alt="" className='rounded-md w-full xl:h-64 h-40 shadow-2xl ring-2 ring-white ' />
-                {/* {project.description.map((text, index) => (
-                  <div key={index} className=' items-center flex space-x-2'>
-                    <FontAwesomeIcon icon={faCheck} className='text-green-600' />
-                    <p className='font-semibold'> {text}</p>
-                  </div>
-                ))} */}
                 <div className='flex space-x-5 justify-center ring py-2  ring-blue-400 rounded-lg '>
                   {project.tools && project.tools.map((tool, index) => (
                     <div key={index} className='flex items-center'>
