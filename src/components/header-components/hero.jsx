@@ -7,7 +7,7 @@ const hero = () => {
   return (
     <>
       <div
-        className=' text-white xl:text-base text-xs '>
+        className=' text-white xl:text-base text-xs  '>
         <div className='xl:flex hidden  xl:justify-around justify-between  w-full p-4 place-self-center bg-[#0A0F1C] fixed top-0 z-50 '>
           {Tabs.map((tab) => (
             tab.isSection ? (
@@ -28,7 +28,7 @@ const hero = () => {
             )
           ))}
         </div>
-        <div className='flex flex-col xl:place-items-center place-items-start xl:space-y-7 space-y-3 xl:p-15 bg-[#0A1022] p-5  xl:mt-9 m-0 '>
+        <div className='flex flex-col xl:place-items-center h-52 place-items-start space-y-7 xl:p-15 bg-[#0A1022] p-5  xl:mt-9 m-0 '>
           <h1 className='xl:text-3xl text-xs font-bold relative'>
             Daniel Chukwuebuka Ejimofor
           </h1>
