@@ -46,7 +46,7 @@ const hero = () => {
             )
           ))}
         </div>
-        < div className="relative w-full h-[80vh] overflow-hidden rounded-3xl">
+        < div className="relative items-center justify-center flex w-full h-[80vh] overflow-hidden rounded-3xl">
           {heroImages.map((image, index) => (
             <img
               key={index}
@@ -69,8 +69,8 @@ const hero = () => {
             ))}
           </div>
           <div className="absolute inset-0 rounded-3xl bg-black/70" />
-          <div className='absolute flex flex-col  justify-center h-[80vh] space-y-7 xl:p-15 p-5  xl:mt-9 m-0 '>
-            <h1 className='  text-3xl font-bold text-center'>
+          <div className='absolute items-center flex flex-col flex-1 space-y-7 xl:p-15 p-5  xl:mt-9 m-0 '>
+            <h1 className='text-3xl font-bold text-center'>
               Daniel Chukwuebuka Ejimofor
             </h1>
             <h3 className=' text-sm font-semibold text-blue-600'>
