@@ -33,7 +33,7 @@ const aboutMe = ({ id }) => {
             Technologies I Work With
           </h3>
           <div className='flex w-full gap-4 h-full'>
-            <div className='grid grid-cols-2 w-6/12 xl:p-5 p-3 gap-3 items-center rounded-xl shadow-2xl hover:shadow-violet-500/20 xl:text-xs text-[10px]  border-2 border-[#1E293B] bg-[#0D1324]'>
+            <div className='grid grid-cols-2 w-6/12 xl:p-5 p-3 gap-3 items-center rounded-xl shadow-2xl hover:shadow-violet-500/20 xl:text-xs text-[10px]  border-2 border-[#1E293B] bg-[#0D1324] hover:translate-y-2 transition-all duration-300 cursor-pointer '>
               {skillsData.tools.map((tool) => (
                 <div key={tool.id} className='flex space-x-1 items-center'>
                   {tool.isAwesome ?
@@ -43,7 +43,7 @@ const aboutMe = ({ id }) => {
                 </div>
               ))}
             </div>
-            <div className='grid grid-cols-2 w-6/12 bg-[#0D1324] xl:p-5 p-3 gap-5 rounded-xl items-center shadow-2xl  border-2 border-[#1E293B] xl:text-xs text-[10px] hover:shadow-violet-500/20'>
+            <div className='grid grid-cols-2 w-6/12 bg-[#0D1324] xl:p-5 p-3 gap-5 rounded-xl items-center shadow-2xl  border-2 border-[#1E293B] xl:text-xs text-[10px] hover:shadow-violet-500/20 hover:translate-y-2 transition-all duration-300 cursor-pointer'>
               {skillsData.others.map((skill) => (
                 <div key={skill.id} className='flex space-x-1 items-center'>
                   {skill.isAwesome
