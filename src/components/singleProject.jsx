@@ -24,9 +24,9 @@ const SingleProject = () => {
         ← Back to Projects
       </Link>
 
-      <div className='flex justify-evenly'>
+      <div className='flex xl:flex-row flex-col justify-evenly'>
         {/* Title */}
-        <h1 className='font-bold xl:text-3xl text-xl w-[50%] tracking-widest mt-4 mb-6'>
+        <h1 className='font-bold xl:text-3xl text-xl xl:w-[50%] w-full tracking-widest mt-4 mb-6'>
           {project.title}
         </h1>
 
@@ -34,7 +34,7 @@ const SingleProject = () => {
         <img
           src={project.image}
           alt={project.title}
-          className='rounded-md  w-[50%] xl:h-96 h-52 object-cover shadow-2xl ring-2 ring-white mb-8'
+          className='rounded-md  xl:w-[50%] w-full xl:h-96 h-52 object-cover shadow-2xl ring-2 ring-white mb-8'
         />
       </div>
 
