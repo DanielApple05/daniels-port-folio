@@ -64,7 +64,7 @@ const SingleProject = () => {
         </div>
       </div>
       <div className='flex xl:flex-row flex-col ring ring-blue-400 rounded-lg p-3 min-h-56'>
-        <div className=' flex flex-col  space-y-3 xl:w-[30%] w-full  items-center border-r border-gray-400 p-3'>
+        <div className=' flex flex-col  space-y-3 xl:w-[30%] w-full items-center border-r border-gray-400 p-3'>
           <p className='text-center text-violet-500'>Technologies</p>
           <div className='flex space-x-2 '>
             {project.tools && project.tools.map((tool, index) => (
