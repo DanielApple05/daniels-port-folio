@@ -9,6 +9,8 @@ const projectsData = [
   {
     id: 1,
     title: "Book Verse",
+    type: "MERN Stack",
+
     image: "/images/project7.png",
     links: [
       { id: 1, name: "View Demo", link: "https://leinads-book-verse.vercel.app/" },
@@ -80,7 +82,7 @@ const projectsData = [
     title: "Todo App",
     image: "/images/project2.PNG",
     links: [
-      { id: 7, name: "View Demo", link: "https://todo-list-with-react-js-brown.vercel.app" },
+      { id: 7, name: "View Demo", link: "https://todo-list-with-react-js-brown.vercel.app/" },
       { id: 8, more: "Description"}
     ],
     description: [
@@ -103,7 +105,7 @@ const projectsData = [
     title: "Sneakers Ecommerce",
     image: "/images/project3.PNG",
     links: [
-      { id: 9, name: "View Demo", link: "https://leinads-sneaks.vercel.app" },
+      { id: 9, name: "View Demo", link: "https://leinads-sneaks.vercel.app/" },
       { id: 10, more: "Description" }
     ],
     description: [
@@ -126,7 +128,7 @@ const projectsData = [
     title: "Furniro Furniture Ecommerce",
     image: "/images/project5.PNG",
     links: [
-      { id: 11, name: "View Demo", link: "https://furniro-furniture-shop.netlify.app" },
+      { id: 11, name: "View Demo", link: "https://furniro-furniture-shop.netlify.app/" },
       { id: 12, more: "Description"}
     ],
     description: [

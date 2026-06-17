@@ -26,21 +26,20 @@ const hero = () => {
     <>
       <div
         className=' text-white xl:text-base text-xs  '>
-        <div className='xl:flex hidden  xl:justify-around justify-between  w-full p-4 place-self-center bg-[#0A0F1C] fixed top-0 z-50 '>
+        <div className='xl:flex hidden  xl:justify-around justify-between  w-6/12 p-4 place-self-center bg-violet-600/50 fixed top-0 z-50 rounded-b-lg mt-5 backdrop-blur-xs '>
           {Tabs.map((tab) => (
             tab.isSection ? (
               <a
                 key={tab.id}
                 href={`#${tab.id}`}
-                className='cursor-pointer hover:text-blue-400'>
+                className='cursor-pointer hover:text-indigo-600'>
                 {tab.name}
               </a>
             ) : (
               <Link
                 key={tab.id}
                 to={tab.path}
-                className='cursor-pointer hover:text-blue-400'
-              >
+                className='cursor-pointer hover:text-indigo-600'              >
                 {tab.name}
               </Link>
             )

@@ -15,7 +15,7 @@ const aboutMe = ({ id }) => {
       <Hero key={id} />
       <div className='xl:p-20 p-5 bg-[#050816]  text-slate-50 xl:text-base text-xs '>
 
-        <section id='about' className=''>
+        <section id='about' >
           <h3 className='mb-5 font-bold xl:text-xl text-lg ' >
             About Me
           </h3>
@@ -94,7 +94,7 @@ const aboutMe = ({ id }) => {
                       return (
                         <Link
                           key={link.id}
-                          to="/singleProject"
+                          to={`/project/${project.id}`}
                           className="font-bold py-2 px-4 rounded-lg border border-blue-400 hover:bg-blue-700 hover:text-white"
                         >
                           {link.more}
