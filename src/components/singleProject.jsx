@@ -65,11 +65,11 @@ const SingleProject = () => {
       </div>
 
       <div className='flex xl:flex-row flex-col ring ring-blue-400 rounded-lg p-3'>
-        <div className='grid grid-cols-2 space-y-3 xl:w-[20%] w-full items-center xl:border-r border-l p-3'>
+        <div className='xl:grid grid-cols-2 flex justify-between  space-y-3 xl:w-[20%] w-full items-center xl:border-r border-l p-3'>
           {project.tools && project.tools.map((tool, index) => (
             <div key={index} className='flex items-center '>
               {tool.isAwesome
-                ? <FontAwesomeIcon icon={tool.logo} className={`xl:text-2xl text-lg ${tool.style}`} />
+                ? <FontAwesomeIcon icon={tool.logo} className={`xl:text-2xl text-lg  ${tool.style}`} />
                 : <tool.logo className={`w-6 h-6 ${tool.style}`} />
               }
             </div>
