@@ -59,7 +59,7 @@ const SingleProject = () => {
           <img
             src={project.image}
             alt={project.title}
-            className='rounded-md  xl:h-full h-52 w-full object-cover shadow-2xl ring-2 ring-white mb-8'
+            className='rounded-md  xl:h-full h-52 w-full object-cover shadow-2xl ring-2 ring-white '
           />
         </div>
       </div>
@@ -87,11 +87,6 @@ const SingleProject = () => {
           }
         </div>
       </div>
-
-
-
-
-
     </div>
   );
 };
