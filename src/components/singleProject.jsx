@@ -25,7 +25,7 @@ const SingleProject = () => {
         ← Back to Projects
       </Link>
 
-      <div className='flex xl:flex-row flex-col-reverse justify-evenly xl:mb-16 mb-12'>
+      <div className='flex xl:flex-row flex-col-reverse justify-evenly xl:mb-16 mb-6'>
         <div className=' xl:w-[50%] w-full pr-10 py-10 space-y-5 '>
           <h6 className='font-bold xl:text-xl text-lg text-violet-500 tracking-widest'>
             {project.type}
@@ -63,22 +63,24 @@ const SingleProject = () => {
           />
         </div>
       </div>
-
       <div className='flex xl:flex-row flex-col ring ring-blue-400 rounded-lg p-3'>
-        <div className='xl:grid grid-cols-2 flex justify-between  space-y-3 xl:w-[20%] w-full items-center xl:border-r border-l p-3'>
-          {project.tools && project.tools.map((tool, index) => (
-            <div key={index} className='flex items-center '>
-              {tool.isAwesome
-                ? <FontAwesomeIcon icon={tool.logo} className={`xl:text-2xl text-lg  ${tool.style}`} />
-                : <tool.logo className={`w-6 h-6 ${tool.style}`} />
-              }
-            </div>
-          ))}
+        <div className=' flex flex-col  space-y-3 xl:w-[20%] w-full  items-center xl:border-r border-none p-3'>
+          <p className='text-center text-violet-500'>Technologies</p>
+          <div className='flex space-x-2  '>
+            {project.tools && project.tools.map((tool, index) => (
+              <div key={index} className='flex mt-5'>
+                {tool.isAwesome
+                  ? <FontAwesomeIcon icon={tool.logo} className={`xl:text-2xl text-lg  ${tool.style}`} />
+                  : <tool.logo className={`w-6 h-6 ${tool.style}`} />
+                }
+              </div>
+            ))}
+          </div>
         </div>
-        <div className=' space-y-1 p-2 text-sm w-auto xl:border-r border-l '>
+        <div className=' space-y-1 p-2 text-sm w-auto xl:border-r border-none '>
           {
             project.description && project.description.map((description) => (<div key={description.id} className='flex space-x-2 items-center '>
-              <FontAwesomeIcon icon={faCircleCheck} className='text-violet-400'/>
+              <FontAwesomeIcon icon={faCircleCheck} className='text-violet-400' />
               <p > {description}</p>
             </div>
             ))

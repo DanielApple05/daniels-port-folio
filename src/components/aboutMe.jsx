@@ -13,7 +13,7 @@ const aboutMe = ({ id }) => {
   return (
     <div>
       <Hero key={id} />
-      <div className='xl:p-20 p-5 bg-[#050816]  text-slate-50 xl:text-base text-xs '>
+      <div className='xl:p-20 p-5 bg-[#050816] text-slate-50 xl:text-base text-xs '>
 
         <section id='about' >
           <h3 className='mb-5 font-bold xl:text-xl text-lg ' >
