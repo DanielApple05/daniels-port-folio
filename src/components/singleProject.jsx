@@ -63,10 +63,10 @@ const SingleProject = () => {
           />
         </div>
       </div>
-      <div className='flex xl:flex-row flex-col ring ring-blue-400 rounded-lg p-3'>
-        <div className=' flex flex-col  space-y-3 xl:w-[20%] w-full  items-center xl:border-r border-none p-3'>
+      <div className='flex xl:flex-row flex-col ring ring-blue-400 rounded-lg p-3 min-h-56'>
+        <div className=' flex flex-col  space-y-3 xl:w-[30%] w-full  items-center border-r border-gray-400 p-3'>
           <p className='text-center text-violet-500'>Technologies</p>
-          <div className='flex space-x-2  '>
+          <div className='flex space-x-2 '>
             {project.tools && project.tools.map((tool, index) => (
               <div key={index} className='flex mt-5'>
                 {tool.isAwesome
@@ -77,14 +77,19 @@ const SingleProject = () => {
             ))}
           </div>
         </div>
-        <div className=' space-y-1 p-2 text-sm w-auto xl:border-r border-none '>
+        <div className=' space-y-1 p-2 text-sm w-[40%] border-r border-gray-400 '>
+          <p className='text-center text-violet-500'>Description</p>
           {
-            project.description && project.description.map((description) => (<div key={description.id} className='flex space-x-2 items-center '>
+            project.description && project.description.slice(0, 5).map((description) => (
+            <div key={description.id} className='flex space-x-2 items-center  '>
               <FontAwesomeIcon icon={faCircleCheck} className='text-violet-400' />
-              <p > {description}</p>
+              <p className='' > {description}</p>
             </div>
             ))
           }
+        </div>
+        <div className='space-y-1 p-2 text-sm w-[30%]'>
+           <p  className='text-center text-violet-500' >Links</p>
         </div>
       </div>
     </div>
