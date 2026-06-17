@@ -8,14 +8,13 @@ import { Link } from 'react-router-dom';
 import MobileNav from './mobileNav';
 
 const aboutMe = ({ id }) => {
-
   const navigate = useNavigate();
 
   return (
     <div>
       <Hero key={id} />
       <div className='xl:p-20 p-5 bg-[#050816]  text-slate-50 xl:text-base text-xs '>
-        
+
         <section id='about' className=''>
           <h3 className='mb-5 font-bold xl:text-xl text-lg ' >
             About Me
@@ -109,7 +108,7 @@ const aboutMe = ({ id }) => {
             ))}
           </div>
         </section>
-     < MobileNav key={id} />
+        < MobileNav key={id} />
       </div >
     </div >
   );

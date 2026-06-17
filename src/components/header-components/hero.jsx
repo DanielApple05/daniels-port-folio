@@ -70,15 +70,15 @@ const hero = () => {
           </div>
           <div className="absolute inset-0 rounded-3xl bg-black/70" />
           <div className='absolute items-center flex flex-col flex-1 space-y-7 xl:p-15 p-5  xl:mt-9 m-0 '>
-            <h1 className='text-3xl font-bold text-center'>
+            <h1 className='xl:text-5xl text-3xl font-bold text-center'>
               Daniel Chukwuebuka Ejimofor
             </h1>
-            <h3 className=' text-sm font-semibold text-blue-600'>
+            <h3 className=' xl:text-lg text-sm font-semibold '>
               <span className=' xl:mr-2 mr-1'>Full Stack Developer</span> | <span className='xl:ml-2 ml-1'> Mern Stack Developer</span>
             </h3>
             <div className='flex xl:space-x-18 space-x-3'>
               {About.map((item) => (
-                <button key={item.id} className='hover:shadow-lg hover:shadow-violet-700/50 hover:translate-y-1 transition-all duration-300 cursor-pointer bg-blue-950 border border-violet-500/50 hover:bg-blue-600 rounded-md xl:px-5 px-3 py-1 text-lg'
+                <button key={item.id} className='hover:shadow-lg hover:shadow-violet-700/50 hover:translate-y-1 transition-all duration-300 cursor-pointer bg-violet-950 border border-violet-500/50 hover:bg-indigo-600 rounded-md xl:px-5 px-3 py-1 text-lg'
                   onClick={() => window.open(item.link, '_blank', 'noopener,noreferrer')}>
                   {item.name}
                 </button>))}
