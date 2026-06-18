@@ -3,10 +3,19 @@ import projectsData from './projectsData';
 import { Link, useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare, faCircleCheck, faArrowLeft, faPaperPlane, faArrowRight, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 const SingleProject = () => {
   const scrollRef = useRef(null);
+  const [showLeft, setShowLeft] = useState(false);
+  const [showRight, setShowRight] = useState(true);
+
+  const handleScroll = () => {
+    const el = scrollRef.current;
+    if (!el) return;
+    setShowLeft(el.scrollLeft > 0);
+    setShowRight(el.scrollLeft + el.clientWidth < el.scrollWidth - 1);
+  };
 
   const scroll = (direction) => {
     if (scrollRef.current) {
@@ -115,33 +124,37 @@ const SingleProject = () => {
           </a>
         </div>
       </div>
-      <div className='flex w-full justify-between items-center pl-12 my-6 py-6 space-x-2'>
+      <div className=' flex xl:flex-row flex-col w-full justify-between items-center xl:pl-12 pl-0 my-6 py-6 space-x-2'>
         <p>Mobile View Screenshot</p>
-        <div className='relative w-[60%]'>
-          <button
-            onClick={() => scroll('left')}
-            className='absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-violet-600 hover:bg-violet-700 text-white w-8 h-8 rounded-full flex items-center justify-center shadow-lg'
-          >
-            <FontAwesomeIcon icon={faChevronLeft} />
-          </button>
+        <div className='relative xl:w-[60%] w-full  xl:mb-10 mb-0'>
+          {showLeft && (
+            <button
+              onClick={() => scroll('left')}
+              className='absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-violet-600 hover:bg-violet-700 text-white w-8 h-8 rounded-full flex items-center justify-center shadow-lg'
+            >
+              <FontAwesomeIcon icon={faChevronLeft} />
+            </button>
+          )}
           <div
             ref={scrollRef}
+            onScroll={handleScroll}
             className="flex overflow-x-auto scrollbar-hide p-5 gap-3 h-72 bg-[#0F172A] rounded-xl"
           >
             {project.mobileView.map((mobile) => (
               <div key={mobile.id} className="flex-shrink-0 w-[40%] h-full rounded-lg">
-                <img src={mobile.mobileImg} alt="" className="w-full h-full rounded-lg object-cover" />
+                <img src={mobile.mobileImg} alt="" className="w-full h-full rounded-lg " />
               </div>
             ))}
           </div>
 
-          {/* Next Button */}
-          <button
-            onClick={() => scroll('right')}
-            className='absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-violet-600 hover:bg-violet-700 text-white w-8 h-8 rounded-full flex items-center justify-center shadow-lg'
-          >
-            <FontAwesomeIcon icon={faChevronRight} />
-          </button>
+          {showRight && (
+            <button
+              onClick={() => scroll('right')}
+              className='absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-violet-600 hover:bg-violet-700 text-white w-8 h-8 rounded-full flex items-center justify-center shadow-lg'
+            >
+              <FontAwesomeIcon icon={faChevronRight} />
+            </button>
+          )}
         </div>
       </div>
       <div className='bg-[#0F172A] flex justify-between mt-16  h-28 text-lg  items-center rounded-lg'>
