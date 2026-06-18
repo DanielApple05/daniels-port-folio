@@ -106,17 +106,17 @@ const SingleProject = () => {
       </div>
       <div className='bg-[#0F172A] flex justify-between mt-16 h-28 text-lg  items-center rounded-lg'>
         <div className='flex items-center space-x-3 m-3 '>
-          <div>
-            <FontAwesomeIcon icon={faPaperPlane} className='text-3xl text-[#7C3AED]' />
+          <div className='flex item-center justify-center'>
+            <FontAwesomeIcon icon={faPaperPlane} className='xl:text-4xl text-lg text-[#7C3AED]' />
           </div>
-         <div>
+         <div className='xl:text-base text-xs xl:max-w-5xl max-w-xl'>
            <p className='mb-2'> Interested in worrking with us ?</p>
           <p>I'm always open to discussing new opportunities and exciting projects.</p>
          </div>
         </div>
         <button className=' flex items-center space-x-2 bg-[#7C3AED] rounded-l-lg p-2 cursor-pointer hover:translate-x-0.5 duration-300 transition-all hover:shadow-lg hover:shadow-violet-700/50 '>
-          <p>Get In Touch</p>
-          <FontAwesomeIcon icon={faArrowRight} className='text-lg' />
+          <p className='xl:text-base text-sm '>Get In Touch</p>
+          <FontAwesomeIcon icon={faArrowRight} className='xl:text-lg text-sm' />
         </button>
       </div>
     </div>
