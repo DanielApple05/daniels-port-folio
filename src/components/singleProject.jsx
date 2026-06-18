@@ -55,33 +55,33 @@ const SingleProject = () => {
           />
         </div>
       </div>
-      <div className='flex xl:flex-row flex-col ring ring-blue-400 rounded-lg p-3 min-h-56'>
-        <div className=' flex flex-col  space-y-3 xl:w-[30%] w-full items-center border-r border-gray-400 p-3'>
-          <p className='text-center font-semibold text-violet-500'>Technologies</p>
-          <div className='flex space-x-2 '>
+      <div className='flex xl:flex-row flex-col ring ring-blue-400 rounded-lg p-3 xl:min-h-56 min-h-auto'>
+        <div className=' flex flex-col xl:w-[30%] w-full items-center xl:border-x-2 border-y-2 xl:border-y-0 border-gray-400 p-3'>
+          <p className='text-center font-semibold text-2xl xl:text-base text-violet-500 mb-3'>Technologies</p>
+          <div className=' xl:flex flex-row grid grid-cols-3 mb-3 xl:mb-0 items-center justify-between w-full '>
             {project.tools && project.tools.map((tool, index) => (
-              <div key={index} className='flex mt-5'>
+              <div key={index} className='flex mt-5 items-center' >
                 {tool.isAwesome
-                  ? <FontAwesomeIcon icon={tool.logo} className={`xl:text-2xl text-lg  ${tool.style}`} />
-                  : <tool.logo className={`w-6 h-6 ${tool.style}`} />
+                  ? <FontAwesomeIcon icon={tool.logo} className={`xl:text-2xl text-4xl  ${tool.style}`} />
+                  : <tool.logo className={`w-9 h-9 ${tool.style}`} />
                 }
               </div>
             ))}
           </div>
         </div>
-        <div className=' space-y-1 p-2 text-sm xl:w-[40%] w-full border-r border-gray-400 '>
-          <p className='text-center font-semibold text-violet-500'>Description</p>
+        <div className='space-y-1 p-2  xl:w-[40%] w-full my-3 xl:my-0 '>
+          <p className='text-center text-2xl xl:text-base font-semibold text-violet-500'>Description</p>
           {
             project.description && project.description.slice(0, 5).map((description) => (
               <div key={description.id} className='flex space-x-2 items-center  '>
-                <FontAwesomeIcon icon={faCircleCheck} className='text-violet-400' />
-                <p className='' > {description}</p>
+                <FontAwesomeIcon icon={faCircleCheck} className='text-violet-400 text-xl' />
+                <p className='mb-4 text-lg ' > {description}</p>
               </div>
             ))
           }
         </div>
-        <div className='space-y-2 p-2 text-sm xl:w-[30%] w-full'>
-          <p className='text-center font-semibold text-violet-500' >Links</p>
+        <div className='space-y-2 p-2 xl:w-[30%] w-full  xl:border-x-2 border-y-2 xl:border-y-0 border-gray-400'>
+          <p className='text-center font-semibold text-violet-500 text-2xl xl:text-base' >Links</p>
           <a
             key={project.id}
             href={project.links.link}

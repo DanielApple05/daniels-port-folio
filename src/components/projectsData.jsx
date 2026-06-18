@@ -4,7 +4,6 @@ import Vercel from '../images/vercel.svg?react'
 import Express from '../images/express.svg?react'
 import Node from '../images/node.svg?react'
 import MongoDB from '../images/mongoDb.svg?react'
-import { iconName } from '@fortawesome/free-brands-svg-icons/fa11ty';
 
 const projectsData = [
   {
@@ -17,12 +16,10 @@ const projectsData = [
     more: "Description",
     gitRepo: { host: "https://github.com/DanielApple05/Book-verse", icon: faGithub },
     description: [
-      "Digital library app built with React, Tailwind CSS, and the Google Books API",
       "Full-stack MERN app with JWT-based user authentication and account management",
       "Browse books by category, search by title or author, and view detailed book info",
       "Personal library with reading progress tracking, favorites, and reading status",
       "Embedded Google Books viewer with font size and theme customization",
-      "Responsive UI with dark mode, auto dark mode, and mobile navigation support",
       "Deployed on Vercel (frontend) and Render (backend) with MongoDB Atlas"
     ],
     tools: [
@@ -42,11 +39,14 @@ const projectsData = [
     overview: "Space Tourism is a multi-page frontend application inspired by a Frontend Mentor challenge. It presents an immersive UI for exploring space destinations, crew members, and technology — with smooth page transitions, dynamic routing, and a fully responsive layout built to pixel-perfect design specs.",
     image: "/images/project1.PNG",
     links: { name: "Live Demo", link: "https://space-tourism-site-gamma.vercel.app/" },
-     more: "Description",
-    gitRepo: { host: "https://github.com/DanielApple05/Space-Tourism-site",icon: faGithub} , 
+    more: "Description",
+    gitRepo: { host: "https://github.com/DanielApple05/Space-Tourism-site", icon: faGithub },
     description: [
-      "Dynamic routing between pages",
-      "Fully responsive UI built with React and Tailwind"
+      "Multi-page React app with dynamic routing using React Router DOM",
+      "Fully responsive UI built with React and Tailwind CSS",
+      "Tab-based navigation for destinations, crew, and technology sections",
+      "Built from a Figma design file to pixel-perfect accuracy",
+      "Smooth page transitions and interactive UI components"
     ],
     tools: [
       { logo: VSCode, isAwesome: false, style: '' },
@@ -64,12 +64,13 @@ const projectsData = [
     image: "/images/project6.png",
     links: { name: "Live Demo", link: "https://sky-view-forecast.vercel.app/" },
     more: "Description",
-    gitRepo:{host: "https://github.com/DanielApple05/weather-App/", icon: faGithub },
+    gitRepo: { host: "https://github.com/DanielApple05/weather-App/", icon: faGithub },
     description: [
-      "Real-time weather conditions for any city worldwide",
-      "5-day forecast with hourly breakdown by day",
-      "Search by city with metric/imperial unit toggle",
-      "Powered by OpenWeatherMap API with a clean dark UI"
+      "Real-time weather conditions for any city worldwide via OpenWeatherMap API",
+      "5-day forecast with hourly breakdown per day",
+      "City search with metric and imperial unit toggle",
+      "Clean dark UI optimized for quick readability",
+      "Fully responsive layout built with React and Tailwind CSS"
     ],
     tools: [
       { logo: VSCode, isAwesome: false, style: '' },
@@ -87,11 +88,13 @@ const projectsData = [
     image: "/images/project2.PNG",
     links: { name: "Live Demo", link: "https://todo-list-with-react-js-brown.vercel.app/" },
     more: "Description",
-    gitRepo: {host:"https://github.com/DanielApple05/Todo-App/", icon: faGithub },
+    gitRepo: { host: "https://github.com/DanielApple05/Todo-App/", icon: faGithub },
     description: [
-      "Add, complete, and delete tasks",
-      "Dark mode with local storage persistence",
-      "A functional MERN Stack App"
+      "Full-stack MERN app with JWT authentication and protected routes",
+      "Create, complete, and delete tasks persisted to MongoDB",
+      "Clear-completed tasks feature using Promise.all for parallel operations",
+      "Dark mode with local storage persistence across sessions",
+      "Deployed on Vercel (frontend) and Render (backend)"
     ],
     tools: [
       { logo: VSCode, isAwesome: false, style: '' },
@@ -111,11 +114,13 @@ const projectsData = [
     image: "/images/project3.PNG",
     links: { name: "Live Demo", link: "https://leinads-sneaks.vercel.app/" },
     more: "Description",
-    gitRepo: {host: "https://github.com/DanielApple05/Sneakers-frontEnd/", icon: faGithub },
+    gitRepo: { host: "https://github.com/DanielApple05/Sneakers-frontEnd/", icon: faGithub },
     description: [
-      "Product page with image gallery",
-      "Add-to-cart functionality using React state",
-      "A Demo App",
+      "Product page with interactive image gallery and thumbnail switching",
+      "Add-to-cart functionality managed with React state",
+      "Component-based architecture with reusable UI elements",
+      "Responsive layout designed for both mobile and desktop",
+      "Clean shopping UI with a focus on product presentation"
     ],
     tools: [
       { logo: VSCode, isAwesome: false, style: '' },
@@ -137,8 +142,11 @@ const projectsData = [
     more: "Description",
     gitRepo: { host: "https://github.com/DanielApple05/Furniro-ECommerce-frontend/", icon: faGithub },
     description: [
-      "Built with HTML and CSS",
-      "Responsive ecommerce layout with modern UI"
+      "Responsive ecommerce layout built from scratch with HTML and CSS",
+      "Modern retail UI with product listings and structured page sections",
+      "JavaScript used for interactive elements and dynamic behavior",
+      "No UI framework — demonstrates strong core frontend fundamentals",
+      "Consistent visual design with attention to spacing, typography, and layout"
     ],
     tools: [
       { logo: VSCode, isAwesome: false, style: '' },
