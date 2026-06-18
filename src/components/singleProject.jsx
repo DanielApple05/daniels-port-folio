@@ -2,7 +2,7 @@ import React from 'react';
 import projectsData from './projectsData';
 import { Link, useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUpRightFromSquare, faCircleCheck, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 const SingleProject = () => {
   const { id } = useParams();
@@ -19,9 +19,9 @@ const SingleProject = () => {
 
   return (
     <div className='min-h-screen bg-[#050816] text-slate-50 xl:p-20 p-5'>
-
-      <Link to="/" className='text-violet-500 hover:text-blue-500 hover:underline text-sm mb-8 inline-block'>
-        ← Back to Projects
+      <Link
+        to="/" className='text-violet-500 hover:text-blue-500 hover:underline text-sm mb-8 inline-block'>
+        <FontAwesomeIcon icon={faArrowLeft} /> Back to Projects
       </Link>
 
       <div className='flex xl:flex-row flex-col-reverse justify-evenly xl:mb-16 mb-6'>
@@ -47,7 +47,7 @@ const SingleProject = () => {
             </a>
           </div>
         </div>
-        <div className=' xl:w-[50%] w-full '>
+        <div className=' xl:w-[50%] w-full shadow-2xl shadow-violet-500 '>
           <img
             src={project.image}
             alt={project.title}
@@ -57,7 +57,7 @@ const SingleProject = () => {
       </div>
       <div className='flex xl:flex-row flex-col ring ring-blue-400 rounded-lg p-3 min-h-56'>
         <div className=' flex flex-col  space-y-3 xl:w-[30%] w-full items-center border-r border-gray-400 p-3'>
-          <p className='text-center text-violet-500'>Technologies</p>
+          <p className='text-center font-semibold text-violet-500'>Technologies</p>
           <div className='flex space-x-2 '>
             {project.tools && project.tools.map((tool, index) => (
               <div key={index} className='flex mt-5'>
@@ -69,8 +69,8 @@ const SingleProject = () => {
             ))}
           </div>
         </div>
-        <div className=' space-y-1 p-2 text-sm w-[40%] border-r border-gray-400 '>
-          <p className='text-center text-violet-500'>Description</p>
+        <div className=' space-y-1 p-2 text-sm xl:w-[40%] w-full border-r border-gray-400 '>
+          <p className='text-center font-semibold text-violet-500'>Description</p>
           {
             project.description && project.description.slice(0, 5).map((description) => (
               <div key={description.id} className='flex space-x-2 items-center  '>
@@ -80,16 +80,27 @@ const SingleProject = () => {
             ))
           }
         </div>
-        <div className='space-y-1 p-2 text-sm w-[30%]'>
-          <p className='text-center text-violet-500' >Links</p>
+        <div className='space-y-2 p-2 text-sm xl:w-[30%] w-full'>
+          <p className='text-center font-semibold text-violet-500' >Links</p>
           <a
             key={project.id}
             href={project.links.link}
             target='_blank'
             rel='noopener noreferrer'
-            className='font-bold py-2 px-6 flex items-center rounded-lg border border-blue-400 hover:bg-violet-500 bg-blue-700 hover:text-white hover:-translate-y-2 duration-300 transition-all'
+            className='font-bold py-2 px-6 flex items-center justify-between rounded-lg border border-blue-400 hover:bg-violet-500 hover:text-white hover:-translate-y-0.5 duration-300 transition-all'
           >
             {project.links.name}
+            <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='text-xl' />
+          </a>
+          <a
+            key={project.id}
+            href={project.gitRepo.host}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='font-bold py-2 px-6 flex items-center justify-between rounded-lg border border-blue-400 hover:bg-violet-500 hover:text-white hover:-translate-y-0.5 duration-300 transition-all'
+          >
+            <p> View GitHub</p>
+            <FontAwesomeIcon icon={project.gitRepo.icon} className='text-xl' />
           </a>
         </div>
       </div>

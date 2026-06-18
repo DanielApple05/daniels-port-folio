@@ -45,9 +45,9 @@ const hero = () => {
             )
           ))}
         </div>
-        < div className=" flex xl:flex-row flex-col w-full overflow-hidden  ">
-          <div className=' flex flex-col space-y-7 xl:p-15 p-5  xl:mt-9 m-0 w-[50%] justify-center items-center'>
-            <h1 className='xl:text-3xl text-3xl text-violet-500 font-bold'>
+        < div className=" flex xl:flex-row flex-col-reverse w-full overflow-hidden  ">
+          <div className=' flex flex-col space-y-7 xl:p-15 p-5 xl:mt-9 m-0 xl:w-[50%] w-full justify-center items-center'>
+            <h1 className='xl:text-3xl text-3xl text-violet-500 font-bold text-center'>
               Daniel Chukwuebuka Ejimofor
             </h1>
             <h3 className=' xl:text-lg text-sm font-semibold text-violet-500'>
@@ -61,7 +61,7 @@ const hero = () => {
                 </button>))}
             </div>
           </div>
-          <div className='relative w-[50%] flex justify-items-center mt-20 '>
+          <div className='relative xl:w-[50%] w-full flex justify-items-center mt-20 '>
             <div className='flex justify-center items-center h-96'>
               {heroImages.map((image, index) => (
                 <img
