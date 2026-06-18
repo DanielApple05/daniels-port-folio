@@ -1,10 +1,21 @@
-import React from 'react';
+
 import projectsData from './projectsData';
 import { Link, useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUpRightFromSquare, faCircleCheck, faArrowLeft, faPaperPlane, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUpRightFromSquare, faCircleCheck, faArrowLeft, faPaperPlane, faArrowRight, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { useRef } from 'react';
 
 const SingleProject = () => {
+  const scrollRef = useRef(null);
+
+  const scroll = (direction) => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({
+        left: direction === 'left' ? -200 : 200,
+        behavior: 'smooth'
+      });
+    }
+  };
   const { id } = useParams();
   const project = projectsData.find((p) => String(p.id) === id);
 
@@ -104,15 +115,44 @@ const SingleProject = () => {
           </a>
         </div>
       </div>
-      <div className='bg-[#0F172A] flex justify-between mt-16 h-28 text-lg  items-center rounded-lg'>
+      <div className='flex w-full justify-between items-center pl-12 my-6 py-6 space-x-2'>
+        <p>Mobile View Screenshot</p>
+        <div className='relative w-[60%]'>
+          <button
+            onClick={() => scroll('left')}
+            className='absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-violet-600 hover:bg-violet-700 text-white w-8 h-8 rounded-full flex items-center justify-center shadow-lg'
+          >
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </button>
+          <div
+            ref={scrollRef}
+            className="flex overflow-x-auto scrollbar-hide p-5 gap-3 h-72 bg-[#0F172A] rounded-xl"
+          >
+            {project.mobileView.map((mobile) => (
+              <div key={mobile.id} className="flex-shrink-0 w-[40%] h-full rounded-lg">
+                <img src={mobile.mobileImg} alt="" className="w-full h-full rounded-lg object-cover" />
+              </div>
+            ))}
+          </div>
+
+          {/* Next Button */}
+          <button
+            onClick={() => scroll('right')}
+            className='absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-violet-600 hover:bg-violet-700 text-white w-8 h-8 rounded-full flex items-center justify-center shadow-lg'
+          >
+            <FontAwesomeIcon icon={faChevronRight} />
+          </button>
+        </div>
+      </div>
+      <div className='bg-[#0F172A] flex justify-between mt-16  h-28 text-lg  items-center rounded-lg'>
         <div className='flex items-center space-x-3 m-3 '>
           <div className='flex item-center justify-center'>
             <FontAwesomeIcon icon={faPaperPlane} className='xl:text-4xl text-lg text-[#7C3AED]' />
           </div>
-         <div className='xl:text-base text-xs xl:max-w-5xl max-w-xl'>
-           <p className='mb-2'> Interested in worrking with us ?</p>
-          <p>I'm always open to discussing new opportunities and exciting projects.</p>
-         </div>
+          <div className='xl:text-base text-xs xl:max-w-5xl max-w-xl'>
+            <p className='mb-2'> Interested in worrking with us ?</p>
+            <p>I'm always open to discussing new opportunities and exciting projects.</p>
+          </div>
         </div>
         <button className=' flex items-center space-x-2 bg-[#7C3AED] rounded-l-lg p-2 cursor-pointer hover:translate-x-0.5 duration-300 transition-all hover:shadow-lg hover:shadow-violet-700/50 '>
           <p className='xl:text-base text-sm '>Get In Touch</p>
