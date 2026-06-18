@@ -25,8 +25,8 @@ const hero = () => {
   return (
     <>
       <div
-        className=' text-white xl:text-base text-xs bg-[#050816] '>
-        <div className='xl:flex hidden justify-around w-6/12 p-4 place-self-center fixed top-0 z-50 font-semibold rounded-b-lg backdrop-blur-xl '>
+        className=' text-violet-500 xl:text-base text-xs bg-[#050816] '>
+        <div className='xl:flex hidden justify-around w-6/12 p-4 place-self-center fixed top-0 z-50 font-semibold rounded-b-lg backdrop-blur-3xl '>
           {Tabs.map((tab) => (
             tab.isSection ? (
               <a

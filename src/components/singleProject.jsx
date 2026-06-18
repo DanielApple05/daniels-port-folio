@@ -20,7 +20,6 @@ const SingleProject = () => {
   return (
     <div className='min-h-screen bg-[#050816] text-slate-50 xl:p-20 p-5'>
 
-      {/* Back button */}
       <Link to="/" className='text-violet-500 hover:text-blue-500 hover:underline text-sm mb-8 inline-block'>
         ← Back to Projects
       </Link>
@@ -37,22 +36,15 @@ const SingleProject = () => {
             {project.overview}
           </p>
           <div className='flex space-x-4'>
-            {project.links.map((link) => {
-              if (link.name) {
-                return (
-                  <a
-                    key={link.id}
-                    href={link.link}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='font-bold py-2 px-6 flex items-center rounded-lg border border-blue-400 hover:bg-violet-500 bg-blue-700 hover:text-white hover:-translate-y-2 duration-300 transition-all'
-                  >
-                    {link.name}
-                  </a>
-                );
-              }
-              return null;
-            })}
+            <a
+              key={project.id}
+              href={project.links.link}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='font-bold py-2 px-6 flex items-center rounded-lg border border-blue-400 hover:bg-violet-500 bg-blue-700 hover:text-white hover:-translate-y-2 duration-300 transition-all'
+            >
+              {project.links.name}
+            </a>
           </div>
         </div>
         <div className=' xl:w-[50%] w-full '>
@@ -81,15 +73,24 @@ const SingleProject = () => {
           <p className='text-center text-violet-500'>Description</p>
           {
             project.description && project.description.slice(0, 5).map((description) => (
-            <div key={description.id} className='flex space-x-2 items-center  '>
-              <FontAwesomeIcon icon={faCircleCheck} className='text-violet-400' />
-              <p className='' > {description}</p>
-            </div>
+              <div key={description.id} className='flex space-x-2 items-center  '>
+                <FontAwesomeIcon icon={faCircleCheck} className='text-violet-400' />
+                <p className='' > {description}</p>
+              </div>
             ))
           }
         </div>
         <div className='space-y-1 p-2 text-sm w-[30%]'>
-           <p  className='text-center text-violet-500' >Links</p>
+          <p className='text-center text-violet-500' >Links</p>
+          <a
+            key={project.id}
+            href={project.links.link}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='font-bold py-2 px-6 flex items-center rounded-lg border border-blue-400 hover:bg-violet-500 bg-blue-700 hover:text-white hover:-translate-y-2 duration-300 transition-all'
+          >
+            {project.links.name}
+          </a>
         </div>
       </div>
     </div>

@@ -75,34 +75,25 @@ const aboutMe = ({ id }) => {
                     </div>
                   ))}
                 </div>
+
                 <div className='w-full flex justify-between'>
-                  {project.links.map((link) => {
-                    if (link.name) {
-                      return (
-                        <a
-                          key={link.id}
-                          href={link.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="font-bold py-2 px-4 rounded-lg border border-blue-400 hover:bg-blue-700 hover:text-white"
-                        >
-                          {link.name}
-                        </a>
-                      );
-                    }
-                    if (link.more) {
-                      return (
-                        <Link
-                          key={link.id}
-                          to={`/project/${project.id}`}
-                          className="font-bold py-2 px-4 rounded-lg border border-blue-400 hover:bg-blue-700 hover:text-white"
-                        >
-                          {link.more}
-                        </Link>
-                      );
-                    }
-                    return null;
-                  })}
+                  <a
+                    key={project.id}
+                    href={project.links.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-bold py-2 px-4 rounded-lg border border-blue-400 hover:bg-blue-700 hover:text-white"
+                  >
+                    {project.links.name}
+                  </a>
+
+                  <Link
+                    key={project.id}
+                    to={`/project/${project.id}`}
+                    className="font-bold py-2 px-4 rounded-lg border border-blue-400 hover:bg-blue-700 hover:text-white"
+                  >
+                    {project.more}
+                  </Link>
                 </div>
               </div>
             ))}
