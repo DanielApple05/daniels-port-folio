@@ -70,7 +70,7 @@ const hero = () => {
                   key={index}
                   src={image}
                   alt=""
-                  className={`absolute rounded-lg inset-0 m-auto xl:w-[85%] w-full h-96 transition-opacity duration-1000 ${current === index ? "opacity-100" : "opacity-0"
+                  className={`absolute xl:rounded-b-0 xl:rounded-lg rounded-b-xl inset-0 m-auto xl:w-[85%] w-full h-96 transition-opacity duration-1000 ${current === index ? "opacity-100" : "opacity-0"
                     }`}
                 />
               ))}
