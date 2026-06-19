@@ -76,7 +76,7 @@ const SingleProject = () => {
         </div>
       </div>
       <div className='flex xl:flex-row flex-col border border-blue-400 rounded-lg p-3 xl:min-h-36 min-h-auto bg-[#0F172A]'>
-        <div className=' flex flex-col xl:w-[30%] w-full items-center xl:border-x-2 border-y-2 xl:border-y-0 border-gray-400 p-3'>
+        <div className=' flex flex-col xl:w-[30%] w-full items-center p-3'>
           <p className='text-center font-semibold text-2xl xl:text-base text-violet-500 mb-3'>Technologies</p>
           <div className=' grid xl:grid-cols-2 grid-cols-3  mb-3 xl:mb-0 items-center justify-between w-full '>
             {project.tools && project.tools.map((tool, index) => (
@@ -89,7 +89,7 @@ const SingleProject = () => {
             ))}
           </div>
         </div>
-        <div className='space-y-1 p-2  xl:w-[40%] w-full my-3 xl:my-0 '>
+        <div className='space-y-1 p-2  xl:w-[40%] w-full my-3 xl:my-0 xl:border-x-2 border-y-2 xl:border-y-0 border-gray-400 '>
           <p className='text-center text-2xl xl:text-base font-semibold text-violet-500'>Description</p>
           {
             project.description && project.description.slice(0, 5).map((description) => (
@@ -100,7 +100,7 @@ const SingleProject = () => {
             ))
           }
         </div>
-        <div className='space-y-2 p-2 xl:w-[30%] w-full  xl:border-x-2 border-y-2 xl:border-y-0 border-gray-400'>
+        <div className='space-y-2 p-2 xl:w-[30%] w-full '>
           <p className='text-center font-semibold text-violet-500 text-2xl xl:text-base' >Links</p>
           <a
             key={project.id}
@@ -124,13 +124,15 @@ const SingleProject = () => {
           </a>
         </div>
       </div>
-      <div className=' flex xl:flex-row flex-col w-full justify-between items-center xl:pl-12 pl-0 my-6 py-6 space-x-2'>
-        <p>Mobile View Screenshot</p>
-        <div className='relative xl:w-[60%] w-full  xl:mb-10 mb-0'>
+      <div className=' flex xl:flex-row flex-col w-full rounded-lg justify-between bg-[#0F172A] items-center my-6 py-6 space-x-2  '>
+        <div className='flex m-5'>
+          <p>Mobile View Screenshot</p>
+        </div>
+        <div className='relative xl:w-[60%] w-full  bg-[#050816] rounded-lg p-5 m-5'>
           {showLeft && (
             <button
               onClick={() => scroll('left')}
-              className='absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-violet-600 hover:bg-violet-700 text-white w-8 h-8 rounded-full flex items-center justify-center shadow-lg'
+              className='absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-violet-600 hover:bg-violet-700 text-white w-8 h-8 rounded-full flex items-center justify-center shadow-lg cursor-pointer'
             >
               <FontAwesomeIcon icon={faChevronLeft} />
             </button>
@@ -138,7 +140,7 @@ const SingleProject = () => {
           <div
             ref={scrollRef}
             onScroll={handleScroll}
-            className="flex overflow-x-auto scrollbar-hide p-5 gap-3 h-72 bg-[#0F172A] rounded-xl"
+            className="flex overflow-x-auto scrollbar-hide p-5 gap-3 h-72  rounded-xl"
           >
             {project.mobileView.map((mobile) => (
               <div key={mobile.id} className="flex-shrink-0 w-[40%] h-full rounded-lg">
@@ -146,18 +148,17 @@ const SingleProject = () => {
               </div>
             ))}
           </div>
-
           {showRight && (
             <button
               onClick={() => scroll('right')}
-              className='absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-violet-600 hover:bg-violet-700 text-white w-8 h-8 rounded-full flex items-center justify-center shadow-lg'
+              className='absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-violet-600 hover:bg-violet-700 text-white w-8 h-8 rounded-full flex items-center justify-center shadow-lg cursor-pointer'
             >
               <FontAwesomeIcon icon={faChevronRight} />
             </button>
           )}
         </div>
       </div>
-      <div className='bg-[#0F172A] flex justify-between mt-16  h-28 text-lg  items-center rounded-lg'>
+      <div className='bg-[#0F172A] flex justify-between mt-4 h-28 text-lg  items-center rounded-lg'>
         <div className='flex items-center space-x-3 m-3 '>
           <div className='flex item-center justify-center'>
             <FontAwesomeIcon icon={faPaperPlane} className='xl:text-4xl text-lg text-[#7C3AED]' />
