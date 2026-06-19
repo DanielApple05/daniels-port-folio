@@ -9,7 +9,7 @@ import MobileNav from './mobileNav';
 
 const aboutMe = ({ id }) => {
   const navigate = useNavigate();
-
+  
   return (
     <div>
       <Hero key={id} />
