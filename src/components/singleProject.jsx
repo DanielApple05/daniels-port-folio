@@ -159,7 +159,7 @@ const SingleProject = () => {
         </div>
       </div>
       <div className='bg-[#0F172A] flex justify-between mt-4 h-28 text-lg  items-center rounded-lg'>
-        <div className=' w-[50%] flex items-center xl:space-x-3 space-x-1 m-3 '>
+        <div className=' flex items-center space-x-3 m-3 '>
           <div className='flex item-center justify-center'>
             <FontAwesomeIcon icon={faPaperPlane} className='xl:text-4xl text-lg text-[#7C3AED]' />
           </div>
