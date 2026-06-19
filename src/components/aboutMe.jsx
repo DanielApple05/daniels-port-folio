@@ -89,6 +89,7 @@ const aboutMe = ({ id }) => {
 
                   <Link
                     key={project.id}
+                    reloadDocument
                     to={`/project/${project.id}`}
                     className="font-bold py-2 px-4 rounded-lg border border-blue-400 hover:bg-blue-700 hover:text-white"
                   >

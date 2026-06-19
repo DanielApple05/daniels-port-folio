@@ -78,7 +78,7 @@ const SingleProject = () => {
       <div className='flex xl:flex-row flex-col border border-blue-400 rounded-lg p-3 xl:min-h-36 min-h-auto bg-[#0F172A]'>
         <div className=' flex flex-col xl:w-[30%] w-full items-center p-3'>
           <p className='text-center font-semibold text-2xl xl:text-base text-violet-500 mb-3'>Technologies</p>
-          <div className=' grid xl:grid-cols-2 grid-cols-3  mb-3 xl:mb-0 items-center justify-between w-full '>
+          <div className=' grid grid-cols-3  mb-3 xl:mb-0 items-center justify-between w-full '>
             {project.tools && project.tools.map((tool, index) => (
               <div key={index} className='flex mt-5 items-center' >
                 {tool.isAwesome
@@ -107,7 +107,7 @@ const SingleProject = () => {
             href={project.links.link}
             target='_blank'
             rel='noopener noreferrer'
-            className='font-bold py-2 px-6 flex items-center justify-between rounded-lg border border-blue-400 hover:bg-violet-500 hover:text-white hover:-translate-y-0.5 duration-300 transition-all'
+            className='font-bold text-sm py-2 px-6 flex items-center justify-between rounded-lg border border-blue-400 hover:bg-violet-500 hover:text-white hover:-translate-y-0.5 duration-300 transition-all'
           >
             {project.links.name}
             <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='text-xl' />
@@ -117,7 +117,7 @@ const SingleProject = () => {
             href={project.gitRepo.host}
             target='_blank'
             rel='noopener noreferrer'
-            className='font-bold py-2 px-6 flex items-center justify-between rounded-lg border border-blue-400 hover:bg-violet-500 hover:text-white hover:-translate-y-0.5 duration-300 transition-all'
+            className='font-bold text-sm py-2 px-6 flex items-center justify-between rounded-lg border border-blue-400 hover:bg-violet-500 hover:text-white hover:-translate-y-0.5 duration-300 transition-all'
           >
             <p> View GitHub</p>
             <FontAwesomeIcon icon={project.gitRepo.icon} className='text-xl' />
@@ -170,6 +170,7 @@ const SingleProject = () => {
         </div>
         <Link
         to='/contact'
+        reloadDocument
         className='flex items-center space-x-2 bg-[#7C3AED] rounded-l-lg p-2 cursor-pointer hover:translate-x-0.5 duration-300 transition-all hover:shadow-lg hover:shadow-violet-700/50 '>
           <p className='xl:text-base text-sm '>Get In Touch</p>
           <FontAwesomeIcon icon={faArrowRight} className='xl:text-lg text-sm' />

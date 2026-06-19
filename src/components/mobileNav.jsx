@@ -1,6 +1,6 @@
 import React from 'react';
 import Navs from './mobileTabs'
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
@@ -18,16 +18,17 @@ const MobileNav = () => {
               <FontAwesomeIcon icon={nav.icon} />
             </a>
           ) : (
-            <NavLink
+            <Link
               key={nav.id}
               to={nav.path}
+              reloadDocument
               className={({ isActive }) =>
                 `flex items-center justify-center p-2 rounded-full transition-all duration-300 hover:-translate-y-1
           ${isActive ? 'bg-blue-400 text-white shadow-md' : ''}`
               }
             >
               <FontAwesomeIcon icon={nav.icon} />
-            </NavLink>
+            </Link>
           )
         )}
       </div>
