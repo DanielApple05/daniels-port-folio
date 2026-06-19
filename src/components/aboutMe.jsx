@@ -14,9 +14,8 @@ const aboutMe = ({ id }) => {
     <div>
       <Hero key={id} />
       <div className='xl:p-20 p-5 bg-[#050816] text-slate-50 xl:text-base text-xs '>
-
         <section id='about' >
-          <h3 className='mb-5 font-bold xl:text-xl text-lg ' >
+          <h3 className='mb-5 font-bold xl:text-xl text-lg' >
             About Me
           </h3>
           <p>
