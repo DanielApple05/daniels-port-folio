@@ -8,11 +8,11 @@ const hero = () => {
   const [current, setCurrent] = useState(0);
   const heroImages = [
     "/images/project7.png",
-     "/images/project1.PNG",
+    "/images/project1.PNG",
     "/images/project2.PNG",
     "/images/project4.PNG",
     "/images/project5.PNG",
-     "/images/project6.png"
+    "/images/project6.png"
   ];
   const About = [{ id: 1, name: 'View Projects', link: 'https://github.com/DanielApple05' }, { id: 2, name: 'Download CV', link: '/Daniel_Ejimofor_CV.pdf', download: true }];
 
@@ -20,7 +20,6 @@ const hero = () => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % heroImages.length);
     }, 4000);
-
     return () => clearInterval(interval);
   }, []);
 
@@ -59,7 +58,7 @@ const hero = () => {
             <div className='flex xl:space-x-18 space-x-3'>
               {About.map((item) => (
                 <button key={item.id} className='hover:shadow-lg hover:shadow-violet-700/50 hover:translate-y-1 transition-all duration-300 cursor-pointer bg-violet-950 border border-violet-500/50 hover:bg-indigo-600 rounded-md xl:px-5 px-3 py-1 text-lg text-slate-50 '
-                  onClick={() => window.open(item.link, '_blank', 'noopener,noreferrer' )}>
+                  onClick={() => window.open(item.link, '_blank', 'noopener,noreferrer')}>
                   {item.name}
                 </button>))}
             </div>

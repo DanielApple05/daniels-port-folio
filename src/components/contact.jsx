@@ -44,7 +44,7 @@ const contact = () => {
             <div>
               <h5 className="xlz:text-3xl text-lg font-semibold mb-4">Let's Work Together!</h5>
               <p className="text-sm">
-                I'm open to Internship and junior frontend opportuinities. Feel free to reach out for collaborations, projects, or just a chat about tech and web development.
+                I'm open to Internship and junior MERN stack opportuinities. Feel free to reach out for collaborations, projects, or just a chat about tech and web development.
               </p>
             </div>
             <hr className=" border-gray-600" />
