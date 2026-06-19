@@ -8,8 +8,8 @@ const hero = () => {
   const [current, setCurrent] = useState(0);
   const heroImages = [
     "/images/project7.png",
+     "/images/project1.PNG",
     "/images/project2.PNG",
-    "/images/project3.PNG",
     "/images/project4.PNG",
     "/images/project5.PNG",
      "/images/project6.png"
