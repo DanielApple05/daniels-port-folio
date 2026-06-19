@@ -95,7 +95,7 @@ const SingleProject = () => {
             project.description && project.description.slice(0, 5).map((description) => (
               <div key={description.id} className='flex space-x-2 items-center  '>
                 <FontAwesomeIcon icon={faCircleCheck} className='text-violet-400 text-xl' />
-                <p className='mb-2 text-lg ' > {description}</p>
+                <p className='mb-2 xl:text-sm text-lg ' > {description}</p>
               </div>
             ))
           }
@@ -159,7 +159,7 @@ const SingleProject = () => {
         </div>
       </div>
       <div className='bg-[#0F172A] flex justify-between mt-4 h-28 text-lg  items-center rounded-lg'>
-        <div className='flex items-center space-x-3 m-3 '>
+        <div className=' w-[50%] flex items-center xl:space-x-3 space-x-1 m-3 '>
           <div className='flex item-center justify-center'>
             <FontAwesomeIcon icon={faPaperPlane} className='xl:text-4xl text-lg text-[#7C3AED]' />
           </div>
@@ -168,10 +168,12 @@ const SingleProject = () => {
             <p>I'm always open to discussing new opportunities and exciting projects.</p>
           </div>
         </div>
-        <button className=' flex items-center space-x-2 bg-[#7C3AED] rounded-l-lg p-2 cursor-pointer hover:translate-x-0.5 duration-300 transition-all hover:shadow-lg hover:shadow-violet-700/50 '>
+        <Link
+        to='/contact'
+        className='flex items-center space-x-2 bg-[#7C3AED] rounded-l-lg p-2 cursor-pointer hover:translate-x-0.5 duration-300 transition-all hover:shadow-lg hover:shadow-violet-700/50 '>
           <p className='xl:text-base text-sm '>Get In Touch</p>
           <FontAwesomeIcon icon={faArrowRight} className='xl:text-lg text-sm' />
-        </button>
+        </Link>
       </div>
     </div>
   );
