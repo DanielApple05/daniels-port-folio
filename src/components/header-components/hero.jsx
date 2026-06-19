@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react'
 const hero = () => {
   const [current, setCurrent] = useState(0);
   const heroImages = [
-    "/images/project1.PNG",
+    "/images/project7.png",
     "/images/project2.PNG",
     "/images/project3.PNG",
     "/images/project4.PNG",
