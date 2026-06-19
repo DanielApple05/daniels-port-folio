@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const MobileNav = () => {
   return (
     <div className='flex justify-center'>
-      <div className="xl:hidden flex fixed bottom-10 text-base z-20 mx-auto justify-around bg-violet-600/50 w-60 p-3 rounded-full backdrop-blur-md shadow-lg shadow-violet-700">
+      <div className="xl:hidden flex items-center fixed bottom-10 text-base z-20 mx-auto justify-around bg-violet-600/50 w-60 p-3 rounded-full backdrop-blur-md shadow-lg shadow-violet-700">
         {Navs.map((nav) =>
           nav.isSection ? (
             <a
