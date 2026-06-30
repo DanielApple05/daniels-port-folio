@@ -12,7 +12,8 @@ const hero = () => {
     "/images/project2.PNG",
     "/images/project4.PNG",
     "/images/project5.PNG",
-    "/images/project6.png"
+    "/images/project6.png",
+    "/images/secureBankPreview.png"
   ];
   const About = [{ id: 1, name: 'View Projects', link: 'https://github.com/DanielApple05' }, { id: 2, name: 'Download CV', link: '/Daniel_Ejimofor_CV.pdf', download: true }];
 

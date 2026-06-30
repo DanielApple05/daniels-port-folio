@@ -241,7 +241,7 @@ const SingleProject = () => {
         )}
 
         {/* CTA footer */}
-        <div className='bg-gradient-to-r from-violet-900/30 to-blue-900/30 border border-white/5 rounded-2xl flex items-center justify-between p-6 gap-4'>
+        <div className='bg-gradient-to-r from-violet-900/30 to-blue-900/30 border border-white/5 rounded-2xl flex xl:flex-row flex-col items-center justify-between p-6 gap-4'>
           <div className='flex items-center gap-4'>
             <div className='w-12 h-12 rounded-xl bg-violet-600/20 flex items-center justify-center shrink-0'>
               <FontAwesomeIcon icon={faPaperPlane} className='text-violet-400 text-lg' />
