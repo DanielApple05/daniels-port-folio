@@ -1,108 +1,163 @@
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUpRightFromSquare, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import Hero from './header-components/hero';
 import projectsData from './projectsData';
 import skillsData from './skillsData';
-import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import MobileNav from './mobileNav';
 
-const aboutMe = ({ id }) => {
-  const navigate = useNavigate();
-  
+const AboutMe = ({ id }) => {
+  const [imgError, setImgError] = useState({});
+
   return (
-    <div>
+    <div className='bg-[#050816] text-slate-50 min-h-screen'>
       <Hero key={id} />
-      <div className='xl:p-20 p-5 bg-[#050816] text-slate-50 xl:text-base text-xs '>
-        <section id='about' >
-          <h3 className='mb-5 font-bold xl:text-xl text-lg' >
-            About Me
-          </h3>
-          <p>
-            I'm a Full Stack Developer specializing in the MERN stack, with a focus on building scalable, secure, and user-friendly web applications. I've developed both frontend interfaces and backend systems, including REST APIs, authentication flows, and protected routes.
-            I enjoy turning ideas into real-world products, writing clean and maintainable code, and continuously improving my skills. My recent work includes building a fully functional backend with user authentication and integrating APIs using modern development tools.
-            I'm currently open to opportunities where I can contribute, grow, and build impactful digital experiences.
-          </p>
+
+      <div className='xl:px-20 px-5 xl:py-16 py-10 max-w-7xl mx-auto'>
+
+        {/* About */}
+        <section id='about' className='mb-14'>
+          <div className='flex items-center gap-3 mb-5'>
+            <div className='w-1 h-6 bg-violet-500 rounded-full' />
+            <h3 className='font-bold xl:text-2xl text-xl'>About Me</h3>
+          </div>
+          <div className='bg-[#0F172A] rounded-2xl p-6 border border-white/5'>
+            <p className='text-gray-400 leading-relaxed xl:text-base text-sm'>
+              I'm a Full Stack Developer specializing in the MERN stack, with a focus on building scalable, secure, and user-friendly web applications. I've developed both frontend interfaces and backend systems, including REST APIs, authentication flows, and protected routes.
+              I enjoy turning ideas into real-world products, writing clean and maintainable code, and continuously improving my skills. My recent work includes building a fully functional backend with user authentication and integrating APIs using modern development tools.
+              I'm currently open to opportunities where I can contribute, grow, and build impactful digital experiences.
+            </p>
+          </div>
         </section>
-        <hr className='border-gray-400 mt-5' />
-        <section id='skills' className='xl:my-5 my-10 '>
-          <h3 className=' xl:text-xl text-lg font-bold my-10'>
-            Technologies I Work With
-          </h3>
-          <div className='flex w-full gap-4 h-full'>
-            <div className='grid grid-cols-2 w-6/12 xl:p-5 p-3 gap-3 items-center rounded-xl shadow-2xl hover:shadow-violet-500/20 xl:text-xs text-[10px]  border-2 border-[#1E293B] bg-[#0D1324] hover:translate-y-2 transition-all duration-300 cursor-pointer '>
-              {skillsData.tools.map((tool) => (
-                <div key={tool.id} className='flex space-x-1 items-center'>
-                  {tool.isAwesome ?
-                    <FontAwesomeIcon icon={tool.logo} className={`xl:text-2xl text-lg ${tool.style}`} /> : <img className={`  w-5 ${tool.style}`} src={tool.logo} alt="" />
-                  }
-                  <p>{tool.name}</p>
-                </div>
-              ))}
+
+        {/* Skills */}
+        <section id='skills' className='mb-14'>
+          <div className='flex items-center gap-3 mb-6'>
+            <div className='w-1 h-6 bg-violet-500 rounded-full' />
+            <h3 className='font-bold xl:text-2xl text-xl'>Technologies I Work With</h3>
+          </div>
+
+          <div className='grid xl:grid-cols-2 grid-cols-1 gap-5'>
+            {/* Tools */}
+            <div className='bg-[#0F172A] rounded-2xl p-6 border border-white/5 hover:border-violet-500/30 hover:-translate-y-1 transition-all duration-300'>
+              <p className='text-violet-400 text-xs font-bold uppercase tracking-widest mb-5'>Core Stack</p>
+              <div className='grid grid-cols-2 gap-3'>
+                {skillsData.tools.map((tool) => (
+                  <div key={tool.id} className='flex items-center gap-3 bg-white/5 rounded-xl px-3 py-2.5'>
+                    {tool.isAwesome
+                      ? <FontAwesomeIcon icon={tool.logo} className={`xl:text-xl text-lg shrink-0 ${tool.style}`} />
+                      : <img className='w-5 h-5 shrink-0 object-contain' src={tool.logo} alt={tool.name} />
+                    }
+                    <p className='xl:text-sm text-xs text-gray-300'>{tool.name}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className='grid grid-cols-2 w-6/12 bg-[#0D1324] xl:p-5 p-3 gap-5 rounded-xl items-center shadow-2xl  border-2 border-[#1E293B] xl:text-xs text-[10px] hover:shadow-violet-500/20 hover:translate-y-2 transition-all duration-300 cursor-pointer'>
-              {skillsData.others.map((skill) => (
-                <div key={skill.id} className='flex space-x-1 items-center'>
-                  {skill.isAwesome
-                    ? <FontAwesomeIcon icon={skill.logo} className={`xl:text-2xl text-lg ${skill.style}`} />
-                    : <img className='xl:w-5 w-3' src={skill.logo} />
-                  }
-                  <p>{skill.name}</p>
-                </div>
-              ))}
+
+            {/* Others */}
+            <div className='bg-[#0F172A] rounded-2xl p-6 border border-white/5 hover:border-violet-500/30 hover:-translate-y-1 transition-all duration-300'>
+              <p className='text-violet-400 text-xs font-bold uppercase tracking-widest mb-5'>Other Tools</p>
+              <div className='grid grid-cols-2 gap-3'>
+                {skillsData.others.map((skill) => (
+                  <div key={skill.id} className='flex items-center gap-3 bg-white/5 rounded-xl px-3 py-2.5'>
+                    {skill.isAwesome
+                      ? <FontAwesomeIcon icon={skill.logo} className={`xl:text-xl text-lg shrink-0 ${skill.style}`} />
+                      : <img className='w-5 h-5 shrink-0 object-contain' src={skill.logo} alt={skill.name} />
+                    }
+                    <p className='xl:text-sm text-xs text-gray-300'>{skill.name}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
-        <hr className='border-gray-400 xl:my-7 my-3' />
-        <section id='projects' >
-          <h3 className='xl:my-5 my-3 text-xl font-bold'>
-            Projects
-          </h3>
-          <div className=' xl:grid-cols-2 grid-cols-1 grid w-full rounded-2xl gap-10 space-y-5 '>
+
+        {/* Projects */}
+        <section id='projects' className='mb-14'>
+          <div className='flex items-center gap-3 mb-6'>
+            <div className='w-1 h-6 bg-violet-500 rounded-full' />
+            <h3 className='font-bold xl:text-2xl text-xl'>Projects</h3>
+          </div>
+
+          <div className='grid xl:grid-cols-2 grid-cols-1 gap-6'>
             {projectsData.map((project) => (
-              <div className=' space-y-3 border-2  border-[#1E293B] bg-[#0D1324] flex flex-col xl:p-5 p-3  rounded-xl hover:shadow-lg hover:shadow-violet-700/50 hover:-translate-y-2 transition-all duration-300 cursor-pointer' key={project.id}>
-                <h2 className='font-bold xl:tracking-widest tracking-wide xl:text-lg text-xs' >{project.title}</h2>
-                <hr className='border-gray-400' />
-                <img src={project.image} alt="" className='rounded-md w-full xl:h-64 h-40 shadow-2xl ring-2 ring-white ' />
-                <div className='flex space-x-5 justify-center ring py-2  ring-blue-400 rounded-lg '>
-                  {project.tools && project.tools.map((tool, index) => (
-                    <div key={index} className='flex items-center'>
-                      {tool.isAwesome
-                        ? <FontAwesomeIcon icon={tool.logo} className={` xl:text-xl text-base ${tool.style}`} />
-                        : <tool.logo className={`w-5 h-5 ${tool.style}`} />
-                      }
+              <div
+                key={project.id}
+                className='bg-[#0F172A] border border-white/5 rounded-2xl overflow-hidden flex flex-col hover:border-violet-500/30 hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-900/20 transition-all duration-300'
+              >
+                {/* Project image */}
+                <div className='relative w-full xl:h-52 h-40 bg-[#050816] overflow-hidden'>
+                  {project.image && !imgError[project.id] ? (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className='w-full h-full object-cover object-top'
+                      onError={() => setImgError(prev => ({ ...prev, [project.id]: true }))}
+                    />
+                  ) : (
+                    <div className='w-full h-full flex items-center justify-center bg-gradient-to-br from-violet-900/20 to-blue-900/20'>
+                      <p className='text-gray-600 text-sm'>{project.title}</p>
                     </div>
-                  ))}
+                  )}
+                  {/* Type badge */}
+                  <div className='absolute top-3 left-3'>
+                    <span className='text-xs font-bold text-violet-300 bg-violet-900/70 backdrop-blur-sm px-3 py-1 rounded-full'>
+                      {project.type}
+                    </span>
+                  </div>
                 </div>
 
-                <div className='w-full flex justify-between'>
-                  <a
-                    key={project.id}
-                    href={project.links.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-bold py-2 px-4 rounded-lg border border-blue-400 hover:bg-blue-700 hover:text-white"
-                  >
-                    {project.links.name}
-                  </a>
+                {/* Content */}
+                <div className='flex flex-col flex-1 p-5 gap-4'>
+                  <h2 className='font-extrabold xl:text-lg text-base tracking-wide text-white'>{project.title}</h2>
 
-                  <Link
-                    key={project.id}
-                    reloadDocument
-                    to={`/project/${project.id}`}
-                    className="font-bold py-2 px-4 rounded-lg border border-blue-400 hover:bg-blue-700 hover:text-white"
-                  >
-                    {project.more}
-                  </Link>
+                  {/* Tools row */}
+                  <div className='flex flex-wrap gap-2'>
+                    {project.tools?.map((tool, index) => (
+                      <div
+                        key={index}
+                        className='w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center hover:bg-violet-500/20 transition'
+                      >
+                        {tool.isAwesome
+                          ? <FontAwesomeIcon icon={tool.logo} className={`text-base ${tool.style}`} />
+                          : <tool.logo className={`w-4 h-4 ${tool.style}`} />
+                        }
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Buttons */}
+                  <div className='flex gap-3 mt-auto'>
+                    <a
+                      href={project.links.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 flex items-center justify-center gap-2 font-bold py-2.5 px-4 rounded-xl bg-violet-600 hover:bg-violet-500 text-white text-sm transition-all duration-300 hover:-translate-y-0.5"
+                    >
+                      {project.links.name}
+                      <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='text-xs' />
+                    </a>
+                    <Link
+                      to={`/project/${project.id}`}
+                      reloadDocument
+                      className="flex-1 flex items-center justify-center gap-2 font-bold py-2.5 px-4 rounded-xl border border-white/10 hover:border-violet-500 text-gray-300 hover:text-white text-sm transition-all duration-300 hover:-translate-y-0.5"
+                    >
+                      View More
+                      <FontAwesomeIcon icon={faArrowRight} className='text-xs' />
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
         </section>
-        < MobileNav key={id} />
-      </div >
-    </div >
-  );
-}
 
-export default aboutMe;
+      </div>
+
+      <MobileNav key={id} />
+    </div>
+  );
+};
+
+export default AboutMe;

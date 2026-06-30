@@ -83,7 +83,7 @@ const projectsData = [
       { id: 4, mobileImg: "/images/weatherAppMobileView4.jpeg" },
       { id: 5, mobileImg: "/images/weatherAppMobileView5.jpeg" },
       { id: 6, mobileImg: "/images/weatherAppMobileView6.jpeg" },
-      { id: 6, mobileImg: "/images/weatherAppMobileView7.jpeg" },
+      { id: 7, mobileImg: "/images/weatherAppMobileView7.jpeg" },
     ],
     links: { name: "Live Demo", link: "https://sky-view-forecast.vercel.app/" },
     more: "Description",
@@ -201,7 +201,47 @@ const projectsData = [
       { logo: faTailwindCss, isAwesome: true, style: "text-sky-400" },
       { logo: faJs, isAwesome: true, style: "text-yellow-400" },
     ]
-  }
+  },
+  {
+    id: 7,
+    title: "SecureBank",
+    type: "MERN Stack",
+    overview: "SecureBank is a full-stack demo banking application built on the MERN stack. It delivers a real banking experience with user authentication, live money transfers between accounts, real-time balance updates, transaction history, and an admin dashboard for platform management. The app features a mobile-first UI designed from custom Figma mockups, JWT-protected routes, bcrypt PIN and password hashing, and a complete transfer flow from initiation through PIN confirmation to receipt generation.",
+    image: "/images/secureBankPreview.png",
+    mobileView: [
+      { id: 1, mobileImg: "/images/secureBankMobileView1.jpeg" },
+      { id: 2, mobileImg: "/images/secureBankMobileView2.jpeg" },
+      { id: 4, mobileImg: "/images/secureBankMobileView4.jpeg" },
+      { id: 5, mobileImg: "/images/secureBankMobileView5.jpeg" },
+      { id: 6, mobileImg: "/images/secureBankMobileView6.jpeg" },
+    ],
+    links: { name: "Live Demo", link: "https://ease-swift-banking.vercel.app/" },
+    more: "Description",
+    gitRepo: { host: "https://github.com/DanielApple05/Banking", icon: faGithub },
+    description: [
+      "Full-stack MERN banking app with JWT authentication, bcrypt password and PIN hashing, and protected routes",
+      "Real money transfers between registered accounts with live balance updates, debit and credit transaction records, and PIN validation on every transfer",
+      "Complete transfer flow — Transfer → Review → PIN Confirmation → Success/Failed → Downloadable PDF Receipt",
+      "Transaction history with date grouping, category filters, and real-time search across title, recipient, and narration",
+      "In-app notifications driven by real transaction data — credit alerts, transfer confirmations, and failed transfer notices",
+      "Admin dashboard with platform-wide user management, transaction monitoring, and manual account crediting",
+      "Security & Privacy settings — set, reset, and change transaction PIN and account password with bcrypt validation",
+      "Recent beneficiaries saved locally after each successful transfer for quick repeat payments",
+      "Account name lookup by account number with debounced API calls for a real banking UX",
+      "Deployed on Vercel (frontend) and Render (backend) with MongoDB Atlas, multi-origin CORS, and SPA rewrite rules"
+    ],
+    tools: [
+      { logo: VSCode, isAwesome: false, style: '' },
+      { logo: MongoDB, isAwesome: false, style: '' },
+      { logo: Express, isAwesome: false, style: 'bg-white' },
+      { logo: faReact, isAwesome: true, style: 'text-cyan-400' },
+      { logo: Node, isAwesome: false, style: '' },
+      { logo: faGithub, isAwesome: true, style: '' },
+      { logo: Vercel, isAwesome: false, style: '' },
+      { logo: faTailwindCss, isAwesome: true, style: 'text-sky-400' },
+    ]
+  },
+
 ];
 
 export default projectsData;
