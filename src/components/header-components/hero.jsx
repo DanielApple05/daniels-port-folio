@@ -2,8 +2,6 @@ import Tabs from './tabs';
 import { Link } from "react-router-dom";
 import { useState, useEffect } from 'react'
 
-
-
 const hero = () => {
   const [current, setCurrent] = useState(0);
   const heroImages = [

@@ -254,7 +254,7 @@ const SingleProject = () => {
           <Link
             to='/contact'
             reloadDocument
-            className='shrink-0 flex items-center gap-2 bg-violet-600 hover:bg-violet-500 text-white font-bold py-3 px-5 rounded-xl transition-all duration-300 hover:-translate-y-0.5 shadow-lg shadow-violet-900/40'
+            className='shrink-0 flex items-center gap-2 bg-violet-600 hover:bg-violet-500 text-white font-bold py-3 px-5 rounded-xl transition-all duration-300 hover:-translate-y-0.5 shadow-lg shadow-violet-900/40 xl:w-auto w-full flex  '
           >
             Get In Touch
             <FontAwesomeIcon icon={faArrowRight} />
