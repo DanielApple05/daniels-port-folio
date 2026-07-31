@@ -1,9 +1,11 @@
-import { faReact, faJs, faHtml5, faCss3, faTailwindCss, faFigma, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faReact, faJs, faHtml5, faCss3, faTailwindCss, faFigma, faGithub, faTypescript } from '@fortawesome/free-brands-svg-icons';
 import VSCode from '/images/vscode.svg'
 import Vercel from '/images/vercel.svg'
 import Express from '/images/express.svg'
 import Node from '/images/node.svg'
 import MongoDb from '/images/mongoDb.svg'
+import Vite from '/images/vite.svg'
+import Shadcn from '/images/shadcn.svg'
 
 
 const skillsData = {
@@ -46,6 +48,16 @@ const skillsData = {
       id: 6,
       name: "Node",
       logo: Node,
+       isAwesome: false
+    },  {
+      id: 7,
+      name: "Typescript",
+      logo: faTypescript,
+       isAwesome: true
+    }, {
+      id: 7,
+      name: "Vite",
+      logo: Vite,
        isAwesome: false
     },
   ],
@@ -92,7 +104,12 @@ const skillsData = {
       name: "MongoDb",
       logo: MongoDb,
        isAwesome: false
-    }
+    }, {
+      id: 13,
+      name: "Shadcn",
+      logo: Shadcn,
+       isAwesome: false
+    },
   ]
 };
 

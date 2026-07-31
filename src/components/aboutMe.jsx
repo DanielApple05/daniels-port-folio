@@ -117,12 +117,16 @@ const AboutMe = ({ id }) => {
                     {project.tools?.map((tool, index) => (
                       <div
                         key={index}
-                        className='w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center hover:bg-violet-500/20 transition'
+                        className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center hover:bg-violet-500/20 transition"
                       >
-                        {tool.isAwesome
-                          ? <FontAwesomeIcon icon={tool.logo} className={`text-base ${tool.style}`} />
-                          : <tool.logo className={`w-4 h-4 ${tool.style}`} />
-                        }
+                        {tool.isAwesome ? (
+                          <FontAwesomeIcon
+                            icon={tool.logo}
+                            className={`text-base ${tool.style}`}
+                          />
+                        ) : (
+                          <tool.logo className={`w-4 h-4 ${tool.style}`} />
+                        )}
                       </div>
                     ))}
                   </div>

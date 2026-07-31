@@ -1,9 +1,11 @@
-import { faReact, faJs, faHtml5, faCss3, faTailwindCss, faFigma, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faReact, faJs, faHtml5, faCss3, faTailwindCss, faFigma, faGithub, faTypescript } from '@fortawesome/free-brands-svg-icons';
 import VSCode from '../images/vscode.svg?react'
 import Vercel from '../images/vercel.svg?react'
 import Express from '../images/express.svg?react'
 import Node from '../images/node.svg?react'
 import MongoDB from '../images/mongoDb.svg?react'
+import Shadcn from "../images/shadcn.svg?react";
+import Vite from '../images/vite.svg?react';
 
 const projectsData = [
   {
@@ -41,7 +43,55 @@ const projectsData = [
     ]
   },
   {
-    id: 2,
+  id: 2,
+  title: "Restaurant Tip Manager",
+  type: "React & TypeScript",
+  overview:
+    "A modern restaurant tip management dashboard built as part of the Banley Frontend Assessment. The application enables users to manage restaurants, calculate and track tips, edit existing records, filter calculations, and monitor spending statistics through a responsive and intuitive interface.",
+
+  image: "/images/banley_preview.PNG",
+
+  mobileView: [
+    { id: 1, mobileImg: "/images/banleyMobileView1.jpeg" },
+    { id: 2, mobileImg: "/images/banleyMobileView2.jpeg" },
+    { id: 3, mobileImg: "/images/banleyMobileView3.jpeg" },
+    { id: 4, mobileImg: "/images/banleyMobileView4.jpeg" },
+    { id: 5, mobileImg: "/images/banleyMobileView5.jpeg" },
+  ],
+
+  links: {
+    name: "Live Demo",
+    link: "https://YOUR_DEPLOYED_LINK.com",
+  },
+  more: "Description",
+  gitRepo: {
+    host: "https://github.com/DanielApple05/banley-assessment",
+    icon: faGithub,
+  },
+  description: [
+    "Built with React, TypeScript, and Vite using reusable components and service-based architecture.",
+    "Manage restaurants with full CRUD functionality.",
+    "Calculate restaurant tips automatically based on bill amount and configured tip percentage.",
+    "View, edit, and delete saved tip calculations.",
+    "Filter tip history by restaurant for easier tracking.",
+    "Dashboard displays total tips, average tip amount, and total visits.",
+    "Added pagination for improved scalability and navigation.",
+    "Implemented client-side validation with instant toast notifications for better user experience.",
+    "Included loading skeletons, empty states, and an Error Boundary for graceful error handling.",
+    "Responsive design built with Tailwind CSS and shadcn/ui components."
+  ],
+  tools: [
+    { logo: VSCode, isAwesome: false, style: "" },
+    { logo: faReact, isAwesome: true, style: "text-sky-500" },
+    { logo: faTypescript, isAwesome: true, style: "" },
+    { logo: Vite, isAwesome: false, style: "" },
+    { logo: faTailwindCss, isAwesome: true, style: "text-sky-400" },
+    { logo: Shadcn, isAwesome: false, style: "" },
+    { logo: faGithub, isAwesome: true, style: "" },
+  ]
+},
+  {
+    id: 3,
     title: "SecureBank",
     type: "MERN Stack",
     overview: "SecureBank is a full-stack demo banking application built on the MERN stack. It delivers a real banking experience with user authentication, live money transfers between accounts, real-time balance updates, transaction history, and an admin dashboard for platform management. The app features a mobile-first UI designed from custom Figma mockups, JWT-protected routes, bcrypt PIN and password hashing, and a complete transfer flow from initiation through PIN confirmation to receipt generation.",
@@ -80,7 +130,7 @@ const projectsData = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     title: "Book Verse",
     type: "MERN Stack",
     overview: "BookVerse is a full-stack digital library application that lets users discover, track, and read books online. It combines the Google Books API with a custom MERN backend to deliver a personalized reading experience — complete with authentication, a reading progress tracker, favorites, and an embedded book viewer with theme and font customization.",
@@ -114,7 +164,7 @@ const projectsData = [
     ]
   },
   {
-    id: 4,
+    id: 5,
     title: "Weather App",
     type: "Frontend / API Integration",
     overview: "SkyView is a real-time weather forecast app powered by the OpenWeatherMap API. Users can search any city worldwide and instantly get current conditions alongside a 5-day forecast with hourly breakdowns. The app supports metric and imperial unit toggling and features a clean, minimal dark UI designed for quick at-a-glance readability.",
@@ -147,7 +197,7 @@ const projectsData = [
     ]
   },
   {
-    id: 5,
+    id: 6,
     title: "Space Tourism",
     type: "Frontend",
     overview: "Space Tourism is a multi-page frontend application inspired by a Frontend Mentor challenge. It presents an immersive UI for exploring space destinations, crew members, and technology — with smooth page transitions, dynamic routing, and a fully responsive layout built to pixel-perfect design specs.",
@@ -177,7 +227,7 @@ const projectsData = [
     ]
   },
   {
-    id: 6,
+    id: 7,
     title: "Todo App",
     type: "MERN Stack",
     overview: "A full-stack task management app built on the MERN stack. Users can create, complete, and delete tasks with changes persisted to a MongoDB database via a Node/Express REST API. The app includes JWT-based authentication, protected routes, dark mode with local storage persistence, and a clear-completed feature powered by Promise.all for efficient batch operations.",
@@ -210,7 +260,7 @@ const projectsData = [
     ]
   },
   {
-    id: 7,
+    id: 8,
     title: "Sneakers Ecommerce",
     type: "MERN Stack",
     overview: "A sneaker-focused ecommerce demo app built with React. It features a product page with an interactive image gallery, add-to-cart functionality managed through React state, and a clean shopping UI. The project was built to demonstrate component-based architecture, state management patterns, and responsive product layout design.",
@@ -244,7 +294,7 @@ const projectsData = [
     ]
   },
   {
-    id: 8,
+    id: 9,
     title: "Furniro Furniture Ecommerce",
     type: "HTML & CSS",
     overview: "Furniro is a furniture ecommerce landing page built from scratch using HTML, CSS, and JavaScript. It showcases a modern retail UI with product listings, a structured layout, and responsive design across screen sizes. The project demonstrates strong foundational frontend skills and attention to visual detail without relying on any UI framework.",
@@ -275,7 +325,6 @@ const projectsData = [
       { logo: faJs, isAwesome: true, style: "text-yellow-400" },
     ]
   },
-
 
 ];
 
