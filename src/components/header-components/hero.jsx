@@ -5,13 +5,14 @@ import { useState, useEffect } from 'react'
 const hero = () => {
   const [current, setCurrent] = useState(0);
   const heroImages = [
-    "/images/project7.png",
-    "/images/project1.PNG",
-    "/images/project2.PNG",
-    "/images/project4.PNG",
-    "/images/project5.PNG",
-    "/images/project6.png",
-    "/images/secureBankPreview.png"
+    "/images/BusGo_preview.png",
+    "/images/BookVerse_preview.png",
+    "/images/SecureBank_preview.png",
+    "/images/Todo_preview.PNG",
+    "/images/Sneakers_preview.PNG",
+    "/images/SkyView_preview.png",
+    "/images/SpaceTourism_preview.PNG",
+    "/images/Furniro_preview.PNG",
   ];
   const About = [{ id: 1, name: 'View Projects', link: 'https://github.com/DanielApple05' }, { id: 2, name: 'Download CV', link: '/Daniel_Ejimofor_CV.pdf', download: true }];
 
