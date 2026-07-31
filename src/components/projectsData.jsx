@@ -15,9 +15,12 @@ const projectsData = [
     overview: "BusGo is a full-stack bus transportation booking application inspired by Peace Mass Transit (PMT), built as a technical assessment for a Frontend Developer Industrial Training role. It delivers a complete booking journey — route search with autocomplete, real-time seat availability, seat selection with double-booking prevention, and Paystack payment integration — backed by a custom Express/MongoDB API with server-side payment verification.",
     image: "/images/BusGo_preview.png",
     mobileView: [
-      { id: 1, mobileImg: "/images/busGoMobileView1.jpeg" },
-      { id: 2, mobileImg: "/images/busGoMobileView2.jpeg" },
-      { id: 3, mobileImg: "/images/busGoMobileView3.jpeg" },
+      { id: 1, mobileImg: "/images/busGoMobileView1.png" },
+      { id: 2, mobileImg: "/images/busGoMobileView2.png" },
+      { id: 3, mobileImg: "/images/busGoMobileView3.png" },
+      { id: 4, mobileImg: "/images/busGoMobileView4.png" },
+      { id: 5, mobileImg: "/images/busGoMobileView5.png" },
+      { id: 6, mobileImg: "/images/busGoMobileView6.png" },
     ],
     links: { name: "Live Demo", link: "https://Bus-Go-Two.vercel.app" },
     more: "Description",
@@ -43,53 +46,53 @@ const projectsData = [
     ]
   },
   {
-  id: 2,
-  title: "Restaurant Tip Manager",
-  type: "React & TypeScript",
-  overview:
-    "A modern restaurant tip management dashboard built as part of the Banley Frontend Assessment. The application enables users to manage restaurants, calculate and track tips, edit existing records, filter calculations, and monitor spending statistics through a responsive and intuitive interface.",
+    id: 2,
+    title: "Restaurant Tip Manager",
+    type: "React & TypeScript",
+    overview:
+      "A modern restaurant tip management dashboard built as part of the Banley Frontend Assessment. The application enables users to manage restaurants, calculate and track tips, edit existing records, filter calculations, and monitor spending statistics through a responsive and intuitive interface.",
 
-  image: "/images/banley_preview.PNG",
+    image: "/images/BanleyRestaurant_preview.png",
 
-  mobileView: [
-    { id: 1, mobileImg: "/images/banleyMobileView1.jpeg" },
-    { id: 2, mobileImg: "/images/banleyMobileView2.jpeg" },
-    { id: 3, mobileImg: "/images/banleyMobileView3.jpeg" },
-    { id: 4, mobileImg: "/images/banleyMobileView4.jpeg" },
-    { id: 5, mobileImg: "/images/banleyMobileView5.jpeg" },
-  ],
+    mobileView: [
+      { id: 1, mobileImg: "/images/banleyMobileView1.jpeg" },
+      { id: 2, mobileImg: "/images/banleyMobileView2.jpeg" },
+      { id: 3, mobileImg: "/images/banleyMobileView3.jpeg" },
+      { id: 4, mobileImg: "/images/banleyMobileView4.jpeg" },
+      { id: 5, mobileImg: "/images/banleyMobileView5.jpeg" },
+    ],
 
-  links: {
-    name: "Live Demo",
-    link: "https://daniels-banley-assessment.vercel.app",
+    links: {
+      name: "Live Demo",
+      link: "https://daniels-banley-assessment.vercel.app",
+    },
+    more: "Description",
+    gitRepo: {
+      host: "https://github.com/DanielApple05/banley-assessment",
+      icon: faGithub,
+    },
+    description: [
+      "Built with React, TypeScript, and Vite using reusable components and service-based architecture.",
+      "Manage restaurants with full CRUD functionality.",
+      "Calculate restaurant tips automatically based on bill amount and configured tip percentage.",
+      "View, edit, and delete saved tip calculations.",
+      "Filter tip history by restaurant for easier tracking.",
+      "Dashboard displays total tips, average tip amount, and total visits.",
+      "Added pagination for improved scalability and navigation.",
+      "Implemented client-side validation with instant toast notifications for better user experience.",
+      "Included loading skeletons, empty states, and an Error Boundary for graceful error handling.",
+      "Responsive design built with Tailwind CSS and shadcn/ui components."
+    ],
+    tools: [
+      { logo: VSCode, isAwesome: false, style: "" },
+      { logo: faReact, isAwesome: true, style: "text-sky-500" },
+      { logo: faTypescript, isAwesome: true, style: "" },
+      { logo: Vite, isAwesome: false, style: "" },
+      { logo: faTailwindCss, isAwesome: true, style: "text-sky-400" },
+      { logo: Shadcn, isAwesome: false, style: "" },
+      { logo: faGithub, isAwesome: true, style: "" },
+    ]
   },
-  more: "Description",
-  gitRepo: {
-    host: "https://github.com/DanielApple05/banley-assessment",
-    icon: faGithub,
-  },
-  description: [
-    "Built with React, TypeScript, and Vite using reusable components and service-based architecture.",
-    "Manage restaurants with full CRUD functionality.",
-    "Calculate restaurant tips automatically based on bill amount and configured tip percentage.",
-    "View, edit, and delete saved tip calculations.",
-    "Filter tip history by restaurant for easier tracking.",
-    "Dashboard displays total tips, average tip amount, and total visits.",
-    "Added pagination for improved scalability and navigation.",
-    "Implemented client-side validation with instant toast notifications for better user experience.",
-    "Included loading skeletons, empty states, and an Error Boundary for graceful error handling.",
-    "Responsive design built with Tailwind CSS and shadcn/ui components."
-  ],
-  tools: [
-    { logo: VSCode, isAwesome: false, style: "" },
-    { logo: faReact, isAwesome: true, style: "text-sky-500" },
-    { logo: faTypescript, isAwesome: true, style: "" },
-    { logo: Vite, isAwesome: false, style: "" },
-    { logo: faTailwindCss, isAwesome: true, style: "text-sky-400" },
-    { logo: Shadcn, isAwesome: false, style: "" },
-    { logo: faGithub, isAwesome: true, style: "" },
-  ]
-},
   {
     id: 3,
     title: "SecureBank",

@@ -153,9 +153,9 @@ const SingleProject = () => {
           <div className='bg-[#0F172A] rounded-2xl p-6 border border-white/5 mb-14'>
             <p className='text-violet-400 font-bold text-sm uppercase tracking-widest mb-6'>Mobile Screenshots</p>
 
-            <div className='xl:flex xl:gap-6 hidden'>
+            <div className='xl:grid xl:gap-6 hidden'>
               {/* Thumbnail sidebar */}
-              <div className='flex flex-col gap-3 shrink-0'>
+              <div className='flex gap-3 shrink-0'>
                 {mobileImgs.map((mobile, i) => (
                   <button
                     key={mobile.id}
@@ -241,7 +241,7 @@ const SingleProject = () => {
         )}
 
         {/* CTA footer */}
-        <div className='bg-gradient-to-r from-violet-900/30 to-blue-900/30 border border-white/5 rounded-2xl flex xl:flex-row flex-col items-center justify-between p-6 gap-4'>
+        <div className='bg-gradient from-violet-900/30 to-blue-900/30 border border-white/5 rounded-2xl flex xl:flex-row flex-col items-center justify-between p-6 gap-4'>
           <div className='flex items-center gap-4'>
             <div className='w-12 h-12 rounded-xl bg-violet-600/20 flex items-center justify-center shrink-0'>
               <FontAwesomeIcon icon={faPaperPlane} className='text-violet-400 text-lg' />
