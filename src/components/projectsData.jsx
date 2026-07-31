@@ -61,7 +61,7 @@ const projectsData = [
 
   links: {
     name: "Live Demo",
-    link: "https://YOUR_DEPLOYED_LINK.com",
+    link: "https://daniels-banley-assessment.vercel.app",
   },
   more: "Description",
   gitRepo: {
