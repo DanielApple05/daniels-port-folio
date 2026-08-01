@@ -55,11 +55,12 @@ const projectsData = [
     image: "/images/BanleyRestaurant_preview.png",
 
     mobileView: [
-      { id: 1, mobileImg: "/images/banleyMobileView1.jpeg" },
-      { id: 2, mobileImg: "/images/banleyMobileView2.jpeg" },
-      { id: 3, mobileImg: "/images/banleyMobileView3.jpeg" },
-      { id: 4, mobileImg: "/images/banleyMobileView4.jpeg" },
-      { id: 5, mobileImg: "/images/banleyMobileView5.jpeg" },
+      { id: 1, mobileImg: "/images/banleyMobileView1.png" },
+      { id: 2, mobileImg: "/images/banleyMobileView2.png" },
+      { id: 3, mobileImg: "/images/banleyMobileView3.png" },
+      { id: 4, mobileImg: "/images/banleyMobileView4.png" },
+      { id: 5, mobileImg: "/images/banleyMobileView5.png" },
+      { id: 5, mobileImg: "/images/banleyMobileView6.png" },
     ],
 
     links: {
