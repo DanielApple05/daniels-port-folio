@@ -29,7 +29,7 @@ const projectsData = [
       "Full trip-booking flow — route search with live city autocomplete, bus selection, seat picking, and passenger details",
       "Backend-enforced seat holds with automatic 10-minute expiry to prevent double bookings",
       "Paystack payment integration with server-side transaction verification and amount matching before confirming any booking",
-      "Hybrid guest/auth model — booking requires no account, while optional login surfaces booking history matched by email",
+      "Hybrid guest/auth model, booking requires no account, while optional login surfaces booking history matched by email",
       "'My Bookings' history and a dedicated Hire-a-Bus inquiry flow with its own backend endpoint",
       "Fully responsive UI with a custom slide-out mobile navigation drawer",
       "Deployed on Vercel (frontend) and Render (backend) with MongoDB Atlas"
@@ -42,6 +42,7 @@ const projectsData = [
       { logo: Node, isAwesome: false, style: '' },
       { logo: faGithub, isAwesome: true, style: '' },
       { logo: Vercel, isAwesome: false, style: '' },
+      { logo: Vite, isAwesome: false, style: "" },
       { logo: faTailwindCss, isAwesome: true, style: 'text-sky-400' },
     ]
   },
@@ -129,6 +130,7 @@ const projectsData = [
       { logo: faReact, isAwesome: true, style: 'text-cyan-400' },
       { logo: Node, isAwesome: false, style: '' },
       { logo: faGithub, isAwesome: true, style: '' },
+      { logo: Vite, isAwesome: false, style: "" },
       { logo: Vercel, isAwesome: false, style: '' },
       { logo: faTailwindCss, isAwesome: true, style: 'text-sky-400' },
     ]
@@ -165,6 +167,7 @@ const projectsData = [
       { logo: Node, isAwesome: false, style: 'text-cyan-400' },
       { logo: faGithub, isAwesome: true, style: '' },
       { logo: Vercel, isAwesome: false, style: '' },
+      { logo: Vite, isAwesome: false, style: "" },
     ]
   },
   {
@@ -197,7 +200,8 @@ const projectsData = [
       { logo: faGithub, isAwesome: true, style: "" },
       { logo: faTailwindCss, isAwesome: true, style: "text-sky-400" },
       { logo: faReact, isAwesome: true, style: 'text-cyan-400' },
-      { logo: Vercel, isAwesome: false, style: '' }
+      { logo: Vercel, isAwesome: false, style: '' },
+      { logo: Vite, isAwesome: false, style: "" },
     ]
   },
   {
@@ -228,6 +232,7 @@ const projectsData = [
       { logo: faFigma, isAwesome: true, style: 'text-pink-500' },
       { logo: faGithub, isAwesome: true, style: 'text-white' },
       { logo: Vercel, isAwesome: false, style: '' },
+      { logo: Vite, isAwesome: false, style: "" },
     ]
   },
   {
@@ -261,6 +266,7 @@ const projectsData = [
       { logo: Node, isAwesome: false, style: 'text-cyan-400' },
       { logo: faGithub, isAwesome: true, style: '' },
       { logo: Vercel, isAwesome: false, style: '' },
+      { logo: Vite, isAwesome: false, style: "" },
     ]
   },
   {
@@ -294,6 +300,7 @@ const projectsData = [
       { logo: faReact, isAwesome: true, style: 'text-cyan-400' },
       { logo: Node, isAwesome: false, style: 'text-cyan-400' },
       { logo: faGithub, isAwesome: true, style: '' },
+      { logo: Vite, isAwesome: false, style: "" },
       { logo: Vercel, isAwesome: false, style: '' },
     ]
   },

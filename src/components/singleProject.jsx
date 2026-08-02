@@ -111,7 +111,7 @@ const SingleProject = () => {
                   <p className='text-gray-500 text-sm'>Preview coming soon</p>
                 </div>
               )}
-              <div className='absolute inset-0 bg-gradient-to-t from-[#050816]/60 via-transparent to-transparent pointer-events-none' />
+              <div className='absolute inset-0 bg-gradient from-[#050816]/60 via-transparent to-transparent pointer-events-none' />
             </div>
           </div>
         </div>
