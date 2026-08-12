@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react'
 const hero = () => {
   const [current, setCurrent] = useState(0);
   const heroImages = [
+    "/images/FarmCompanion_preview.png",
     "/images/BusGo_preview.png",
     "/images/BookVerse_preview.png",
     "/images/SecureBank_preview.png",
@@ -13,7 +14,7 @@ const hero = () => {
     "/images/SkyView_preview.png",
     "/images/SpaceTourism_preview.PNG",
     "/images/Furniro_preview.PNG",
-    "/images/BanleyRestaurant_preview.png"
+    "/images/BanleyRestaurant_preview.png",
   ];
   const About = [{ id: 1, name: 'View Projects', link: 'https://github.com/DanielApple05' }, { id: 2, name: 'Download CV', link: '/Daniel_Ejimofor_CV.pdf', download: true }];
 

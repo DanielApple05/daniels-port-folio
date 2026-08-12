@@ -98,16 +98,16 @@ const SingleProject = () => {
 
           {/* Right — main image */}
           <div className='order-1 xl:order-2'>
-            <div className='relative rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-2xl shadow-violet-900/30 bg-[#0F172A]'>
+            <div className='relative rounded-2xl  overflow-hidden ring-1 ring-white/10 shadow-2xl shadow-violet-900/30 bg-[#0F172A]'>
               {project.image && !imgError['main'] ? (
                 <img
                   src={project.image}
                   alt={project.title}
-                  className='w-full h-64 xl:h-80 object-cover object-top'
+                  className='w-full h-64 xl:h-80 object-center object-top'
                   onError={() => setImgError(prev => ({ ...prev, main: true }))}
                 />
               ) : (
-                <div className='w-full h-64 xl:h-80 flex items-center justify-center bg-gradient-to-br from-violet-900/30 to-blue-900/30'>
+                <div className='w-full h-64 xl:h-80 flex items-center justify-center bg-gradient from-violet-900/30 to-blue-900/30'>
                   <p className='text-gray-500 text-sm'>Preview coming soon</p>
                 </div>
               )}
