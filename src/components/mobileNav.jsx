@@ -4,10 +4,13 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
-const MobileNav = () => {
+const MobileNav = ({ showMobileNav }) => {
   return (
-    <div className='flex justify-center'>
-      <div className="xl:hidden flex items-center fixed bottom-10 text-base z-20 mx-auto justify-around bg-violet-600/50 w-80 p-3 rounded-full backdrop-blur-md shadow-lg shadow-violet-700">
+    <div
+      className={` xl:hidden fixed bottom-10 left-0 right-0 z-50 transition-transform duration-300 ${showMobileNav ? 'translate-y-0 ' : 'translate-y-[200%]'
+        }`}
+    >
+      <div className=" flex items-center text-base mx-auto justify-around bg-violet-600/50 w-80 p-3 rounded-full backdrop-blur-md shadow-lg shadow-violet-700">
         {Navs.map((nav) =>
           nav.isSection ? (
             <a
@@ -32,7 +35,7 @@ const MobileNav = () => {
           )
         )}
       </div>
-    </div>
+    </div >
   );
 }
 

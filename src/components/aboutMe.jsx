@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import Hero from './header-components/hero';
@@ -10,6 +10,39 @@ import MobileNav from './mobileNav';
 
 const AboutMe = ({ id }) => {
   const [imgError, setImgError] = useState({});
+  const [showMobileNav, setShowMobileNav] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Always show the nav at the top
+      if (currentScrollY <= 50) {
+        setShowMobileNav(true);
+        setLastScrollY(currentScrollY);
+        return;
+      }
+
+      // Scrolling down
+      if (currentScrollY > lastScrollY) {
+        setShowMobileNav(false);
+      }
+
+      // Scrolling up
+      if (currentScrollY < lastScrollY) {
+        setShowMobileNav(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollY]);
 
   return (
     <div className='bg-[#050816] text-slate-50 min-h-screen'>
@@ -244,7 +277,7 @@ const AboutMe = ({ id }) => {
                           key={index}
                           className='flex items-start gap-3 text-gray-400 text-sm leading-relaxed'
                         >
-                          <span className='mt-2 w-1.5 h-1.5 rounded-full bg-violet-500 shrink-0' />
+                          <span className='mt-2 w-1.5 h-1.5 rounded-full bg-violet-500 shrink-0 ' />
                           <p>{item}</p>
                         </div>
                       ))}
@@ -257,9 +290,9 @@ const AboutMe = ({ id }) => {
           </div>
         </section>
       </div>
-
-      <MobileNav key={id} />
-    </div>
+        <MobileNav key={id} showMobileNav={showMobileNav} />
+      </div>
+    
   );
 };
 

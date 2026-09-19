@@ -5,6 +5,7 @@ import {
   faLaptopCode,
   faBriefcase,
   faPaperPlane,
+  faUserTie,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Navs = [
@@ -13,7 +14,7 @@ const Navs = [
     title: "About",
     icon: faHouse,
     isSection: true,
-    
+
   },
   {
     id: "about",
@@ -34,12 +35,18 @@ const Navs = [
     isSection: true,
   },
   {
-    id: "contact",
-    title: "Contact",
-    icon: faPaperPlane,
-    isSection: false,
-    path: "/contact",
+    id: "experience",
+    title: "Experience",
+    icon: faUserTie,
+    isSection: true,
   },
+  // {
+  //   id: "contact",
+  //   title: "Contact",
+  //   icon: faPaperPlane,
+  //   isSection: false,
+  //   path: "/contact",
+  // },
 ];
 
 export default Navs;
