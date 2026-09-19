@@ -80,7 +80,7 @@ const Contact = () => {
 
           <Link
             to="/"
-            className="rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-gray-300 transition-all duration-300 hover:border-violet-500/40 hover:bg-violet-500/10 hover:text-white"
+            className="rounded-l-xl border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-gray-300 transition-all duration-300 hover:border-violet-500/40 hover:bg-violet-500/10hover:text-violet-500 animate-bounce fixed right-0 z-50"
           >
             About Me
           </Link>
