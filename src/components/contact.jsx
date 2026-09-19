@@ -198,7 +198,7 @@ const Contact = () => {
                   required
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white outline-none transition placeholder:text-gray-600 focus:border-violet-500/60 focus:bg-white/[0.06]"
+                  className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-base text-white outline-none transition placeholder:text-gray-600 focus:border-violet-500/60 focus:bg-white/[0.06]"
                 />
 
                 <ValidationError
@@ -225,7 +225,7 @@ const Contact = () => {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white outline-none transition placeholder:text-gray-600 focus:border-violet-500/60 focus:bg-white/[0.06]"
+                  className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-base text-white outline-none transition placeholder:text-gray-600 focus:border-violet-500/60 focus:bg-white/[0.06]"
                 />
 
                 <ValidationError
@@ -251,7 +251,7 @@ const Contact = () => {
                   required
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  className="h-36 w-full resize-none rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white outline-none transition placeholder:text-gray-600 focus:border-violet-500/60 focus:bg-white/[0.06]"
+                  className="h-36 w-full resize-none rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-base text-white outline-none transition placeholder:text-gray-600 focus:border-violet-500/60 focus:bg-white/[0.06]"
                 />
 
                 <ValidationError
