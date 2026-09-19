@@ -12,13 +12,6 @@ const Navs = [
   {
     id: "about",
     title: "About",
-    icon: faHouse,
-    isSection: true,
-
-  },
-  {
-    id: "about",
-    title: "About",
     icon: faCircleInfo,
     isSection: true,
   },
@@ -40,13 +33,13 @@ const Navs = [
     icon: faUserTie,
     isSection: true,
   },
-  // {
-  //   id: "contact",
-  //   title: "Contact",
-  //   icon: faPaperPlane,
-  //   isSection: false,
-  //   path: "/contact",
-  // },
+  {
+    id: "contact",
+    title: "Contact",
+    icon: faPaperPlane,
+    isSection: false,
+    path: "/contact",
+  },
 ];
 
 export default Navs;
