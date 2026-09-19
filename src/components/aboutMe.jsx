@@ -207,29 +207,29 @@ const AboutMe = ({ id }) => {
             {experienceData.map((experience) => (
               <div
                 key={experience.id}
-                className='bg-[#0F172A] border border-white/5 rounded-2xl p-5 xl:p-6 hover:border-violet-500/30 transition-all duration-300'
+                className='bg-[#0F172A] border border-white/5 rounded-2xl hover:border-violet-500/30 transition-all duration-300'
               >
                 <div className='flex flex-col md:flex-row gap-6'>
 
                   {/* Company Image */}
-                  <div className='md:w-52 xl:w-80 shrink-0'>
-                    <div className='w-full h-40 md:h-full min-h-40 rounded-xl overflow-hidden bg-[#050816] border border-white/5'>
+                  <div className='md:w-52 xl:w-[40%] shrink-0'>
+                    <div className='w-full h-40 md:h-full min-h-40 rounded-l-2xl overflow-hidden bg-[#050816] border border-white/5'>
                       {experience.image ? (
                         <img
                           src={experience.image}
                           alt={`${experience.company} cover`}
-                          className='w-full h-full object-center'
+                          className=' h-full object-center w-full'
                         />
                       ) : (
                         <div className='w-full h-full flex items-center justify-center bg-gradient from-violet-900/20 to-blue-900/20'>
-                          <p className='text-gray-600 text-sm'>{project.title}</p>
+                          <p className='text-gray-600 text-sm'>{experience.company}</p>
                         </div>
                       )}
                     </div>
                   </div>
 
                   {/* Experience Content */}
-                  <div className='flex flex-col flex-1'>
+                  <div className='flex flex-col flex-1 pt-3 pb-5 px-5'>
 
                     {/* Header */}
                     <div className='flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4'>
@@ -244,7 +244,7 @@ const AboutMe = ({ id }) => {
                           </span>
                         </div>
 
-                        <p className='text-violet-400 font-semibold text-sm mt-1'>
+                        <p className='text-violet-400 font-semibold text-sm mt-1 '>
                           {experience.company}
                         </p>
                       </div>
