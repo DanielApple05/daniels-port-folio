@@ -16,7 +16,7 @@ const hero = () => {
     "/images/Furniro_preview.PNG",
     "/images/BanleyRestaurant_preview.png",
   ];
-  const About = [{ id: 1, name: 'View Projects', link: 'https://github.com/DanielApple05' }, { id: 2, name: 'Download CV', link: '/Daniel_Ejimofor_CV.pdf', download: true }];
+  const About = [{ id: 1, name: 'View Projects', link: 'https://github.com/DanielApple05' }, { id: 2, name: 'Download CV', link: '/Daniel_Ejimofor_Resume.pdf', download: true }];
 
   useEffect(() => {
     const interval = setInterval(() => {
