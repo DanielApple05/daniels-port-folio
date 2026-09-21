@@ -46,7 +46,7 @@ const projectsData = [
     more: "Description",
 
     gitRepo: {
-      host: "https://github.com/DanielApple05/Farm-Companion",
+      host: "https://github.com/DanielApple05/",
       icon: faGithub,
     },
 
