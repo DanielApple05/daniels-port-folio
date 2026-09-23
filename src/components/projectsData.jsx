@@ -40,7 +40,7 @@ const projectsData = [
 
     links: {
       name: "Live Demo",
-      link: "https://farm-ai-green.vercel.app/",
+      link: "https://ai-farms.vercel.app/",
     },
 
     more: "Description",
